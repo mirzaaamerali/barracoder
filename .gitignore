@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+node_modules/
+.vscode/
+# Never commit filled forms or anything with student/family personal data
+**/filled/
+**/*-signed.*
+roster*
