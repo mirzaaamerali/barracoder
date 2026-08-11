@@ -1,6 +1,6 @@
 # Barracoder 🐟🤖
 
-**FIRST® LEGO® League Explore — BioGlow season — White Lake Robotics**
+**FIRST® LEGO® League Challenge — BioGlow season — White Lake Robotics**
 
 Team hub for the Barracoder team: season schedule, paperwork tracking, event prep,
 and every official season document in one place.
@@ -31,16 +31,19 @@ browser. Notes and ideas live in [notes/](notes/).
 
 | Folder | Contents |
 |--------|----------|
-| [season/guides/](season/guides/) | Team Meeting Guide (the season bible), season overview, challenge book |
-| [season/sessions/](season/sessions/) | Slide decks: intro + Sessions 1–10 (one per meeting) |
-| [season/events/](season/events/) | Event introduction + the reviewing packet (sheet, flowchart, fillable docs) |
-| [season/resources/](season/resources/) | Build-instruction Books 1–2, text-based build instructions, multimedia connections |
+| [season/guides/](season/guides/) | Team Meeting Guide, **Robot Game Rulebook**, Engineering Notebook, season overview |
+| [season/sessions/](season/sessions/) | Slide decks: intro + Sessions 1–12 |
+| [season/robot-game/](season/robot-game/) | Mission-model build instructions (Books 1–13 + prepack + EOP), field setup guide, wireframe grid, guided-mission SPIKE program |
+| [season/resources/](season/resources/) | Multimedia resources |
 | [season/certificates/](season/certificates/) | Participation certificate templates |
 
-The team model requirements in one line: **LEGO elements only**, uses the whole
-Explore Set + mat, one part **motorized and coded** with SPIKE Essential, and it
-must include a **designed plant/animal**, a **rainforest job**, and a
-**biodiversity-study tool** — assembled from Session 8 through the festival.
+The season in one line: build and code a **SPIKE Prime robot** to score
+missions in **2.5-minute robot game matches**, develop an **innovation
+project**, and present both to judges — robot game + judging both happen at
+the Nov 8 scrimmage and the December festival.
+
+> Note: `season/` previously held the FLL **Explore** packet (wrong division
+> for this team) — those files live on in git history before 2026-08-11.
 
 ## Attribution
 

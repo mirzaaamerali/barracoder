@@ -97,7 +97,8 @@ h1{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-
 .blab{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:10px 0 6px}
 .goals li{margin:3px 0; font-size:14px}
 ul.cklist{list-style:none; padding:0; margin:0; display:grid; gap:6px}
-.ck{display:flex; gap:10px; align-items:flex-start; width:100%; text-align:left; border:1px solid var(--line);
+.cklist li{display:flex; flex-wrap:wrap; align-items:center; gap:6px}
+.ck{display:flex; gap:10px; align-items:flex-start; flex:1; min-width:230px; text-align:left; border:1px solid var(--line);
   border-radius:9px; padding:8px 11px; font-size:14px; color:var(--ink); background:var(--paper)}
 .ck:hover{border-color:var(--accent)}
 .ck:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
@@ -145,6 +146,25 @@ ul.cklist{list-style:none; padding:0; margin:0; display:grid; gap:6px}
 .libgroup a{color:var(--accent); text-decoration:none; font-weight:600}
 .libgroup a:hover{text-decoration:underline}
 .ft{color:var(--muted); font-size:11px; font-weight:600; letter-spacing:.05em; margin-left:6px}
+/* reference chips on plan items */
+.ref{display:inline-flex; align-items:center; font-size:11px; font-weight:800; color:var(--glow);
+  border:1px solid var(--glow); border-radius:99px; padding:1px 9px; margin:2px 0 0 6px;
+  background:var(--glow-soft); cursor:pointer; white-space:nowrap}
+.ref:hover{background:var(--glow); color:var(--accent-ink)}
+/* in-page PDF viewer */
+.pdfview{position:fixed; inset:0; z-index:60; background:rgba(10,16,12,.55); display:flex;
+  align-items:stretch; justify-content:center; padding:2.5vh 2.5vw}
+.pdfview[hidden]{display:none}
+.pvbox{display:flex; flex-direction:column; width:min(1000px,100%); background:var(--card);
+  border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow)}
+.pvhead{display:flex; align-items:center; gap:12px; padding:10px 14px; border-bottom:1px solid var(--line)}
+.pvhead b{font-size:14px; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.pvhead .mono{font-size:12px; color:var(--muted)}
+.pvhead a{font-size:12.5px; font-weight:700; text-decoration:none; color:var(--accent)}
+.pvhead button{background:var(--deep); border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-weight:700; font-size:13px}
+.pvhead button:hover{border-color:var(--accent); color:var(--accent)}
+.pvhead button:focus-visible, .ref:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.pvbox iframe{flex:1; width:100%; border:0; background:#525659}
 footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
 .view{display:none}
 .view.on{display:block}
@@ -161,7 +181,7 @@ footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); colo
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="eyebrow">White Lake Robotics · FIRST LEGO League Explore · BioGlow</div>
+      <div class="eyebrow">White Lake Robotics · FIRST LEGO League Challenge · BioGlow</div>
       <h1>Barracoder Season Board</h1>
       <div class="sub">Tuesdays &amp; Thursdays 6:00–7:30 pm · tap any row to see the plan and tick it off</div>
     </div>
@@ -190,10 +210,19 @@ footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); colo
     <div class="legend" id="callegend"></div></div>
   <div class="view" id="v-lib"><div class="lib" id="libgrid"></div></div>
 
-  <footer>Barracoder · FIRST LEGO League Explore · BioGlow season · materials © FIRST &amp; the LEGO Group ·
+  <footer>Barracoder · FIRST LEGO League Challenge · BioGlow season · materials © FIRST &amp; the LEGO Group ·
     <a href="https://github.com/mirzaaamerali/barracoder">GitHub repo</a> ·
     <a href="https://github.com/mirzaaamerali/barracoder/tree/main/notes">notes</a> ·
     <a href="https://github.com/mirzaaamerali/barracoder/blob/main/SCHEDULE.md">printable schedule</a></footer>
+</div>
+
+<div class="pdfview" id="pdfview" hidden role="dialog" aria-modal="true" aria-label="Document viewer">
+  <div class="pvbox">
+    <div class="pvhead"><b id="pvtitle"></b><span class="mono" id="pvpage"></span>
+      <a id="pvnew" target="_blank" rel="noopener">Open in tab ↗</a>
+      <button id="pvclose" type="button">✕ Close</button></div>
+    <iframe id="pvframe" title="Document"></iframe>
+  </div>
 </div>
 
 <script>
@@ -203,12 +232,35 @@ const setLS = (k, v) => localStorage.setItem('bar:' + k, JSON.stringify(v));
 const todayIso = () => { const n = new Date();
   return n.getFullYear() + '-' + String(n.getMonth()+1).padStart(2,'0') + '-' + String(n.getDate()).padStart(2,'0'); };
 const MN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const PHCOLOR = {'Core sessions':'--ph-core','Festival prep':'--ph-prep','Scrimmage':'--ph-scrim',
-  'Improve for the festival':'--ph-improve','Wrap-up':'--ph-wrap'};
+const PHCOLOR = {'Core sessions':'--ph-core','Event prep':'--ph-prep','Scrimmage':'--ph-scrim',
+  'Improve for the main event':'--ph-improve','Wrap-up':'--ph-wrap'};
 let DATA = null;
 
 fetch('meetings.json').then(r => r.json()).then(d => { DATA = d; render(); })
   .catch(() => { $('#v-board').textContent = 'Could not load meetings.json — refresh to retry.'; });
+
+/* in-page PDF viewer */
+let pvReturn = null;
+function openPdf(href, page, title) {
+  pvReturn = document.activeElement;
+  $('#pvtitle').textContent = title || href.split('/').pop();
+  $('#pvpage').textContent = page ? 'p.' + page : '';
+  $('#pvnew').href = href + (page ? '#page=' + page : '');
+  $('#pvframe').src = href + (page ? '#page=' + page : '');
+  $('#pdfview').hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('#pvclose').focus();
+}
+function closePdf() {
+  $('#pdfview').hidden = true;
+  $('#pvframe').src = 'about:blank';
+  document.body.style.overflow = '';
+  if (pvReturn) pvReturn.focus();
+}
+document.getElementById('pvclose').onclick = closePdf;
+document.getElementById('pdfview').addEventListener('click', e => { if (e.target.id === 'pdfview') closePdf(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#pdfview').hidden) closePdf(); });
+const isPdf = href => /\.pdf$/i.test(href) && !/^https?:/i.test(href);
 
 /* tabs */
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
@@ -316,28 +368,31 @@ function buildBody(r, m) {
   let h = '';
   if (m.goals.length) h += '<div><div class="blab">Goals</div><ul class="goals">' +
     m.goals.map(g => '<li></li>').join('') + '</ul></div>';
-  h += '<div><div class="blab">Plan · 90 min — tick as you go</div><ul class="cklist" data-key="' + m.date + ':plan"></ul></div>';
+  h += '<div><div class="blab">Plan · 90 min — tick as you go · tap a page chip to open the doc</div><ul class="cklist" data-key="' + m.date + ':plan"></ul></div>';
   if ((m.deliverables || []).length) h += '<div><div class="blab">Done when</div><ul class="cklist" data-key="' + m.date + ':done"></ul></div>';
   h += '<div><div class="blab">Materials</div><div class="mats"><a class="daily" href="meeting.html?date=' + m.date + '">✨ Daily page</a></div></div>';
   body.innerHTML = h;
   body.querySelectorAll('.goals li').forEach((li, i) => li.textContent = m.goals[i]);
-  buildCk(body.querySelector('[data-key="' + m.date + ':plan"]'), m.activities, m.date + ':plan');
+  buildCk(body.querySelector('[data-key="' + m.date + ':plan"]'), m.activities, m.date + ':plan', m.activity_refs);
   const dn = body.querySelector('[data-key="' + m.date + ':done"]');
   if (dn) buildCk(dn, m.deliverables, m.date + ':done');
   const mats = body.querySelector('.mats');
   (m.materials || []).forEach(x => {
     const a = document.createElement('a'); a.href = x.href; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = '📄 ' + x.label; mats.appendChild(a);
+    a.textContent = '📄 ' + x.label;
+    if (isPdf(x.href)) a.onclick = e => { e.preventDefault(); openPdf(x.href, null, x.label); };
+    mats.appendChild(a);
   });
 }
 
-function buildCk(ul, items, key) {
+function buildCk(ul, items, key, refs) {
   items.forEach((t, i) => {
     const li = document.createElement('li');
     const b = document.createElement('button'); b.type = 'button';
     b.className = 'ck' + (LS(key).includes(i) ? ' on' : '');
     b.innerHTML = '<span class="box">' + (LS(key).includes(i) ? '✓' : '') + '</span><span class="t"></span>';
     b.querySelector('.t').textContent = t;
+    const rlist = (refs && refs[i]) || [];
     b.onclick = () => {
       const s = LS(key), on = s.includes(i);
       setLS(key, on ? s.filter(x => x !== i) : s.concat([i]));
@@ -345,7 +400,14 @@ function buildCk(ul, items, key) {
       b.querySelector('.box').textContent = on ? '' : '✓';
       renderTiles(); refreshGroupBars();
     };
-    li.appendChild(b); ul.appendChild(li);
+    li.appendChild(b);
+    rlist.forEach(r => {
+      const c = document.createElement('button'); c.type = 'button'; c.className = 'ref';
+      c.textContent = '📖 ' + r.label;
+      c.onclick = () => openPdf(r.href, r.page, r.label);
+      li.appendChild(c);
+    });
+    ul.appendChild(li);
   });
 }
 function refreshGroupBars() {
@@ -454,22 +516,24 @@ function renderCal() {
 /* library */
 const LIBGROUPS = [
   ['Guides', [
-    ['Team Meeting Guide', 'season/guides/fll-explore-bioglow-TMG.pdf', 'PDF'],
-    ['Season overview', 'season/guides/fll-explore-bioglow-season-overview.pdf', 'PDF'],
-    ['Engineering Notebook', 'season/guides/fll-explore-bioglow-EN.pdf', 'PDF']]],
-  ['Build instructions', [
-    ['Build Book 1 — tree (bags 1–3)', 'season/resources/fll-explore-bioglow-bi-book-1.pdf', 'PDF'],
-    ['Build Book 2 — animals · lift · device (bags 4–8)', 'season/resources/fll-explore-bioglow-bi-book-2.pdf', 'PDF'],
-    ['Text-based instructions 01', 'season/resources/fll-explore-bioglow-text-based-bi-01.pdf', 'PDF'],
-    ['Text-based instructions 02', 'season/resources/fll-explore-bioglow-text-based-bi-02.pdf', 'PDF']]],
-  ['Session slide decks', [['Intro session', 'season/sessions/fll-explore-bioglow-session-slides-intro.pptx', 'PPTX']]
-    .concat(Array.from({length: 10}, (_, i) => ['Session ' + (i+1), 'season/sessions/fll-explore-bioglow-session-slides-' + (i+1) + '.pptx', 'PPTX']))],
-  ['Events & reviewing', [
-    ['Event introduction', 'season/events/fll-explore-bioglow-event-introduction.pdf', 'PDF'],
-    ['Reviewing sheet', 'season/events/fll-explore-bioglow-reviewing-sheet.pdf', 'PDF'],
-    ['Reviewing flowchart', 'season/events/fll-explore-bioglow-reviewing-flowchart.pdf', 'PDF'],
-    ['Fillable reviewing documents', 'season/events/fll-explore-bioglow-reviewing-documents-fillable.pdf', 'PDF'],
-    ['Multimedia connections', 'season/resources/fll-explore-bioglow-multimedia-connections.pdf', 'PDF']]],
+    ['Team Meeting Guide', 'season/guides/fll-challenge-bioglow-tmg.pdf', 'PDF'],
+    ['Robot Game Rulebook', 'season/guides/fll-challenge-bioglow-rgr.pdf', 'PDF'],
+    ['Engineering Notebook', 'season/guides/fll-challenge-bioglow-en.pdf', 'PDF'],
+    ['Season overview', 'season/guides/fll-challenge-bioglow-season-overview.pdf', 'PDF']]],
+  ['Robot game & field', [
+    ['Field setup reference guide', 'season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf', 'PDF'],
+    ['Wireframe grid', 'season/robot-game/fll-challenge-bioglow-wireframe-grid.pdf', 'PDF'],
+    ['Prepack build instructions', 'season/robot-game/fll-challenge-bioglow-bi-enus-prepack.pdf', 'PDF'],
+    ['Element overview (EOP)', 'season/robot-game/fll-challenge-bioglow-bi-enus-eop.pdf', 'PDF'],
+    ['Guided mission — SPIKE program', 'season/robot-game/guided-mission-bioglow-11.llsp3', 'DL']]],
+  ['Mission build instructions', Array.from({length: 13}, (_, i) => {
+    const n = String(i+1).padStart(2,'0');
+    return ['Book ' + n, 'season/robot-game/fll-challenge-bioglow-bi-enus-book-' + n + '.pdf', 'PDF'];
+  })],
+  ['Session slide decks', [['Intro session', 'season/sessions/fll-challenge-bioglow-session-slide-intro.pptx', 'PPTX']]
+    .concat(Array.from({length: 12}, (_, i) => ['Session ' + (i+1), 'season/sessions/fll-challenge-bioglow-session-slide-' + (i+1) + '.pptx', 'PPTX']))],
+  ['Resources', [
+    ['Multimedia resources', 'season/resources/fll-challenge-bioglow-multimedia-resources.pdf', 'PDF']]],
   ['Certificates', [
     ['Welcome certificate', 'season/certificates/first_canopy_fll_bioglow_certificatewelcome_ppt_ltr.pptx', 'PPTX'],
     ['Founders-edition certificate', 'season/certificates/first_canopy_fll_foundersedition_bioglow_certificate_ppt_ltr.pptx', 'PPTX']]],
@@ -490,9 +554,10 @@ function renderLib() {
       const li = document.createElement('li');
       const a = document.createElement('a'); a.href = href; a.target = '_blank'; a.rel = 'noopener';
       a.textContent = label;
+      if (tag === 'PDF') a.onclick = e => { e.preventDefault(); openPdf(href, null, label); };
       li.appendChild(a);
       const s = document.createElement('span'); s.className = 'ft';
-      s.textContent = tag === 'PDF' ? 'PDF · opens in browser' : tag === 'PPTX' ? 'PPTX · downloads' : 'on GitHub';
+      s.textContent = tag === 'PDF' ? 'PDF · opens in browser' : tag === 'PPTX' ? 'PPTX · downloads' : tag === 'DL' ? 'downloads · open in SPIKE app' : 'on GitHub';
       li.appendChild(s);
       ul.appendChild(li);
     });

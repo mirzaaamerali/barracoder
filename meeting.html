@@ -299,6 +299,22 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
   .count.live .n{animation:none} html{scroll-behavior:auto}
   .jobcard.in{animation:none} .flash{animation:none} .ring .prg{transition:none}
 }
+
+.ckrow{display:flex; flex-wrap:wrap; align-items:center; gap:6px}
+.ckrow .chk{flex:1; min-width:230px}
+.ref{display:inline-flex; align-items:center; font-size:11px; font-weight:800; color:var(--glow);
+  border:1px solid var(--glow); border-radius:99px; padding:2px 10px; background:var(--glow-soft);
+  cursor:pointer; white-space:nowrap; font-family:inherit}
+.ref:hover{background:var(--glow); color:var(--accent-ink)}
+.ref:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.pdfview{position:fixed; inset:0; z-index:60; background:rgba(10,16,12,.55); display:flex; align-items:stretch; justify-content:center; padding:2.5vh 2.5vw}
+.pdfview[hidden]{display:none}
+.pvbox{display:flex; flex-direction:column; width:min(1000px,100%); background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden}
+.pvhead{display:flex; align-items:center; gap:12px; padding:10px 14px; border-bottom:1px solid var(--line)}
+.pvhead b{font-size:14px; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.pvhead a{font-size:12.5px; font-weight:700; text-decoration:none; color:var(--accent)}
+.pvhead button{background:var(--deep); border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-weight:700; font-size:13px; color:var(--ink); cursor:pointer}
+.pvbox iframe{flex:1; width:100%; border:0; background:#525659}
 </style>
 </head>
 <body>
@@ -358,7 +374,7 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
 
   <section id="phasesec"><h2>Section progress<span class="bar"></span></h2><div class="phases" id="phases"></div></section>
 
-  <footer>Barracoder · FIRST LEGO League Explore · BioGlow season · <a href="index.html">full season plan</a> · content © FIRST &amp; the LEGO Group</footer>
+  <footer>Barracoder · FIRST LEGO League Challenge · BioGlow season · <a href="index.html">full season plan</a> · content © FIRST &amp; the LEGO Group</footer>
 </div>
 
 <!-- ============ RUN MODE ============ -->
@@ -477,13 +493,14 @@ function show(i) {
   pill.className = 'pill ' + (m.kind === 'event' ? 'event' : 'gate');
   pill.textContent = m.kind === 'event' ? '✨ Event day' : '⏳ Deadline';
   fillList('goals', m.goals, 'goal');
-  buildCheck('plan', m.activities, m.date + ':plan', refreshProgress);
+  buildCheck('plan', m.activities, m.date + ':plan', refreshProgress, m.activity_refs);
   buildCheck('donelist', m.deliverables || [], m.date + ':done', () => {});
   $('donesec').hidden = !(m.deliverables && m.deliverables.length);
   const mats = $('mats'); mats.innerHTML = '';
   (m.materials || []).forEach(x => {
     const a = document.createElement('a');
     a.href = x.href; a.target = '_blank'; a.rel = 'noopener'; a.textContent = '📄 ' + x.label;
+    if (/\.pdf$/i.test(x.href) && !/^https?:/i.test(x.href)) a.onclick = e => { e.preventDefault(); openPdf(x.href, null, x.label); };
     mats.appendChild(a);
   });
   const deck = m.deck && DATA.decks[m.deck];
@@ -508,7 +525,7 @@ function toggleIdx(key, i) {
   LSset(key, on ? s.filter(x => x !== i) : [...s, i]);
   return !on;
 }
-function buildCheck(id, items, key, onchange) {
+function buildCheck(id, items, key, onchange, refs) {
   const el = $(id); el.innerHTML = '';
   const saved = LS(key);
   items.forEach((t, i) => {
@@ -525,7 +542,15 @@ function buildCheck(id, items, key, onchange) {
       onchange();
       if (RUN.open) renderPanel();
     };
-    el.appendChild(b);
+    const row = document.createElement('div'); row.className = 'ckrow';
+    row.appendChild(b);
+    (((refs || [])[i]) || []).forEach(r => {
+      const c = document.createElement('button'); c.type = 'button'; c.className = 'ref';
+      c.textContent = '📖 ' + r.label;
+      c.onclick = () => openPdf(r.href, r.page, r.label);
+      row.appendChild(c);
+    });
+    el.appendChild(row);
   });
 }
 function meetingPct(m) {
@@ -1006,7 +1031,7 @@ function runCheck(label, key, idx){
       o.querySelector('.box').textContent = now ? '✓' : '';
     });
     refreshProgress();
-    buildCheck('plan', M[cur].activities, M[cur].date + ':plan', refreshProgress);
+    buildCheck('plan', M[cur].activities, M[cur].date + ':plan', refreshProgress, M[cur].activity_refs);
     buildCheck('donelist', M[cur].deliverables || [], M[cur].date + ':done', () => {});
     if (SEGS[RUN.seg].id === 'close') checkParty();
   };
@@ -1040,7 +1065,7 @@ function planCheck(m, e){
       o.querySelector('.box').textContent = now ? '✓' : '';
     });
     refreshProgress();
-    buildCheck('plan', m.activities, m.date + ':plan', refreshProgress);
+    buildCheck('plan', m.activities, m.date + ':plan', refreshProgress, m.activity_refs);
     if (SEGS[RUN.seg].id === 'close') checkParty();
   };
   return b;
@@ -1259,6 +1284,39 @@ function burst() {
     else { cx.clearRect(0,0,cv.width,cv.height); bursting = false; }
   })();
 }
+
+let pvReturn = null;
+function openPdf(href, page, title) {
+  pvReturn = document.activeElement;
+  document.getElementById('pvtitle').textContent = (title || href.split('/').pop()) + (page ? ' — p.' + page : '');
+  const u = href + (page ? '#page=' + page : '');
+  document.getElementById('pvnew').href = u;
+  document.getElementById('pvframe').src = u;
+  document.getElementById('pdfview').hidden = false;
+  document.getElementById('pvclose').focus();
+}
+function closePdf() {
+  document.getElementById('pdfview').hidden = true;
+  document.getElementById('pvframe').src = 'about:blank';
+  if (pvReturn) pvReturn.focus();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('pvclose').onclick = closePdf;
+  document.getElementById('pdfview').addEventListener('click', e => { if (e.target.id === 'pdfview') closePdf(); });
+});
+document.addEventListener('keydown', e => {
+  const pv = document.getElementById('pdfview');
+  if (e.key === 'Escape' && pv && !pv.hidden) { e.stopPropagation(); closePdf(); }
+}, true);
 </script>
+
+<div class="pdfview" id="pdfview" hidden role="dialog" aria-modal="true" aria-label="Document viewer">
+  <div class="pvbox">
+    <div class="pvhead"><b id="pvtitle"></b>
+      <a id="pvnew" target="_blank" rel="noopener">Open in tab ↗</a>
+      <button id="pvclose" type="button">✕ Close</button></div>
+    <iframe id="pvframe" title="Document"></iframe>
+  </div>
+</div>
 </body>
 </html>
