@@ -36,25 +36,10 @@ button{font:inherit; color:inherit; cursor:pointer}
 /* header */
 .top{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; margin-bottom:22px}
 .eyebrow{font-size:11.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); font-weight:700}
-.biglogo{width:min(560px,88vw); height:auto; margin-top:2px}
+.biglogo{width:min(280px,55vw); height:auto; margin-top:2px}
 @media (prefers-color-scheme: dark){ .biglogo{filter:drop-shadow(0 0 18px rgba(255,255,255,.10))} }
 .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 h1{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:clamp(26px,4.6vw,36px); margin:.1em 0 0; text-wrap:balance}
-.sub{color:var(--muted); font-size:14px; margin-top:2px}
-.todaybtn{display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--accent-ink);
-  font-weight:700; font-size:14.5px; padding:11px 20px; border-radius:12px; text-decoration:none; border:none; box-shadow:var(--shadow)}
-.todaybtn:hover{filter:brightness(1.07)}
-.todaybtn:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
-/* stat tiles */
-.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:18px 0 22px}
-.tile{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow)}
-.tile .lab{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
-.tile .val{font-size:22px; font-weight:800; margin-top:3px; font-family:Futura,"Avenir Next",system-ui,sans-serif}
-.tile .note{font-size:12.5px; color:var(--muted); margin-top:2px}
-.tile.scrim{border-color:var(--ph-scrim)} .tile.scrim .val{color:var(--ph-scrim)}
-.tile.paper{border-color:var(--amber)} .tile.paper .val{color:var(--amber)}
-.tile .tbar{height:7px; background:var(--deep); border-radius:99px; overflow:hidden; margin-top:8px; border:1px solid var(--line)}
-.tile .tbar>div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--glow)); transition:width .35s}
 /* tabs */
 .tabs{display:flex; gap:6px; border-bottom:2px solid var(--line); margin-bottom:20px}
 .tab{background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-2px;
@@ -62,6 +47,10 @@ h1{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-
 .tab:hover{color:var(--ink); background:var(--deep)}
 .tab.on{color:var(--accent); border-bottom-color:var(--accent)}
 .tab:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
+.tabtoday{margin-left:auto; align-self:center; background:var(--accent); color:var(--accent-ink);
+  font-weight:700; font-size:13.5px; padding:7px 15px; border-radius:99px; text-decoration:none; margin-bottom:6px}
+.tabtoday:hover{filter:brightness(1.08)}
+.tabtoday:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
 /* board groups */
 .group{margin-bottom:26px}
 .ghead{display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap}
@@ -186,25 +175,13 @@ footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); colo
     <div class="eyebrow">White Lake Robotics · FIRST LEGO League Challenge · BioGlow</div>
     <img class="biglogo" src="assets/brand/barracoder-logo-web.png" alt="Barracoder">
     <h1 class="visually-hidden">Barracoder Season Board</h1>
-    <div class="sub">Season board · Tuesdays &amp; Thursdays 6:00–7:30 pm · tap any row to see the plan and tick it off</div>
-    <a class="todaybtn" href="meeting.html">✨ Today's meeting</a>
-  </div>
-
-  <div class="tiles">
-    <div class="tile"><div class="lab">Season progress</div><div class="val" id="t-season">–</div>
-      <div class="tbar"><div id="t-seasonbar"></div></div></div>
-    <div class="tile scrim"><div class="lab">Scrimmage · Sun Nov 8</div><div class="val" id="t-scrim">–</div>
-      <div class="note">dry run of the main event</div></div>
-    <div class="tile paper"><div class="lab">Paperwork · due Oct 31</div><div class="val" id="t-paper">–</div>
-      <div class="note" id="t-papernote">items remaining</div></div>
-    <div class="tile"><div class="lab">Main festival</div><div class="val">Dec · TBD</div>
-      <div class="note">register at Session 7 checkpoint</div></div>
   </div>
 
   <div class="tabs" role="tablist">
     <button class="tab on" role="tab" data-v="board" aria-selected="true">Board</button>
     <button class="tab" role="tab" data-v="cal" aria-selected="false">Calendar</button>
     <button class="tab" role="tab" data-v="lib" aria-selected="false">Library</button>
+    <a class="tabtoday" href="meeting.html">✨ Today</a>
   </div>
 
   <div class="view on" id="v-board"></div>
@@ -291,23 +268,7 @@ function render() {
   renderBoard(); renderTiles(); renderCal(); renderLib();
 }
 
-function renderTiles() {
-  const iso = todayIso();
-  let T = 0, D = 0;
-  DATA.meetings.forEach(m => { T += m.activities.length; D += Math.min(LS(m.date + ':plan').length, m.activities.length); });
-  const pct = T ? Math.round(100 * D / T) : 0;
-  $('#t-season').textContent = pct + '%';
-  $('#t-seasonbar').style.width = pct + '%';
-  const scrim = DATA.meetings.find(m => m.kind === 'event');
-  if (scrim) {
-    const days = Math.ceil((new Date(scrim.date + 'T09:00:00') - new Date()) / 86400000);
-    $('#t-scrim').textContent = days > 1 ? days + ' days' : days === 1 ? 'Tomorrow!' : days === 0 ? 'TODAY ✨' : 'Done ✓';
-  }
-  const done = LS('paperwork');
-  const left = (DATA.paperwork || []).length - done.length;
-  $('#t-paper').textContent = left <= 0 ? 'All done ✓' : left + ' open';
-  $('#t-papernote').textContent = left <= 0 ? 'every document complete' : 'of ' + DATA.paperwork.length + ' documents';
-}
+function renderTiles() { /* header tiles removed by request — hook kept for checklist callbacks */ }
 
 function renderBoard() {
   const iso = todayIso();
