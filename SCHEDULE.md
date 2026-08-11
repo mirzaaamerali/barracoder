@@ -1,4 +1,4 @@
-# Barracoders — BioGlow season schedule
+# Barracoder — BioGlow season schedule
 
 **Meetings:** Tuesdays & Thursdays, 6:00–7:30 pm  
 **Scrimmage (dry-run festival):** Tue **Nov 10, 2026**  
@@ -16,63 +16,63 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-08-11 | Tue | [Kickoff + Intro Session: Let's Get Started](#20260811-tue) |
-| 2026-08-13 | Thu | [Session 1: Canopy Connections](#20260813-thu) |
-| 2026-08-18 | Tue | [Session 2: Creature Creators](#20260818-tue) |
-| 2026-08-20 | Thu | [Coding readiness: SPIKE app Tutorial Activities](#20260820-thu) |
-| 2026-08-25 | Tue | [Session 3: Animal Alarm (first coding session)](#20260825-tue) |
-| 2026-08-27 | Thu | [Session 4: Treehouse Camp (motor blocks)](#20260827-thu) |
-| 2026-09-01 | Tue | [Session 5: Science Helpers (lifting platform) — Mid-season checkpoint 1](#20260901-tue) |
-| 2026-09-03 | Thu | [Session 6: Research Tools (sensor + hub)](#20260903-thu) |
-| 2026-09-08 | Tue | [Session 7: Dream Treehouse — Mid-season checkpoint 2 + festival registration deadline](#20260908-tue) |
-| 2026-09-10 | Thu | [Coding consolidation + Core Values banking](#20260910-thu) |
-| 2026-09-15 | Tue | [Session 8: Team Model (meeting 1 of 2)](#20260915-tue) |
-| 2026-09-17 | Thu | [Session 8: Team Model (meeting 2 of 2)](#20260917-thu) |
-| 2026-09-22 | Tue | [Session 8 overflow: model refinement + code narration](#20260922-tue) |
-| 2026-09-24 | Thu | [Session 9: Team Poster (meeting 1 of 2)](#20260924-thu) |
-| 2026-09-29 | Tue | [Session 9: Team Poster (meeting 2 of 2)](#20260929-tue) |
-| 2026-10-01 | Thu | [Session 9 overflow: finish poster + first walk-through (hard gate)](#20261001-thu) |
-| 2026-10-06 | Tue | [Session 10: Prepare for Your Event](#20261006-tue) |
+| 2026-08-11 | Tue | [Kickoff + Intro Session: Let's Get Started](#2026-08-11-tue--kickoff--intro-session-lets-get-started) |
+| 2026-08-13 | Thu | [Session 1: Canopy Connections](#2026-08-13-thu--session-1-canopy-connections) |
+| 2026-08-18 | Tue | [Session 2: Creature Creators](#2026-08-18-tue--session-2-creature-creators) |
+| 2026-08-20 | Thu | [Coding readiness: SPIKE app Tutorial Activities](#2026-08-20-thu--coding-readiness-spike-app-tutorial-activities) |
+| 2026-08-25 | Tue | [Session 3: Animal Alarm (first coding session)](#2026-08-25-tue--session-3-animal-alarm-first-coding-session) |
+| 2026-08-27 | Thu | [Session 4: Treehouse Camp (motor blocks)](#2026-08-27-thu--session-4-treehouse-camp-motor-blocks) |
+| 2026-09-01 | Tue | [Session 5: Science Helpers (lifting platform) — Mid-season checkpoint 1](#2026-09-01-tue--session-5-science-helpers-lifting-platform--mid-season-checkpoint-1) |
+| 2026-09-03 | Thu | [Session 6: Research Tools (sensor + hub)](#2026-09-03-thu--session-6-research-tools-sensor--hub) |
+| 2026-09-08 | Tue | [Session 7: Dream Treehouse — Mid-season checkpoint 2 + festival registration deadline](#2026-09-08-tue--session-7-dream-treehouse--mid-season-checkpoint-2--festival-registration-deadline) |
+| 2026-09-10 | Thu | [Coding consolidation + Core Values banking](#2026-09-10-thu--coding-consolidation--core-values-banking) |
+| 2026-09-15 | Tue | [Session 8: Team Model (meeting 1 of 2)](#2026-09-15-tue--session-8-team-model-meeting-1-of-2) |
+| 2026-09-17 | Thu | [Session 8: Team Model (meeting 2 of 2)](#2026-09-17-thu--session-8-team-model-meeting-2-of-2) |
+| 2026-09-22 | Tue | [Session 8 overflow: model refinement + code narration](#2026-09-22-tue--session-8-overflow-model-refinement--code-narration) |
+| 2026-09-24 | Thu | [Session 9: Team Poster (meeting 1 of 2)](#2026-09-24-thu--session-9-team-poster-meeting-1-of-2) |
+| 2026-09-29 | Tue | [Session 9: Team Poster (meeting 2 of 2)](#2026-09-29-tue--session-9-team-poster-meeting-2-of-2) |
+| 2026-10-01 | Thu | [Session 9 overflow: finish poster + first walk-through (hard gate)](#2026-10-01-thu--session-9-overflow-finish-poster--first-walk-through-hard-gate) |
+| 2026-10-06 | Tue | [Session 10: Prepare for Your Event](#2026-10-06-tue--session-10-prepare-for-your-event) |
 
 ### Phase 2 — Festival prep, mock reviews, paperwork close-out
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-10-08 | Thu | [Mock reviewing session 1](#20261008-thu) |
-| 2026-10-13 | Tue | [Targeted improvement from mock review 1](#20261013-tue) |
-| 2026-10-15 | Thu | [Mock reviewing session 2 + Special Activities practice](#20261015-thu) |
-| 2026-10-20 | Tue | [Paperwork completion audit + outside-audience prep](#20261020-tue) |
-| 2026-10-22 | Thu | [Presentation to an outside audience](#20261022-thu) |
-| 2026-10-27 | Tue | [Feedback fixes + FINAL paperwork sign-off](#20261027-tue) |
-| 2026-10-29 | Thu | [Scrimmage rehearsal 1: full dress rehearsal](#20261029-thu) |
-| 2026-11-03 | Tue | [Scrimmage rehearsal 2: scored full run](#20261103-tue) |
-| 2026-11-05 | Thu | [Scrimmage rehearsal 3: final dress + confidence](#20261105-thu) |
+| 2026-10-08 | Thu | [Mock reviewing session 1](#2026-10-08-thu--mock-reviewing-session-1) |
+| 2026-10-13 | Tue | [Targeted improvement from mock review 1](#2026-10-13-tue--targeted-improvement-from-mock-review-1) |
+| 2026-10-15 | Thu | [Mock reviewing session 2 + Special Activities practice](#2026-10-15-thu--mock-reviewing-session-2--special-activities-practice) |
+| 2026-10-20 | Tue | [Paperwork completion audit + outside-audience prep](#2026-10-20-tue--paperwork-completion-audit--outside-audience-prep) |
+| 2026-10-22 | Thu | [Presentation to an outside audience](#2026-10-22-thu--presentation-to-an-outside-audience) |
+| 2026-10-27 | Tue | [Feedback fixes + FINAL paperwork sign-off](#2026-10-27-tue--feedback-fixes--final-paperwork-sign-off) |
+| 2026-10-29 | Thu | [Scrimmage rehearsal 1: full dress rehearsal](#2026-10-29-thu--scrimmage-rehearsal-1-full-dress-rehearsal) |
+| 2026-11-03 | Tue | [Scrimmage rehearsal 2: scored full run](#2026-11-03-tue--scrimmage-rehearsal-2-scored-full-run) |
+| 2026-11-05 | Thu | [Scrimmage rehearsal 3: final dress + confidence](#2026-11-05-thu--scrimmage-rehearsal-3-final-dress--confidence) |
 
 ### Phase 3 — Scrimmage
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-11-10 | Tue | [SCRIMMAGE (dry-run festival — treat like the real event)](#20261110-tue) |
+| 2026-11-10 | Tue | [SCRIMMAGE (dry-run festival — treat like the real event)](#2026-11-10-tue--scrimmage-dry-run-festival--treat-like-the-real-event) |
 
 ### Phase 4 — Improve for the main festival
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-11-12 | Thu | [Scrimmage debrief: feedback into a fix list](#20261112-thu) |
-| 2026-11-17 | Tue | [Improvement 1: team model + code](#20261117-tue) |
-| 2026-11-19 | Thu | [Improvement 2: poster + presentation](#20261119-thu) |
-| 2026-11-24 | Tue | [Mock reviewing 3 with improved artifacts](#20261124-tue) |
-| 2026-12-01 | Tue | [Final polish + main festival logistics](#20261201-tue) |
-| 2026-12-03 | Thu | [Main-event dress rehearsal](#20261203-thu) |
-| 2026-12-08 | Tue | [Final festival prep (flex for TBD festival date)](#20261208-tue) |
-| 2026-12-10 | Thu | [Festival-week flex meeting](#20261210-thu) |
+| 2026-11-12 | Thu | [Scrimmage debrief: feedback into a fix list](#2026-11-12-thu--scrimmage-debrief-feedback-into-a-fix-list) |
+| 2026-11-17 | Tue | [Improvement 1: team model + code](#2026-11-17-tue--improvement-1-team-model--code) |
+| 2026-11-19 | Thu | [Improvement 2: poster + presentation](#2026-11-19-thu--improvement-2-poster--presentation) |
+| 2026-11-24 | Tue | [Mock reviewing 3 with improved artifacts](#2026-11-24-tue--mock-reviewing-3-with-improved-artifacts) |
+| 2026-12-01 | Tue | [Final polish + main festival logistics](#2026-12-01-tue--final-polish--main-festival-logistics) |
+| 2026-12-03 | Thu | [Main-event dress rehearsal](#2026-12-03-thu--main-event-dress-rehearsal) |
+| 2026-12-08 | Tue | [Final festival prep (flex for TBD festival date)](#2026-12-08-tue--final-festival-prep-flex-for-tbd-festival-date) |
+| 2026-12-10 | Thu | [Festival-week flex meeting](#2026-12-10-thu--festival-week-flex-meeting) |
 
 ### Phase 5 — Wrap-up & celebration
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-12-15 | Tue | [Post-season wrap-up: teardown + inventory + reflection](#20261215-tue) |
-| 2026-12-17 | Thu | [Season celebration + certificates](#20261217-thu) |
+| 2026-12-15 | Tue | [Post-season wrap-up: teardown + inventory + reflection](#2026-12-15-tue--post-season-wrap-up-teardown--inventory--reflection) |
+| 2026-12-17 | Thu | [Season celebration + certificates](#2026-12-17-thu--season-celebration--certificates) |
 
 ## Meeting details
 
@@ -83,6 +83,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 
 ### 2026-08-11 Tue — Kickoff + Intro Session: Let's Get Started
+
+**Materials:** [Intro session slides](season/sessions/fll-explore-bioglow-session-slides-intro.pptx) · [Team Meeting Guide](season/guides/fll-explore-bioglow-TMG.pdf) · [Engineering Notebook](season/guides/fll-explore-bioglow-EN.pdf)
 
 **Goals**
 - Form the team and understand the Explore Story, season journey, and Core Values
@@ -105,6 +107,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-08-13 Thu — Session 1: Canopy Connections
 
+**Materials:** [Session 1 slides](season/sessions/fll-explore-bioglow-session-slides-1.pptx) · [Build Book 1 (tree)](season/resources/fll-explore-bioglow-bi-book-1.pdf) · [Engineering Notebook](season/guides/fll-explore-bioglow-EN.pdf)
+
 **Goals**
 - Explore the BIOGLOW theme and share biodiversity knowledge
 - Build the tree model
@@ -124,6 +128,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-08-18 Tue — Session 2: Creature Creators
 
+**Materials:** [Session 2 slides](season/sessions/fll-explore-bioglow-session-slides-2.pptx) · [Build Book 2 (animals · lift · device)](season/resources/fll-explore-bioglow-bi-book-2.pdf)
+
 **Goals**
 - Build all Explore Set animals and invent new ones
 - Introduce Core Value: Impact
@@ -142,6 +148,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-08-20 Thu — Coding readiness: SPIKE app Tutorial Activities
 
+**Materials:** [Team Meeting Guide](season/guides/fll-explore-bioglow-TMG.pdf) · [Multimedia connections](season/resources/fll-explore-bioglow-multimedia-connections.pdf)
+
 **Goals**
 - Prepare a coding-new team before Session 3 (TMG recommendation)
 - Verify device, app, and hub setup
@@ -157,6 +165,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Hub updated and fully charged for Session 3
 
 ### 2026-08-25 Tue — Session 3: Animal Alarm (first coding session)
+
+**Materials:** [Session 3 slides](season/sessions/fll-explore-bioglow-session-slides-3.pptx) · [Team Meeting Guide](season/guides/fll-explore-bioglow-TMG.pdf)
 
 **Goals**
 - Complete SPIKE Coding Lesson 1 and explore sensor + sound blocks
@@ -175,6 +185,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-08-27 Thu — Session 4: Treehouse Camp (motor blocks)
 
+**Materials:** [Session 4 slides](season/sessions/fll-explore-bioglow-session-slides-4.pptx)
+
 **Goals**
 - Complete SPIKE Coding Lesson 2 and explore motor-coding blocks
 - Discuss observing wildlife from treehouses
@@ -192,6 +204,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Coding Lesson 2 complete; motor blocks used and explained
 
 ### 2026-09-01 Tue — Session 5: Science Helpers (lifting platform) — Mid-season checkpoint 1
+
+**Materials:** [Session 5 slides](season/sessions/fll-explore-bioglow-session-slides-5.pptx) · [Build Book 2 (animals · lift · device)](season/resources/fll-explore-bioglow-bi-book-2.pdf)
 
 **Goals**
 - Build the lifting platform and run/modify the provided code
@@ -212,6 +226,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-09-03 Thu — Session 6: Research Tools (sensor + hub)
 
+**Materials:** [Session 6 slides](season/sessions/fll-explore-bioglow-session-slides-6.pptx) · [Build Book 2 (animals · lift · device)](season/resources/fll-explore-bioglow-bi-book-2.pdf)
+
 **Goals**
 - Build research tools and the sensor-driven research device
 - Learn tools/technology and jobs that study biodiversity
@@ -230,6 +246,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Custom prototyped research tool on the mat
 
 ### 2026-09-08 Tue — Session 7: Dream Treehouse — Mid-season checkpoint 2 + festival registration deadline
+
+**Materials:** [Session 7 slides](season/sessions/fll-explore-bioglow-session-slides-7.pptx) · [Paperwork checklist](docs/DOCUMENTS.md)
 
 **Goals**
 - Learn the six biodiversity careers and their tools
@@ -250,6 +268,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-09-10 Thu — Coding consolidation + Core Values banking
 
+**Materials:** [Multimedia connections](season/resources/fll-explore-bioglow-multimedia-connections.pdf) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Strengthen the code-explanation skills two of the four model criteria depend on
 - Bank Core Values examples (reviewing criteria 8-9)
@@ -266,6 +286,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Written bank of Core Values examples started
 
 ### 2026-09-15 Tue — Session 8: Team Model (meeting 1 of 2)
+
+**Materials:** [Session 8 slides](season/sessions/fll-explore-bioglow-session-slides-8.pptx) · [Engineering Notebook](season/guides/fll-explore-bioglow-EN.pdf)
 
 **Goals**
 - Review the team model requirements and design the model
@@ -284,6 +306,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-09-17 Thu — Session 8: Team Model (meeting 2 of 2)
 
+**Materials:** [Session 8 slides](season/sessions/fll-explore-bioglow-session-slides-8.pptx) · [Engineering Notebook](season/guides/fll-explore-bioglow-EN.pdf)
+
 **Goals**
 - Finish the team model on the mat with all required elements
 - Motorize and code a chosen part
@@ -301,6 +325,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-09-22 Tue — Session 8 overflow: model refinement + code narration
 
+**Materials:** [Session 8 slides](season/sessions/fll-explore-bioglow-session-slides-8.pptx) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Polish the motorized mechanism (EN planning note: buffer meeting after Session 8)
 - Prepare kids to explain the model and code (reviewing criteria 4-7)
@@ -316,6 +342,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Every child can identify and explain model parts
 
 ### 2026-09-24 Thu — Session 9: Team Poster (meeting 1 of 2)
+
+**Materials:** [Session 9 slides](season/sessions/fll-explore-bioglow-session-slides-9.pptx) · [Engineering Notebook](season/guides/fll-explore-bioglow-EN.pdf)
 
 **Goals**
 - Plan poster content covering the team journey
@@ -333,6 +361,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-09-29 Tue — Session 9: Team Poster (meeting 2 of 2)
 
+**Materials:** [Session 9 slides](season/sessions/fll-explore-bioglow-session-slides-9.pptx)
+
 **Goals**
 - Create the poster with every team member contributing
 
@@ -348,6 +378,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-10-01 Thu — Session 9 overflow: finish poster + first walk-through (hard gate)
 
+**Materials:** [Session 9 slides](season/sessions/fll-explore-bioglow-session-slides-9.pptx) · [Multimedia connections](season/resources/fll-explore-bioglow-multimedia-connections.pdf)
+
 **Goals**
 - Finish the poster (Session 9 absorbed two old sessions — extra time is per the multimedia guide)
 - Meet the EN p.25 gate: model AND poster complete before Session 10
@@ -362,6 +394,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] HARD GATE MET: team model and team poster both complete
 
 ### 2026-10-06 Tue — Session 10: Prepare for Your Event
+
+**Materials:** [Session 10 slides](season/sessions/fll-explore-bioglow-session-slides-10.pptx) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Reviewing flowchart](season/events/fll-explore-bioglow-reviewing-flowchart.pdf) · [Fillable reviewing docs](season/events/fll-explore-bioglow-reviewing-documents-fillable.pdf)
 
 **Goals**
 - Reflect on the BIOGLOW experience; plan and practice what to share at the festival
@@ -386,6 +420,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-10-08 Thu — Mock reviewing session 1
 
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Reviewing flowchart](season/events/fll-explore-bioglow-reviewing-flowchart.pdf) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
+
 **Goals**
 - Experience the exact 25-minute reviewing format
 - Baseline the team against the 9 reviewing criteria
@@ -400,6 +436,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Completed mock reviewing sheet with per-criterion ratings
 
 ### 2026-10-13 Tue — Targeted improvement from mock review 1
+
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
 
 **Goals**
 - Move 'Beginning' criteria toward 'Accomplished'
@@ -417,6 +455,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-10-15 Thu — Mock reviewing session 2 + Special Activities practice
 
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
+
 **Goals**
 - Re-score against the 9 criteria
 - Practice the event's surprise STEM activities
@@ -431,6 +471,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Second scored reviewing sheet showing improvement
 
 ### 2026-10-20 Tue — Paperwork completion audit + outside-audience prep
+
+**Materials:** [Paperwork checklist](docs/DOCUMENTS.md) · [Certificate (welcome)](season/certificates/first_canopy_fll_bioglow_certificatewelcome_ppt_ltr.pptx) · [Certificate (founders)](season/certificates/first_canopy_fll_foundersedition_bioglow_certificate_ppt_ltr.pptx)
 
 **Goals**
 - Verify every completion document ahead of the Oct 31 deadline
@@ -447,6 +489,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-10-22 Thu — Presentation to an outside audience
 
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Present model + poster to real guests before the scrimmage (TMG-suggested practice)
 
@@ -460,6 +504,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Guest feedback captured for the improvement meeting
 
 ### 2026-10-27 Tue — Feedback fixes + FINAL paperwork sign-off
+
+**Materials:** [Paperwork checklist](docs/DOCUMENTS.md)
 
 **Goals**
 - Apply outside-audience feedback
@@ -476,6 +522,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-10-29 Thu — Scrimmage rehearsal 1: full dress rehearsal
 
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
+
 **Goals**
 - Rehearse the entire scrimmage day end-to-end
 
@@ -490,6 +538,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-11-03 Tue — Scrimmage rehearsal 2: scored full run
 
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Fillable reviewing docs](season/events/fll-explore-bioglow-reviewing-documents-fillable.pdf)
+
 **Goals**
 - Hit 'Accomplished' on all 9 criteria in a timed run
 
@@ -503,6 +553,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Scored sheet at or near 'Accomplished' on all 9 lines
 
 ### 2026-11-05 Thu — Scrimmage rehearsal 3: final dress + confidence
+
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
 
 **Goals**
 - Lock the presentation and Q&A; end on fun
@@ -524,6 +576,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-11-10 Tue — SCRIMMAGE (dry-run festival — treat like the real event)
 
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
+
 **Goals**
 - Run the full festival experience: showcase, Special Activities, reviewing, celebration
 
@@ -544,6 +598,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-11-12 Thu — Scrimmage debrief: feedback into a fix list
 
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Convert reviewer feedback into a concrete improvement backlog for the December festival
 
@@ -557,6 +613,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Prioritized improvement backlog mapped to the 9 reviewing criteria
 
 ### 2026-11-17 Tue — Improvement 1: team model + code
+
+**Materials:** [Session 8 slides](season/sessions/fll-explore-bioglow-session-slides-8.pptx) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
 
 **Goals**
 - Fix model and coding items from the scrimmage backlog
@@ -572,6 +630,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-11-19 Thu — Improvement 2: poster + presentation
 
+**Materials:** [Session 9 slides](season/sessions/fll-explore-bioglow-session-slides-9.pptx) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Fix poster and presentation items from the scrimmage backlog
 
@@ -586,6 +646,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-11-24 Tue — Mock reviewing 3 with improved artifacts
 
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Reviewing flowchart](season/events/fll-explore-bioglow-reviewing-flowchart.pdf)
+
 **Goals**
 - Verify the improvements moved the scores
 
@@ -599,6 +661,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Post-improvement scored sheet; short December polish list
 
 ### 2026-12-01 Tue — Final polish + main festival logistics
+
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Paperwork checklist](docs/DOCUMENTS.md)
 
 **Goals**
 - Close the polish list; lock festival logistics with families
@@ -615,6 +679,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-12-03 Thu — Main-event dress rehearsal
 
+**Materials:** [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
+
 **Goals**
 - Full festival-day rehearsal with the final artifacts
 
@@ -629,6 +695,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-12-08 Tue — Final festival prep (flex for TBD festival date)
 
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
+
 **Goals**
 - Be fully packed and confident whatever the exact festival date
 
@@ -642,6 +710,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] Team festival-ready: artifacts packed, roles rehearsed, families briefed
 
 ### 2026-12-10 Thu — Festival-week flex meeting
+
+**Materials:** [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
 
 **Goals**
 - Support the main festival whenever it lands; keep it light and fun
@@ -661,6 +731,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 ### 2026-12-15 Tue — Post-season wrap-up: teardown + inventory + reflection
 
+**Materials:** [Team Meeting Guide](season/guides/fll-explore-bioglow-TMG.pdf)
+
 **Goals**
 - Complete the TMG post-season wrap-up
 
@@ -674,6 +746,8 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - [ ] SPIKE Essential set inventoried; model retired; reflections done
 
 ### 2026-12-17 Thu — Season celebration + certificates
+
+**Materials:** [Certificate (welcome)](season/certificates/first_canopy_fll_bioglow_certificatewelcome_ppt_ltr.pptx) · [Certificate (founders)](season/certificates/first_canopy_fll_foundersedition_bioglow_certificate_ppt_ltr.pptx)
 
 **Goals**
 - Celebrate every child and close the season

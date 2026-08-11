@@ -3,7 +3,7 @@
 Everything under [season/](../season/) is official FIRST® LEGO® League Explore
 material for the BioGlow season, downloaded from the FIRST season-resources
 pages. It is © FIRST and the LEGO Group and is redistributed here solely for
-the use of the Barracoders team (White Lake Robotics).
+the use of the Barracoder team (White Lake Robotics).
 
 If you are from another team: please download your own copies from the
 official source so you always have the current revision:

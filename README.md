@@ -1,8 +1,8 @@
-# Barracoders 🐟🤖
+# Barracoder 🐟🤖
 
 **FIRST® LEGO® League Explore — BioGlow season — White Lake Robotics**
 
-Team hub for the Barracoders: season schedule, paperwork tracking, event prep,
+Team hub for the Barracoder team: season schedule, paperwork tracking, event prep,
 and every official season document in one place.
 
 ## Key dates
