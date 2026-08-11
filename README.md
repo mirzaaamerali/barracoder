@@ -5,6 +5,11 @@
 Team hub for the Barracoder team: season schedule, paperwork tracking, event prep,
 and every official season document in one place.
 
+**🌐 Team site (share this with teachers & volunteers):**
+**[mirzaaamerali.github.io/barracoder](https://mirzaaamerali.github.io/barracoder/)** —
+the full schedule plus a document library where every PDF opens right in the
+browser. Notes and ideas live in [notes/](notes/).
+
 ## Key dates
 
 | When | What |
