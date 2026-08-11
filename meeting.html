@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barracoder — Daily Meeting</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<style>
+:root{
+  --night:#071310; --pool:#0D1F18; --deep:#0A1913; --ink:#EAF7ED; --moss:#9DBCA6;
+  --glow:#3FE8CE; --glow-dim:#1D6E64; --fern:#4ED887; --firefly:#D9F76C; --ember:#FFC66E;
+  --line:rgba(122,204,164,.18); --glow-soft:rgba(63,232,206,.12); --ember-soft:rgba(255,198,110,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--night); color:var(--ink); line-height:1.55; font-size:16px;
+  font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif;
+  background-image:radial-gradient(1100px 500px at 80% -10%, rgba(63,232,206,.07), transparent 60%),
+                   radial-gradient(900px 420px at 8% 12%, rgba(78,216,135,.06), transparent 55%);}
+#sky{position:fixed; inset:0; pointer-events:none; z-index:0}
+.wrap{position:relative; z-index:1; max-width:880px; margin:0 auto; padding:28px 18px 90px}
+a{color:var(--glow)}
+.crumbs{display:flex; align-items:center; gap:10px; font-size:13px; color:var(--moss); margin-bottom:22px}
+.crumbs a{color:var(--moss); text-decoration:none; font-weight:600}
+.crumbs a:hover{color:var(--glow)}
+.crumbs .sep{opacity:.5}
+.eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--fern); font-weight:700}
+.datebar{display:flex; align-items:center; gap:14px; margin:10px 0 4px; flex-wrap:wrap}
+.bigdate{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700;
+  font-size:clamp(30px,6vw,46px); letter-spacing:.01em; text-wrap:balance}
+h1.ttl{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:600;
+  font-size:clamp(19px,3.4vw,26px); margin:2px 0 14px; color:var(--ink); text-wrap:balance; max-width:34ch}
+.pill{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+  padding:4px 12px; border-radius:99px; white-space:nowrap}
+.pill.phase{background:var(--glow-soft); color:var(--glow); border:1px solid var(--glow-dim)}
+.pill.gate{background:var(--ember-soft); color:var(--ember); border:1px solid var(--ember)}
+.pill.event{background:var(--glow); color:#06231E}
+.count{display:inline-flex; align-items:baseline; gap:8px; background:var(--pool);
+  border:1px solid var(--line); border-radius:12px; padding:8px 14px; margin:2px 0 20px}
+.count .n{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700;
+  font-size:18px; color:var(--firefly); font-variant-numeric:tabular-nums}
+.count .l{font-size:13px; color:var(--moss)}
+.count.live{border-color:var(--firefly); box-shadow:0 0 22px rgba(217,247,108,.15)}
+.count.live .n{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+.nav{display:flex; gap:10px; align-items:center; margin:0 0 26px; flex-wrap:wrap}
+.nav button, .nav select{background:var(--pool); color:var(--ink); border:1px solid var(--line);
+  border-radius:10px; padding:8px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer}
+.nav button:hover{border-color:var(--glow); color:var(--glow)}
+.nav button:focus-visible, .nav select:focus-visible, .chk:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
+section{margin:30px 0}
+h2{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-size:15px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--fern); font-weight:700; margin:0 0 12px;
+  display:flex; align-items:center; gap:10px}
+h2 .bar{flex:1; height:1px; background:var(--line)}
+.goals{display:flex; flex-direction:column; gap:8px}
+.goal{background:var(--pool); border:1px solid var(--line); border-left:3px solid var(--fern);
+  border-radius:10px; padding:10px 14px; font-size:15px}
+.progresswrap{display:flex; align-items:center; gap:12px; margin-bottom:12px}
+.progress{flex:1; height:8px; background:var(--deep); border-radius:99px; overflow:hidden; border:1px solid var(--line)}
+.progress>div{height:100%; width:0%; background:linear-gradient(90deg,var(--fern),var(--glow)); border-radius:99px; transition:width .35s ease}
+.pct{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; color:var(--moss); min-width:44px; text-align:right}
+.check{display:flex; flex-direction:column; gap:8px}
+.chk{display:flex; gap:12px; align-items:flex-start; background:var(--pool); border:1px solid var(--line);
+  border-radius:10px; padding:11px 14px; cursor:pointer; font-size:15px; user-select:none; transition:opacity .2s}
+.chk .box{flex:none; width:22px; height:22px; border:2px solid var(--glow-dim); border-radius:7px;
+  margin-top:1px; display:grid; place-items:center; color:#06231E; font-weight:900; font-size:14px; transition:all .15s}
+.chk.on{opacity:.6}
+.chk.on .box{background:var(--firefly); border-color:var(--firefly)}
+.chk.on .t{text-decoration:line-through; text-decoration-color:var(--moss)}
+.done .chk .box{border-radius:50%}
+.mats{display:flex; flex-wrap:wrap; gap:10px}
+.mats a{display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:700; color:var(--glow);
+  border:1px solid var(--glow-dim); background:var(--pool); border-radius:99px; padding:7px 15px; text-decoration:none}
+.mats a:hover{border-color:var(--glow); box-shadow:0 0 14px rgba(63,232,206,.18)}
+/* slide viewer */
+.viewer{background:var(--pool); border:1px solid var(--line); border-radius:16px; overflow:hidden}
+.stage{position:relative; min-height:280px; padding:22px 22px 14px}
+.slide-title{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; color:var(--firefly); text-wrap:balance}
+.slide-points{margin:0 0 12px; padding-left:20px}
+.slide-points li{margin:5px 0; font-size:15px}
+.slide-imgs{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px}
+.slide-imgs img{max-width:min(100%,320px); max-height:230px; border-radius:10px; border:1px solid var(--line); background:#fff}
+.tip{margin-top:12px; font-size:13.5px; color:var(--night); background:var(--ember); border-radius:10px; padding:9px 13px; display:none}
+.tip.show{display:block}
+.tip b{letter-spacing:.06em}
+.vbar{display:flex; align-items:center; gap:10px; padding:12px 16px; border-top:1px solid var(--line); flex-wrap:wrap}
+.vbar button{background:var(--deep); color:var(--ink); border:1px solid var(--line); border-radius:10px;
+  padding:8px 16px; font:inherit; font-weight:700; cursor:pointer; font-size:14px}
+.vbar button:hover:not(:disabled){border-color:var(--glow); color:var(--glow)}
+.vbar button:disabled{opacity:.35; cursor:default}
+.vbar button:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
+.dots{flex:1; display:flex; gap:5px; justify-content:center; flex-wrap:wrap}
+.dots i{width:7px; height:7px; border-radius:50%; background:var(--glow-dim); cursor:pointer}
+.dots i.on{background:var(--firefly)}
+.slideno{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:12.5px; color:var(--moss); font-variant-numeric:tabular-nums}
+.dl{font-size:12.5px; color:var(--moss)}
+.dl a{color:var(--moss)}
+.burst{position:fixed; inset:0; pointer-events:none; z-index:5}
+.empty{color:var(--moss); font-size:14px; background:var(--pool); border:1px dashed var(--line); border-radius:12px; padding:14px 16px}
+footer{margin-top:60px; padding-top:16px; border-top:1px solid var(--line); color:var(--moss); font-size:13px}
+@media (prefers-reduced-motion: reduce){ .count.live .n{animation:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="wrap">
+  <nav class="crumbs"><a href="index.html">← Barracoder team hub</a><span class="sep">·</span><span>Daily meeting page</span></nav>
+
+  <div class="eyebrow" id="phasename">…</div>
+  <div class="datebar"><div class="bigdate" id="bigdate">Loading…</div><span class="pill phase" id="pill" hidden></span></div>
+  <h1 class="ttl" id="title"></h1>
+  <div class="count" id="count" hidden><span class="n" id="countn"></span><span class="l" id="countl"></span></div>
+
+  <div class="nav">
+    <button id="prev" aria-label="Previous meeting">← Prev</button>
+    <select id="datesel" aria-label="Jump to meeting"></select>
+    <button id="next" aria-label="Next meeting">Next →</button>
+    <button id="today" title="Jump to today / next meeting">✨ Today</button>
+  </div>
+
+  <section id="goalsec"><h2>Tonight's goals<span class="bar"></span></h2><div class="goals" id="goals"></div></section>
+
+  <section id="plansec"><h2>The 90-minute plan<span class="bar"></span></h2>
+    <div class="progresswrap"><div class="progress"><div id="pbar"></div></div><span class="pct" id="ppct">0%</span></div>
+    <div class="check" id="plan"></div>
+  </section>
+
+  <section id="slidesec" hidden><h2>Session slides<span class="bar"></span></h2>
+    <div class="viewer">
+      <div class="stage" id="stage"></div>
+      <div class="vbar">
+        <button id="sprev" aria-label="Previous slide">←</button>
+        <div class="dots" id="dots"></div>
+        <button id="snext" aria-label="Next slide">→</button>
+        <span class="slideno" id="slideno"></span>
+        <button id="tipbtn" title="Coach tip from the speaker notes">💡 Tip</button>
+      </div>
+    </div>
+    <p class="dl" id="dl"></p>
+  </section>
+
+  <section id="matsec"><h2>Materials for tonight<span class="bar"></span></h2><div class="mats" id="mats"></div></section>
+
+  <section id="donesec" class="done"><h2>Done when<span class="bar"></span></h2><div class="check" id="donelist"></div></section>
+
+  <footer>Barracoder · FIRST LEGO League Explore · BioGlow season · <a href="index.html">full season plan</a> · content © FIRST &amp; the LEGO Group</footer>
+</div>
+<canvas class="burst" id="burst" aria-hidden="true"></canvas>
+
+<script>
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = id => document.getElementById(id);
+let DATA = null, M = [], cur = 0, slideIdx = 0, tipOn = false;
+
+fetch('meetings.json').then(r => r.json()).then(d => { DATA = d; M = d.meetings; boot(); })
+  .catch(() => { $('bigdate').textContent = 'Could not load meetings.json'; });
+
+function todayIdx() {
+  const now = new Date();
+  const iso = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  let i = M.findIndex(m => m.date === iso);
+  if (i >= 0) return i;
+  i = M.findIndex(m => m.date > iso);
+  return i >= 0 ? i : M.length - 1;
+}
+function boot() {
+  const sel = $('datesel');
+  M.forEach((m, i) => {
+    const o = document.createElement('option');
+    const [y,mo,da] = m.date.split('-');
+    o.value = i; o.textContent = `${m.day} ${mo}/${da} — ${m.title.length > 42 ? m.title.slice(0,40)+'…' : m.title}`;
+    sel.appendChild(o);
+  });
+  const q = new URLSearchParams(location.search).get('date');
+  const qi = q ? M.findIndex(m => m.date === q) : -1;
+  show(qi >= 0 ? qi : todayIdx());
+  $('prev').onclick = () => show(cur-1); $('next').onclick = () => show(cur+1);
+  $('today').onclick = () => show(todayIdx());
+  sel.onchange = e => show(+e.target.value);
+  $('sprev').onclick = () => slide(slideIdx-1); $('snext').onclick = () => slide(slideIdx+1);
+  $('tipbtn').onclick = () => { tipOn = !tipOn; renderSlide(); };
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'SELECT') return;
+    if (e.key === 'ArrowLeft') slide(slideIdx-1);
+    if (e.key === 'ArrowRight') slide(slideIdx+1);
+  });
+  let tx = null;
+  $('stage').addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+  $('stage').addEventListener('touchend', e => {
+    if (tx === null) return;
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 45) slide(slideIdx + (dx < 0 ? 1 : -1));
+    tx = null;
+  }, {passive:true});
+  if (!REDUCED) fireflies();
+  setInterval(tickCount, 1000);
+}
+function show(i) {
+  cur = Math.max(0, Math.min(M.length-1, i));
+  const m = M[cur];
+  history.replaceState(null, '', '?date=' + m.date);
+  $('datesel').value = cur;
+  $('prev').disabled = cur === 0; $('next').disabled = cur === M.length-1;
+  const [y,mo,da] = m.date.split('-');
+  const MN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  $('phasename').textContent = m.phase;
+  $('bigdate').textContent = `${m.day === 'Tue' ? 'Tuesday' : 'Thursday'} ${MN[+mo]} ${+da}`;
+  $('title').textContent = m.title;
+  const pill = $('pill');
+  pill.hidden = m.kind === 'meeting';
+  pill.className = 'pill ' + (m.kind === 'event' ? 'event' : 'gate');
+  pill.textContent = m.kind === 'event' ? '✨ Event day' : '⏳ Deadline';
+  fillList('goals', m.goals, 'goal');
+  buildCheck('plan', m.activities, m.date + ':plan', updateProgress);
+  buildCheck('donelist', m.deliverables || [], m.date + ':done', () => {});
+  $('donesec').hidden = !(m.deliverables && m.deliverables.length);
+  const mats = $('mats'); mats.innerHTML = '';
+  (m.materials || []).forEach(x => {
+    const a = document.createElement('a');
+    a.href = x.href; a.target = '_blank'; a.rel = 'noopener'; a.textContent = '📄 ' + x.label;
+    mats.appendChild(a);
+  });
+  const deck = m.deck && DATA.decks[m.deck];
+  $('slidesec').hidden = !deck;
+  if (deck) {
+    slideIdx = 0; tipOn = false;
+    $('dl').innerHTML = 'Prefer the original? <a href="season/sessions/' + deck.file + '">Download the PowerPoint</a>.';
+    renderSlide();
+  }
+  updateProgress(); tickCount();
+  scrollTo({top: 0, behavior: REDUCED ? 'auto' : 'smooth'});
+}
+function fillList(id, items, cls) {
+  const el = $(id); el.innerHTML = '';
+  items.forEach(t => { const d = document.createElement('div'); d.className = cls; d.textContent = t; el.appendChild(d); });
+}
+function buildCheck(id, items, key, onchange) {
+  const el = $(id); el.innerHTML = '';
+  const saved = JSON.parse(localStorage.getItem('bar:' + key) || '[]');
+  items.forEach((t, i) => {
+    const b = document.createElement('button');
+    b.className = 'chk' + (saved.includes(i) ? ' on' : ''); b.type = 'button';
+    b.innerHTML = '<span class="box">' + (saved.includes(i) ? '✓' : '') + '</span><span class="t"></span>';
+    b.querySelector('.t').textContent = t;
+    b.onclick = () => {
+      const s = JSON.parse(localStorage.getItem('bar:' + key) || '[]');
+      const on = s.includes(i);
+      const ns = on ? s.filter(x => x !== i) : [...s, i];
+      localStorage.setItem('bar:' + key, JSON.stringify(ns));
+      b.classList.toggle('on', !on);
+      b.querySelector('.box').textContent = on ? '' : '✓';
+      onchange();
+    };
+    el.appendChild(b);
+  });
+}
+function updateProgress() {
+  const m = M[cur]; if (!m) return;
+  const saved = JSON.parse(localStorage.getItem('bar:' + m.date + ':plan') || '[]');
+  const total = m.activities.length;
+  const pct = total ? Math.round(100 * Math.min(saved.length, total) / total) : 0;
+  $('pbar').style.width = pct + '%';
+  $('ppct').textContent = pct + '%';
+  if (pct === 100 && !REDUCED) burst();
+}
+function tickCount() {
+  const m = M[cur]; if (!m) return;
+  const start = new Date(m.date + 'T18:00:00'), end = new Date(m.date + 'T19:30:00'), now = new Date();
+  const c = $('count'); c.hidden = false; c.classList.remove('live');
+  if (now >= start && now <= end) {
+    c.classList.add('live');
+    const left = Math.floor((end - now) / 60000);
+    $('countn').textContent = '● LIVE'; $('countl').textContent = left + ' min left — have fun!';
+  } else if (now < start) {
+    const mins = Math.floor((start - now) / 60000);
+    const d = Math.floor(mins / 1440), h = Math.floor((mins % 1440) / 60), mm = mins % 60;
+    $('countn').textContent = d > 0 ? `${d}d ${h}h` : `${h}h ${String(mm).padStart(2,'0')}m`;
+    $('countl').textContent = 'until this meeting · 6:00 pm';
+  } else {
+    $('countn').textContent = '✓'; $('countl').textContent = 'this meeting is done — great job, team';
+  }
+}
+function slide(i) {
+  const deck = DATA.decks[M[cur].deck]; if (!deck) return;
+  slideIdx = Math.max(0, Math.min(deck.slides.length-1, i));
+  tipOn = false; renderSlide();
+}
+function renderSlide() {
+  const deck = DATA.decks[M[cur].deck]; if (!deck) return;
+  const s = deck.slides[slideIdx], st = $('stage');
+  st.innerHTML = '';
+  const h = document.createElement('h3'); h.className = 'slide-title'; h.textContent = s.title; st.appendChild(h);
+  if (s.points.length) {
+    const ul = document.createElement('ul'); ul.className = 'slide-points';
+    s.points.forEach(p => { const li = document.createElement('li'); li.textContent = p; ul.appendChild(li); });
+    st.appendChild(ul);
+  }
+  if (s.images.length) {
+    const iw = document.createElement('div'); iw.className = 'slide-imgs';
+    s.images.slice(0,3).forEach(src => {
+      const im = document.createElement('img'); im.src = src; im.alt = s.title; im.loading = 'lazy'; iw.appendChild(im);
+    });
+    st.appendChild(iw);
+  }
+  if (s.tip) {
+    const tp = document.createElement('div'); tp.className = 'tip' + (tipOn ? ' show' : '');
+    tp.innerHTML = '<b>💡 COACH TIP&nbsp;</b>'; tp.appendChild(document.createTextNode(s.tip));
+    st.appendChild(tp);
+  }
+  $('tipbtn').style.visibility = s.tip ? 'visible' : 'hidden';
+  $('sprev').disabled = slideIdx === 0; $('snext').disabled = slideIdx === deck.slides.length-1;
+  $('slideno').textContent = (slideIdx+1) + '/' + deck.slides.length;
+  const dots = $('dots'); dots.innerHTML = '';
+  deck.slides.forEach((_, i) => {
+    const d = document.createElement('i'); if (i === slideIdx) d.className = 'on';
+    d.onclick = () => slide(i); dots.appendChild(d);
+  });
+}
+/* ambient fireflies */
+function fireflies() {
+  const cv = $('sky'), cx = cv.getContext('2d');
+  let W, H, P = [];
+  const resize = () => { W = cv.width = innerWidth; H = cv.height = innerHeight;
+    P = Array.from({length: Math.min(46, W/28)}, () => ({
+      x: Math.random()*W, y: Math.random()*H, r: 1.2 + Math.random()*2.2,
+      a: Math.random()*Math.PI*2, sp: .15 + Math.random()*.4, ph: Math.random()*Math.PI*2 })); };
+  resize(); addEventListener('resize', resize);
+  (function tick(t) {
+    if (document.hidden) { requestAnimationFrame(tick); return; }
+    cx.clearRect(0,0,W,H);
+    P.forEach(p => {
+      p.a += (Math.random()-.5)*.12; p.x += Math.cos(p.a)*p.sp; p.y += Math.sin(p.a)*p.sp*.7;
+      if (p.x < -20) p.x = W+20; if (p.x > W+20) p.x = -20;
+      if (p.y < -20) p.y = H+20; if (p.y > H+20) p.y = -20;
+      const glow = .25 + .75*Math.abs(Math.sin(t/900 + p.ph));
+      const g = cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*7);
+      g.addColorStop(0, `rgba(217,247,108,${.75*glow})`);
+      g.addColorStop(.35, `rgba(63,232,206,${.22*glow})`);
+      g.addColorStop(1, 'rgba(63,232,206,0)');
+      cx.fillStyle = g; cx.beginPath(); cx.arc(p.x,p.y,p.r*7,0,7); cx.fill();
+    });
+    requestAnimationFrame(tick);
+  })(0);
+}
+/* completion celebration */
+let bursting = false;
+function burst() {
+  if (bursting) return; bursting = true;
+  const cv = $('burst'), cx = cv.getContext('2d');
+  cv.width = innerWidth; cv.height = innerHeight;
+  const P = Array.from({length: 90}, () => ({
+    x: innerWidth/2, y: innerHeight*.35, a: Math.random()*Math.PI*2,
+    v: 2.5 + Math.random()*5.5, r: 1.5 + Math.random()*2.5, life: 1,
+    c: Math.random() < .5 ? '217,247,108' : '63,232,206' }));
+  (function tick() {
+    cx.clearRect(0,0,cv.width,cv.height);
+    let alive = false;
+    P.forEach(p => {
+      if (p.life <= 0) return; alive = true;
+      p.x += Math.cos(p.a)*p.v; p.y += Math.sin(p.a)*p.v + 1.1; p.v *= .985; p.life -= .012;
+      cx.fillStyle = `rgba(${p.c},${p.life})`;
+      cx.beginPath(); cx.arc(p.x,p.y,p.r,0,7); cx.fill();
+    });
+    if (alive) requestAnimationFrame(tick);
+    else { cx.clearRect(0,0,cv.width,cv.height); bursting = false; }
+  })();
+}
+</script>
+</body>
+</html>

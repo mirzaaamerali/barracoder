@@ -1,0 +1,3130 @@
+{
+ "meetings": [
+  {
+   "date": "2026-08-11",
+   "day": "Tue",
+   "title": "Kickoff + Intro Session: Let's Get Started",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Form the team and understand the Explore Story, season journey, and Core Values",
+    "Launch all season paperwork with families",
+    "Establish roles and material-management routine"
+   ],
+   "activities": [
+    "Walk through the wordless Explore Story comic (intro deck slides 2-4)",
+    "Present the team journey: challenge -> Core Values -> team model via Explore/Create/Test/Share -> poster -> festival",
+    "Introduce the 7 rotating team roles (+optional Team Captain)",
+    "Write team name and all member names on Engineering Notebook p.3; write season goals on p.6 (START HERE)",
+    "Introduce the six Core Values and the p.7 draw/write page",
+    "Show the BIOGLOW Explore Set and set the material routine; watch a BIOGLOW season playlist video",
+    "Send home consent/registration forms; communicate Tue/Thu cadence and festival plan to families"
+   ],
+   "deliverables": [
+    "EN p.3 team name + roster complete",
+    "EN p.6 season goals written",
+    "Consent forms distributed; meeting schedule communicated to families"
+   ],
+   "materials": [
+    {
+     "label": "Intro session slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-intro.pptx"
+    },
+    {
+     "label": "Team Meeting Guide",
+     "href": "season/guides/fll-explore-bioglow-TMG.pdf"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-explore-bioglow-EN.pdf"
+    }
+   ],
+   "deck": "intro"
+  },
+  {
+   "date": "2026-08-13",
+   "day": "Thu",
+   "title": "Session 1: Canopy Connections",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Explore the BIOGLOW theme and share biodiversity knowledge",
+    "Build the tree model",
+    "Introduce Core Value: Discovery"
+   ],
+   "activities": [
+    "Discovery intro 5-10 min (TMG p.5 definition; draw example on EN p.7)",
+    "Vocabulary: biodiversity, canopy, habitat; guiding questions on the Explore Story (EN p.4); write/draw on p.8",
+    "Build the tree model (Book 1, Bags 1-3) after sorting groups 1-9",
+    "Discuss rainforest layers (EN p.30) and which animals live floor vs canopy; draw animals on p.9",
+    "Challenge: rearrange the leaves to make a specific habitat",
+    "Share to the room; Career Connection: Wildlife Biologist; clean up \u2014 KEEP tree assembled"
+   ],
+   "deliverables": [
+    "Tree model built and stored assembled",
+    "Discovery example on Core Values page"
+   ],
+   "materials": [
+    {
+     "label": "Session 1 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-1.pptx"
+    },
+    {
+     "label": "Build Book 1 (tree)",
+     "href": "season/resources/fll-explore-bioglow-bi-book-1.pdf"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-explore-bioglow-EN.pdf"
+    }
+   ],
+   "deck": "1"
+  },
+  {
+   "date": "2026-08-18",
+   "day": "Tue",
+   "title": "Session 2: Creature Creators",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Build all Explore Set animals and invent new ones",
+    "Introduce Core Value: Impact"
+   ],
+   "activities": [
+    "Recap + vocabulary (camouflage, behaviors); Impact intro 5-10 min with EN p.7 drawing",
+    "Split into pairs and build the three animals (Book 2, Bags 4-6); label animal parts in notebooks",
+    "Lay out the Explore mat, decide where each animal lives, tell a story about one animal",
+    "Challenge: trade pieces to invent a new animal \u2014 name, diet, movement, mat home",
+    "Share differences between animals; clean up: fold/store mat, CHARGE the SPIKE set",
+    "Collect signed consent forms from families"
+   ],
+   "deliverables": [
+    "All animal models built",
+    "Signed consent forms coming in"
+   ],
+   "materials": [
+    {
+     "label": "Session 2 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-2.pptx"
+    },
+    {
+     "label": "Build Book 2 (animals \u00b7 lift \u00b7 device)",
+     "href": "season/resources/fll-explore-bioglow-bi-book-2.pdf"
+    }
+   ],
+   "deck": "2"
+  },
+  {
+   "date": "2026-08-20",
+   "day": "Thu",
+   "title": "Coding readiness: SPIKE app Tutorial Activities",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Prepare a coding-new team before Session 3 (TMG recommendation)",
+    "Verify device, app, and hub setup"
+   ],
+   "activities": [
+    "Run SPIKE app Tutorial Activities as a team (TMG pre-season/Session 3 tip for teams new to coding)",
+    "Verify SPIKE app + FIRST LEGO League Explore Unit access on the team device; update and charge the hub",
+    "Core Values example-banking (5-10 min): record concrete teamwork moments so far",
+    "Team-building game and goal-setting videos (How To Set Goals 4:40 / SMART goals 2:52) from the Multimedia Resources"
+   ],
+   "deliverables": [
+    "Device + Explore Unit lessons verified working",
+    "Hub updated and fully charged for Session 3"
+   ],
+   "materials": [
+    {
+     "label": "Team Meeting Guide",
+     "href": "season/guides/fll-explore-bioglow-TMG.pdf"
+    },
+    {
+     "label": "Multimedia connections",
+     "href": "season/resources/fll-explore-bioglow-multimedia-connections.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-08-25",
+   "day": "Tue",
+   "title": "Session 3: Animal Alarm (first coding session)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Complete SPIKE Coding Lesson 1 and explore sensor + sound blocks",
+    "Learn how biologists detect animals",
+    "Introduce Core Value: Teamwork"
+   ],
+   "activities": [
+    "Recap + vocabulary (detect, program, sensor); Teamwork intro 5-10 min with EN p.7 drawing",
+    "Complete Coding Lesson 1 'Animal Alarm' in the SPIKE app Explore Unit; modify so the color changes when an animal moves in front of the sensor; write the program on EN p.12",
+    "Explore sound blocks; record a custom animal sound and trigger it on sensor detection; test with Session 2 creatures",
+    "Challenge: one sound per invented animal staged on the mat with its story",
+    "Share coding blocks learned; clean up: take EVERYTHING apart, return to storage, charge the set"
+   ],
+   "deliverables": [
+    "Coding Lesson 1 complete; program recorded on EN p.12"
+   ],
+   "materials": [
+    {
+     "label": "Session 3 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-3.pptx"
+    },
+    {
+     "label": "Team Meeting Guide",
+     "href": "season/guides/fll-explore-bioglow-TMG.pdf"
+    }
+   ],
+   "deck": "3"
+  },
+  {
+   "date": "2026-08-27",
+   "day": "Thu",
+   "title": "Session 4: Treehouse Camp (motor blocks)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Complete SPIKE Coding Lesson 2 and explore motor-coding blocks",
+    "Discuss observing wildlife from treehouses",
+    "Introduce Core Value: Fun"
+   ],
+   "activities": [
+    "Recap + vocabulary (motor, observe, treehouse); Fun intro 5-10 min with EN p.7 drawing",
+    "Complete Coding Lesson 2 'Treehouse Camp'; change the program so the roof opens slowly; write ideas on EN p.14",
+    "Camouflage the treehouse model with SPIKE Essential pieces and place it on the mat",
+    "Challenge: program roof open 5s / close 5s repeated 2-3 times; each child shares build + code",
+    "Optional extension for fast finishers: Arctic Ride motor lesson",
+    "Clean up: disassemble everything, return to storage, charge the set"
+   ],
+   "deliverables": [
+    "Coding Lesson 2 complete; motor blocks used and explained"
+   ],
+   "materials": [
+    {
+     "label": "Session 4 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-4.pptx"
+    }
+   ],
+   "deck": "4"
+  },
+  {
+   "date": "2026-09-01",
+   "day": "Tue",
+   "title": "Session 5: Science Helpers (lifting platform) \u2014 Mid-season checkpoint 1",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Build the lifting platform and run/modify the provided code",
+    "Discuss how people collaborate to study the rainforest",
+    "Introduce Core Value: Innovation; halfway goals check"
+   ],
+   "activities": [
+    "Recap + vocabulary (platform, protect); Innovation intro 5-10 min with EN p.7 drawing",
+    "Build the lifting platform (Book 2, Bags 2 & 7 \u2014 motor, gear train, rack gear, scissor lift), add a scientist minifig, run the provided program; write ideas on EN p.16",
+    "Rebuild/fetch the Session 1 tree; adapt the lift to reach different areas of the tree",
+    "Challenge: two scientists on the platform, decide their research, reprogram to raise AND lower safely (watch table edges; take turns editing code)",
+    "HALFWAY THERE reflection on EN p.6; verify checkpoint 1: tree + lift built, building/coding skills developing, team can describe why people study rainforest biodiversity",
+    "Clean up: KEEP tree and lift assembled; charge the set"
+   ],
+   "deliverables": [
+    "Lift built and safely programmed; tree + lift stored assembled",
+    "Mid-season checkpoint 1 met; p.6 halfway reflection done"
+   ],
+   "materials": [
+    {
+     "label": "Session 5 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-5.pptx"
+    },
+    {
+     "label": "Build Book 2 (animals \u00b7 lift \u00b7 device)",
+     "href": "season/resources/fll-explore-bioglow-bi-book-2.pdf"
+    }
+   ],
+   "deck": "5"
+  },
+  {
+   "date": "2026-09-03",
+   "day": "Thu",
+   "title": "Session 6: Research Tools (sensor + hub)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Build research tools and the sensor-driven research device",
+    "Learn tools/technology and jobs that study biodiversity",
+    "Introduce Core Value: Inclusion"
+   ],
+   "activities": [
+    "Recap + vocabulary (research, tool); Inclusion intro 5-10 min with EN p.7 drawing",
+    "Brainstorm and draw research tools; build one from prototyping pieces (Bags 9-13) and place it on the mat; test with Session 2 animals",
+    "Build the research device (Book 2, Bag 8); attach sensor + hub per Book 2; run the provided program and take turns moving it around the mat",
+    "Challenge: reprogram to activate on a different color; test on the team's animals; write findings on EN p.19",
+    "Career Connections: Wildlife Biologist and Conservation Scientist (EN pp.5, 28-29); revisit goals page",
+    "Clean up: KEEP the research device assembled; charge the set"
+   ],
+   "deliverables": [
+    "Research device built, coded, and stored assembled",
+    "Custom prototyped research tool on the mat"
+   ],
+   "materials": [
+    {
+     "label": "Session 6 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-6.pptx"
+    },
+    {
+     "label": "Build Book 2 (animals \u00b7 lift \u00b7 device)",
+     "href": "season/resources/fll-explore-bioglow-bi-book-2.pdf"
+    }
+   ],
+   "deck": "6"
+  },
+  {
+   "date": "2026-09-08",
+   "day": "Tue",
+   "title": "Session 7: Dream Treehouse \u2014 Mid-season checkpoint 2 + festival registration deadline",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Learn the six biodiversity careers and their tools",
+    "Design and build a treehouse/research station for scientists",
+    "COACH: festival + scrimmage registration confirmed and shared with families (TMG deadline)"
+   ],
+   "activities": [
+    "Recap + vocabulary (ecosystem, nature); Discovery mini-build with prototyping pieces 5-10 min",
+    "Explore jobs on EN pp.5, 28-29: wildlife biologist, conservation scientist, botanist, environmental scientist, ecologist, forestry technician",
+    "Design a treehouse where a wildlife biologist safely watches a chosen animal; write/draw on EN p.20; build it from prototyping pieces (can extend the tree model)",
+    "Build a tool/technology for the treehouse; Challenge: add a botanist + plant-study tool; optional outdoor plant walk",
+    "Share jobs + technology learnings; clean up: take EVERYTHING apart; store SPIKE and Explore sets separately",
+    "Coach: verify checkpoint 2 (hub/attachment practice, tools/jobs explored) and confirm Nov 10 scrimmage + December festival registration, details sent to families"
+   ],
+   "deliverables": [
+    "Mid-season checkpoint 2 met",
+    "Scrimmage + festival registered; date/details shared with families and caregivers"
+   ],
+   "materials": [
+    {
+     "label": "Session 7 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-7.pptx"
+    },
+    {
+     "label": "Paperwork checklist",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
+    }
+   ],
+   "deck": "7"
+  },
+  {
+   "date": "2026-09-10",
+   "day": "Thu",
+   "title": "Coding consolidation + Core Values banking",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Strengthen the code-explanation skills two of the four model criteria depend on",
+    "Bank Core Values examples (reviewing criteria 8-9)"
+   ],
+   "activities": [
+    "Rebuild/rerun the lift and research-device programs; take turns modifying them (TMG: sessions may be revisited)",
+    "'Explain your code out loud' drills \u2014 each child narrates how a program makes a model move (reviewing packet hook)",
+    "Core Values micro-activity: collect concrete examples of teamwork and new skills, tagged to discovery, inclusion, innovation, impact, fun",
+    "Short surprise STEM mini-challenge in mixed pairs (event Special Activities practice)",
+    "Charge the set; confirm storage of assembled tree, lift, research device"
+   ],
+   "deliverables": [
+    "Every child has narrated at least one program aloud",
+    "Written bank of Core Values examples started"
+   ],
+   "materials": [
+    {
+     "label": "Multimedia connections",
+     "href": "season/resources/fll-explore-bioglow-multimedia-connections.pdf"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-09-15",
+   "day": "Tue",
+   "title": "Session 8: Team Model (meeting 1 of 2)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Review the team model requirements and design the model",
+    "Begin building; Core Values: Teamwork + Fun"
+   ],
+   "activities": [
+    "Teamwork + Fun mini-builds 5-10 min; vocabulary: model, design, label",
+    "Read the Team Model requirements aloud (EN p.23): LEGO elements only; all Explore Set parts + mat; a SPIKE-motorized part; a designed plant/animal; a rainforest job; a biodiversity-study tool/technology",
+    "Draw and LABEL the team model design on EN pp.22-23, including every member's ideas",
+    "Each member begins building an assigned part of the model (needs ALL Explore Set parts + mat)",
+    "Share design strengths; clean up: keep work-in-progress safe; return unused pieces"
+   ],
+   "deliverables": [
+    "Labeled team model design on EN pp.22-23",
+    "Model parts under construction"
+   ],
+   "materials": [
+    {
+     "label": "Session 8 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-8.pptx"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-explore-bioglow-EN.pdf"
+    }
+   ],
+   "deck": "8"
+  },
+  {
+   "date": "2026-09-17",
+   "day": "Thu",
+   "title": "Session 8: Team Model (meeting 2 of 2)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Finish the team model on the mat with all required elements",
+    "Motorize and code a chosen part"
+   ],
+   "activities": [
+    "Combine members' parts on the Explore mat; check it fits on a table and moves easily",
+    "Verify all required parts against the p.23 checklist: designed plant/animal, rainforest job, biodiversity tool/tech, whole Explore Set + mat, LEGO-only",
+    "Motorize any part with SPIKE Essential and code it using skills from Sessions 3-6",
+    "Share: demonstrate the moving part; each child points to and explains parts; discuss what to tell reviewers",
+    "Clean up: TEAM MODEL STAYS ASSEMBLED from now to the festival; return unused pieces"
+   ],
+   "deliverables": [
+    "Team model built, requirements verified, motorized part coded and working",
+    "Model stored assembled"
+   ],
+   "materials": [
+    {
+     "label": "Session 8 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-8.pptx"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-explore-bioglow-EN.pdf"
+    }
+   ],
+   "deck": "8"
+  },
+  {
+   "date": "2026-09-22",
+   "day": "Tue",
+   "title": "Session 8 overflow: model refinement + code narration",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Polish the motorized mechanism (EN planning note: buffer meeting after Session 8)",
+    "Prepare kids to explain the model and code (reviewing criteria 4-7)"
+   ],
+   "activities": [
+    "Test and improve the motorized/coded part's reliability; iterate per the Engineering Design Process (Explore/Create/Test/Share)",
+    "Each child practices describing the model, the Explore Set components used creatively, which part is motorized, and how the code works",
+    "Reporter captures photos/notes of the finished model for the poster and festival",
+    "Re-check model against the p.23 requirements; confirm safe storage and transportability"
+   ],
+   "deliverables": [
+    "Motorized part demonstrably reliable",
+    "Every child can identify and explain model parts"
+   ],
+   "materials": [
+    {
+     "label": "Session 8 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-8.pptx"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": "8"
+  },
+  {
+   "date": "2026-09-24",
+   "day": "Thu",
+   "title": "Session 9: Team Poster (meeting 1 of 2)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Plan poster content covering the team journey",
+    "Core Values: Innovation + Inclusion"
+   ],
+   "activities": [
+    "Innovation + Inclusion mini-builds 5-10 min; vocabulary: draft, team journey",
+    "Discuss required content: how the team worked together, what they learned about biodiversity, what they built as the team model, plus anything else \u2014 and real-world connections to people/careers/technologies (reviewing criterion 2)",
+    "Draft the poster plan on EN p.25, mining the Team Journey and Core Values notebook pages",
+    "Coach looks ahead to Session 10 reviewer questions while guiding content; decide how EACH person will talk about the poster",
+    "Sketch layout on extra drafting paper for the trifold board"
+   ],
+   "deliverables": [
+    "Poster content draft on EN p.25 with a section owner per child"
+   ],
+   "materials": [
+    {
+     "label": "Session 9 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-9.pptx"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-explore-bioglow-EN.pdf"
+    }
+   ],
+   "deck": "9"
+  },
+  {
+   "date": "2026-09-29",
+   "day": "Tue",
+   "title": "Session 9: Team Poster (meeting 2 of 2)",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Create the poster with every team member contributing"
+   ],
+   "activities": [
+    "Gather trifold poster board + art supplies (coach-supplied); children make the poster themselves, coach supports only",
+    "Build the three assessed sections: what we learned about BioGlow (specific facts/ideas), real-world people/careers/technologies, and our journey (what we built, coded, and learned)",
+    "Include Core Values and Reporter's photos/notes from the season",
+    "Practice how each person introduces their section",
+    "Clean up: extra time for art supplies; store the poster somewhere safe"
+   ],
+   "deliverables": [
+    "Poster substantially complete and stored safely"
+   ],
+   "materials": [
+    {
+     "label": "Session 9 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-9.pptx"
+    }
+   ],
+   "deck": "9"
+  },
+  {
+   "date": "2026-10-01",
+   "day": "Thu",
+   "title": "Session 9 overflow: finish poster + first walk-through (hard gate)",
+   "phase": "Core sessions",
+   "kind": "gate",
+   "goals": [
+    "Finish the poster (Session 9 absorbed two old sessions \u2014 extra time is per the multimedia guide)",
+    "Meet the EN p.25 gate: model AND poster complete before Session 10"
+   ],
+   "activities": [
+    "Complete any unfinished poster sections; final art cleanup",
+    "First full poster walk-through: team rehearses presenting the journey, biodiversity learnings, and the team model to a visitor",
+    "Quick model check: still assembled, motorized part still runs",
+    "Watch poster examples in the 2019 World Festival recap (1:10) to compare and improve"
+   ],
+   "deliverables": [
+    "HARD GATE MET: team model and team poster both complete"
+   ],
+   "materials": [
+    {
+     "label": "Session 9 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-9.pptx"
+    },
+    {
+     "label": "Multimedia connections",
+     "href": "season/resources/fll-explore-bioglow-multimedia-connections.pdf"
+    }
+   ],
+   "deck": "9"
+  },
+  {
+   "date": "2026-10-06",
+   "day": "Tue",
+   "title": "Session 10: Prepare for Your Event",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Reflect on the BIOGLOW experience; plan and practice what to share at the festival",
+    "Core Value: Impact; go over the reviewing sheet and process"
+   ],
+   "activities": [
+    "Impact mini-build 5-10 min; guiding questions: how the model relates to the theme, can you explain the coded program, how will you show team spirit",
+    "Coach walks through the reviewing sheet and reviewing process (downloaded via TMG p.30 QR link)",
+    "Assign speaking roles so each child covers a part: what was explored, describing the model, explaining the motorizing program, presenting the poster-as-journey, reflecting on Core Values",
+    "Fill in EN p.27 'What I Will Share with Reviewers'",
+    "Full practice run of poster and model presentations; team prepares its own materials checklist (model, poster, LEGO set, device, cord, charged battery)"
+   ],
+   "deliverables": [
+    "EN p.27 completed by all members",
+    "Speaking roles assigned; team materials checklist written",
+    "Reviewing sheet reviewed with the team"
+   ],
+   "materials": [
+    {
+     "label": "Session 10 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-10.pptx"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Reviewing flowchart",
+     "href": "season/events/fll-explore-bioglow-reviewing-flowchart.pdf"
+    },
+    {
+     "label": "Fillable reviewing docs",
+     "href": "season/events/fll-explore-bioglow-reviewing-documents-fillable.pdf"
+    }
+   ],
+   "deck": "10"
+  },
+  {
+   "date": "2026-10-08",
+   "day": "Thu",
+   "title": "Mock reviewing session 1",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Experience the exact 25-minute reviewing format",
+    "Baseline the team against the 9 reviewing criteria"
+   ],
+   "activities": [
+    "Run the full flow: welcome/introductions 2 min -> team presentation 5 min -> Q&A up to 10 min (poster, model, Core Values questions verbatim from the sheet) -> positive feedback 3 min -> reviewer deliberation 5 min",
+    "Coach plays reviewer with a printed reviewing sheet, ticking Beginning/Accomplished/Exceeds per line",
+    "Run it a second time with roles rotated; debrief between runs",
+    "List which of the 9 lines are still at 'Beginning' to target next meeting"
+   ],
+   "deliverables": [
+    "Completed mock reviewing sheet with per-criterion ratings"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Reviewing flowchart",
+     "href": "season/events/fll-explore-bioglow-reviewing-flowchart.pdf"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-13",
+   "day": "Tue",
+   "title": "Targeted improvement from mock review 1",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Move 'Beginning' criteria toward 'Accomplished'",
+    "Tighten the 5-minute presentation"
+   ],
+   "activities": [
+    "Work the weakest reviewing-sheet lines: poster theme facts, real-world connections, model-theme link, Explore Set usage story, motorized-part explanation, code narration",
+    "'Explain your code out loud' drills for criterion 7 (Coding Award hinges on this)",
+    "Core Values example rehearsal: concrete teamwork moments and new skills, tagged to discovery, inclusion, innovation, impact, fun",
+    "Rehearse the 5-minute presentation against a timer"
+   ],
+   "deliverables": [
+    "Presentation fits 5 minutes",
+    "Fix list from mock review 1 worked through"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-15",
+   "day": "Thu",
+   "title": "Mock reviewing session 2 + Special Activities practice",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Re-score against the 9 criteria",
+    "Practice the event's surprise STEM activities"
+   ],
+   "activities": [
+    "Second full 25-minute mock reviewing session, scored on a fresh printed sheet; every child answers at least one question",
+    "Compare ratings with mock 1; celebrate lines that moved up",
+    "Surprise-problem practice: a novel mini STEM challenge in unfamiliar groupings (simulates festival Special Activities with other teams' kids)",
+    "Teamwork reflection closer mapped to Core Values words"
+   ],
+   "deliverables": [
+    "Second scored reviewing sheet showing improvement"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-20",
+   "day": "Tue",
+   "title": "Paperwork completion audit + outside-audience prep",
+   "phase": "Festival prep",
+   "kind": "gate",
+   "goals": [
+    "Verify every completion document ahead of the Oct 31 deadline",
+    "Prepare to present to guests"
+   ],
+   "activities": [
+    "Audit the document checklist: EN p.27 for all members, Core Values page complete, consent forms all returned, scrimmage + festival registrations confirmed, participation certificates printed, packing checklist final",
+    "Rehearse the poster and model presentations for an outside audience (TMG Session 10 option)",
+    "Confirm scrimmage-day logistics with families: time, location, how long teams stay",
+    "Short criteria drill on any remaining weak lines"
+   ],
+   "deliverables": [
+    "Paperwork audit list with every item checked or assigned an owner"
+   ],
+   "materials": [
+    {
+     "label": "Paperwork checklist",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
+    },
+    {
+     "label": "Certificate (welcome)",
+     "href": "season/certificates/first_canopy_fll_bioglow_certificatewelcome_ppt_ltr.pptx"
+    },
+    {
+     "label": "Certificate (founders)",
+     "href": "season/certificates/first_canopy_fll_foundersedition_bioglow_certificate_ppt_ltr.pptx"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-22",
+   "day": "Thu",
+   "title": "Presentation to an outside audience",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Present model + poster to real guests before the scrimmage (TMG-suggested practice)"
+   ],
+   "activities": [
+    "Families/another class act as visitors; team delivers the 5-minute presentation",
+    "Guests ask reviewer-style questions from the sheet; each child answers at least one",
+    "Positive-feedback ritual (3 min) so kids experience the real format",
+    "Debrief: what felt hard, what to fix; Reporter notes feedback"
+   ],
+   "deliverables": [
+    "Guest feedback captured for the improvement meeting"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-27",
+   "day": "Tue",
+   "title": "Feedback fixes + FINAL paperwork sign-off",
+   "phase": "Festival prep",
+   "kind": "gate",
+   "goals": [
+    "Apply outside-audience feedback",
+    "Close all paperwork before the 2026-10-31 deadline"
+   ],
+   "activities": [
+    "Fix items from guest feedback: answer phrasing, poster tweaks, code-explanation clarity",
+    "Final paperwork sign-off: every checklist document confirmed complete \u2014 nothing may slip past Oct 31",
+    "Verify model integrity and hub charge routine",
+    "Core Values example bank final pass"
+   ],
+   "deliverables": [
+    "ALL season paperwork complete and signed off (deadline 2026-10-31)"
+   ],
+   "materials": [
+    {
+     "label": "Paperwork checklist",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-10-29",
+   "day": "Thu",
+   "title": "Scrimmage rehearsal 1: full dress rehearsal",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Rehearse the entire scrimmage day end-to-end"
+   ],
+   "activities": [
+    "Teardown/transport/re-stage drill: pack and re-set the team model (with working code) and poster as if arriving at the venue",
+    "Full 25-minute mock reviewing session: introductions 2 min, presentation 5 min, Q&A 10 min, feedback 3 min",
+    "Verify the packing list: model, poster, LEGO Education set, device, charging cord, fully charged battery",
+    "Set expectations: the day is a celebration \u2014 showcase, Special Activities, reviewers visiting the table, award ceremony where every team wins an award"
+   ],
+   "deliverables": [
+    "Transport/re-stage procedure proven; packing list verified"
+   ],
+   "materials": [
+    {
+     "label": "Scrimmage readiness",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-11-03",
+   "day": "Tue",
+   "title": "Scrimmage rehearsal 2: scored full run",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Hit 'Accomplished' on all 9 criteria in a timed run"
+   ],
+   "activities": [
+    "Full mock reviewing session scored on the fillable/printed sheet (9 criteria x Beginning/Accomplished/Exceeds)",
+    "Every child answers at least one poster, model, or Core Values question \u2014 kids talk, not the coach",
+    "Timed 5-minute presentation; adjust who says what if over time",
+    "Target remaining 'Beginning' lines with focused mini-drills"
+   ],
+   "deliverables": [
+    "Scored sheet at or near 'Accomplished' on all 9 lines"
+   ],
+   "materials": [
+    {
+     "label": "Scrimmage readiness",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md"
+    },
+    {
+     "label": "Fillable reviewing docs",
+     "href": "season/events/fll-explore-bioglow-reviewing-documents-fillable.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-11-05",
+   "day": "Thu",
+   "title": "Scrimmage rehearsal 3: final dress + confidence",
+   "phase": "Festival prep",
+   "kind": "meeting",
+   "goals": [
+    "Lock the presentation and Q&A; end on fun"
+   ],
+   "activities": [
+    "Final timed 5-minute presentation + verbatim 9-question drill",
+    "Surprise STEM mini-challenge (Special Activities simulation)",
+    "Family logistics brief for Nov 10; pack everything transport-ready (model, poster, set, device, cord, charged battery)",
+    "Watch 'How to Prepare for your Festival' (1:39) and celebrate with the GoNoodle dance \u2014 HAVE FUN is the overriding goal"
+   ],
+   "deliverables": [
+    "Everything packed and transport-ready for Nov 10",
+    "Every child confident in their speaking part"
+   ],
+   "materials": [
+    {
+     "label": "Scrimmage readiness",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-11-10",
+   "day": "Tue",
+   "title": "SCRIMMAGE (dry-run festival \u2014 treat like the real event)",
+   "phase": "Scrimmage",
+   "kind": "event",
+   "goals": [
+    "Run the full festival experience: showcase, Special Activities, reviewing, celebration"
+   ],
+   "activities": [
+    "Showcase the team model and poster to everyone present",
+    "Participate in Special STEM Activities, collaborating with other teams' children",
+    "Reviewing session: reviewers visit the table, team presents 5 min and answers the 9 sheet questions",
+    "Attend the award ceremony; support and interact with other teams (Gracious Professionalism)",
+    "Reporter/coach capture the completed reviewing sheet feedback for the debrief"
+   ],
+   "deliverables": [
+    "Scrimmage completed; reviewing-sheet feedback in hand"
+   ],
+   "materials": [
+    {
+     "label": "Scrimmage readiness",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-11-12",
+   "day": "Thu",
+   "title": "Scrimmage debrief: feedback into a fix list",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Convert reviewer feedback into a concrete improvement backlog for the December festival"
+   ],
+   "activities": [
+    "Celebrate the scrimmage \u2014 what went well, favorite moments",
+    "Map reviewer feedback line-by-line to the 9 criteria; identify lines below 'Accomplished'",
+    "Build a prioritized fix list: model/code items, poster items, presentation/Q&A items",
+    "Confirm model survived transport; repair anything damaged; charge the set"
+   ],
+   "deliverables": [
+    "Prioritized improvement backlog mapped to the 9 reviewing criteria"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-11-17",
+   "day": "Tue",
+   "title": "Improvement 1: team model + code",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Fix model and coding items from the scrimmage backlog"
+   ],
+   "activities": [
+    "Improve the motorized part's reliability and, if reviewers suggested it, its ambition (motors/sensors/lights)",
+    "Re-verify the p.23 requirements after changes: designed plant/animal, rainforest job, biodiversity tool, whole Explore Set + mat, LEGO-only, motorized part",
+    "Code-narration drills on the updated program \u2014 each child explains the change",
+    "Test/improve cycle per the Engineering Design Process; keep the model assembled"
+   ],
+   "deliverables": [
+    "Model + code fixes from backlog complete and explainable by the kids"
+   ],
+   "materials": [
+    {
+     "label": "Session 8 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-8.pptx"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": "8"
+  },
+  {
+   "date": "2026-11-19",
+   "day": "Thu",
+   "title": "Improvement 2: poster + presentation",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Fix poster and presentation items from the scrimmage backlog"
+   ],
+   "activities": [
+    "Strengthen weak poster sections: theme facts, real-world people/careers/technologies, built/coded/learned journey",
+    "Add scrimmage photos/moments to the journey section (Reporter's captures)",
+    "Rework presentation phrasing where kids stumbled; re-balance speaking roles",
+    "Timed 5-minute run of the updated presentation"
+   ],
+   "deliverables": [
+    "Poster updated; presentation revised and back under 5 minutes"
+   ],
+   "materials": [
+    {
+     "label": "Session 9 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-9.pptx"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": "9"
+  },
+  {
+   "date": "2026-11-24",
+   "day": "Tue",
+   "title": "Mock reviewing 3 with improved artifacts",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Verify the improvements moved the scores"
+   ],
+   "activities": [
+    "Full 25-minute mock reviewing session with the updated model and poster, scored on a printed sheet",
+    "Compare against the scrimmage feedback line-by-line",
+    "Core Values questions drill with fresh examples including the scrimmage itself",
+    "Note anything still weak for December polish (no meeting Thanksgiving week Thursday)"
+   ],
+   "deliverables": [
+    "Post-improvement scored sheet; short December polish list"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Reviewing flowchart",
+     "href": "season/events/fll-explore-bioglow-reviewing-flowchart.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-01",
+   "day": "Tue",
+   "title": "Final polish + main festival logistics",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Close the polish list; lock festival logistics with families"
+   ],
+   "activities": [
+    "Work remaining polish items from Nov 24 mock review",
+    "Confirm main festival date/time/location/duration (December, TBD) and share details with families and caregivers",
+    "Refresh EN p.27 answers to reflect the improved model and poster",
+    "Practice 2-3 sheet questions aloud per child as a stand-up drill"
+   ],
+   "deliverables": [
+    "Festival details communicated to families",
+    "Polish list closed"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Paperwork checklist",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-03",
+   "day": "Thu",
+   "title": "Main-event dress rehearsal",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Full festival-day rehearsal with the final artifacts"
+   ],
+   "activities": [
+    "Teardown/transport/re-stage drill with the final model and poster",
+    "Full 25-minute mock reviewing session: 5-min presentation + 9-question Q&A + positive-feedback ritual",
+    "Special Activities simulation and ceremony expectation-setting for kids and parents",
+    "Verify device, charging cord, and battery routine"
+   ],
+   "deliverables": [
+    "Festival-day procedure locked end-to-end"
+   ],
+   "materials": [
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    },
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-08",
+   "day": "Tue",
+   "title": "Final festival prep (flex for TBD festival date)",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Be fully packed and confident whatever the exact festival date"
+   ],
+   "activities": [
+    "Final packing-list check: team model (assembled), team poster, LEGO Education set, device, charging cord, fully charged battery",
+    "Light run: each child delivers their speaking part once; team spirit practice",
+    "Brief families: celebration format, reviewers visiting the table, every team wins one award (Challenge Solution, Team Poster, Team Model, Coding, Core Values, or Name Your Own)",
+    "If the festival falls earlier this week, this meeting becomes post-event celebration"
+   ],
+   "deliverables": [
+    "Team festival-ready: artifacts packed, roles rehearsed, families briefed"
+   ],
+   "materials": [
+    {
+     "label": "Scrimmage readiness",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md"
+    },
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-10",
+   "day": "Thu",
+   "title": "Festival-week flex meeting",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Support the main festival whenever it lands; keep it light and fun"
+   ],
+   "activities": [
+    "If pre-festival: short confidence run-through of presentation and Q&A, then team games from the Core Values/team-building bank",
+    "If post-festival: share festival stories and the award earned; start FESTIVAL TIME reflections on EN p.6",
+    "GoNoodle 'Celebrate' dance; no heavy work \u2014 fun is the goal"
+   ],
+   "deliverables": [
+    "Team peaked (or celebrated) for the main festival"
+   ],
+   "materials": [
+    {
+     "label": "Event introduction",
+     "href": "season/events/fll-explore-bioglow-event-introduction.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-15",
+   "day": "Tue",
+   "title": "Post-season wrap-up: teardown + inventory + reflection",
+   "phase": "Wrap-up",
+   "kind": "meeting",
+   "goals": [
+    "Complete the TMG post-season wrap-up"
+   ],
+   "activities": [
+    "Complete FESTIVAL TIME reflections on EN p.6; team reflection on the whole journey",
+    "Take apart the team model; return all SPIKE Essential elements to the set and inventory it",
+    "Decide what to do with the Explore Set elements",
+    "Kids take Engineering Notebooks home"
+   ],
+   "deliverables": [
+    "SPIKE Essential set inventoried; model retired; reflections done"
+   ],
+   "materials": [
+    {
+     "label": "Team Meeting Guide",
+     "href": "season/guides/fll-explore-bioglow-TMG.pdf"
+    }
+   ],
+   "deck": null
+  },
+  {
+   "date": "2026-12-17",
+   "day": "Thu",
+   "title": "Season celebration + certificates",
+   "phase": "Wrap-up",
+   "kind": "meeting",
+   "goals": [
+    "Celebrate every child and close the season"
+   ],
+   "activities": [
+    "Award the printed Student Participation Certificates to each team member",
+    "Celebration party with families invited; share Reporter's season photos",
+    "Final Core Values reflection: what new skills and ideas the team learned together",
+    "Coach collects interest for next season"
+   ],
+   "deliverables": [
+    "Certificates awarded; season closed with a celebration"
+   ],
+   "materials": [
+    {
+     "label": "Certificate (welcome)",
+     "href": "season/certificates/first_canopy_fll_bioglow_certificatewelcome_ppt_ltr.pptx"
+    },
+    {
+     "label": "Certificate (founders)",
+     "href": "season/certificates/first_canopy_fll_foundersedition_bioglow_certificate_ppt_ltr.pptx"
+    }
+   ],
+   "deck": null
+  }
+ ],
+ "decks": {
+  "intro": {
+   "file": "fll-explore-bioglow-session-slides-intro.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Introduction",
+     "points": [
+      "Let's Get Started"
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image9.png",
+      "assets/slides/intro/image11.png",
+      "assets/slides/intro/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Explore Story",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image12.png"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Explore Story",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image13.png"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Explore Story",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image14.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Team Journey",
+     "points": [
+      "Explore the Challenge",
+      "Learn about Core Values"
+     ],
+     "tip": "Set the arc up front: discover the theme, build and code a model, track it in the notebook, and share at the Explore festival.",
+     "images": [
+      "assets/slides/intro/image15.jpg",
+      "assets/slides/intro/image16.png"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Team Journey: Create Team Model",
+     "points": [
+      "Create Team Model",
+      "Engineering Design Process: Explore, Create, Test, Share"
+     ],
+     "tip": "The design process has no set order \u2014 teams may explore, create, test, and share several times in a single session.",
+     "images": [
+      "assets/slides/intro/image17.jpeg",
+      "assets/slides/intro/image18.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Team Journey: Poster and Festival",
+     "points": [
+      "Make Team Poster",
+      "Celebrate at Festival",
+      "Journey steps: Explore, Create and Test, Share"
+     ],
+     "tip": "End of the journey: teams share their model and poster with reviewers, then celebrate with family and other teams.",
+     "images": [
+      "assets/slides/intro/image19.jpeg",
+      "assets/slides/intro/image20.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Team Roles",
+     "points": [
+      "Material Manager \u2014 gathers materials for the session and returns them at the end.",
+      "Reporter \u2014 captures the team's journey with pictures or notes to use at the festival.",
+      "Builder \u2014 assembles the LEGO models; LEGO Element Finder \u2014 locates the pieces for each build step.",
+      "Coder \u2014 operates the device and creates the programs in the app.",
+      "Researcher \u2014 writes down team questions about the theme and helps look up answers.",
+      "Adult Facilitator \u2014 a coach, teacher, or mentor who guides the team through the sessions."
+     ],
+     "tip": "Rotate roles so everyone tries each one; builder and coder can be doubled for pairs \u2014 add a team captain role if helpful.",
+     "images": [
+      "assets/slides/intro/image21.jpeg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Form Your Team",
+     "points": [
+      "Write your Team Name and Members names in your Engineering Notebook, page 3."
+     ],
+     "tip": "Form teams now and have each child record the names and team name on notebook page 3.",
+     "images": [
+      "assets/slides/intro/image22.png"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Goals for this season...",
+     "points": [
+      "My goals for the season are...",
+      "Write your goals in your Engineering Notebook, page 6."
+     ],
+     "tip": "Have students reflect on what they want to learn this season before writing their goals down.",
+     "images": [
+      "assets/slides/intro/image23.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Core Values",
+     "points": [
+      "DISCOVERY",
+      "INCLUSION",
+      "INNOVATION",
+      "TEAMWORK",
+      "IMPACT",
+      "FUN"
+     ],
+     "tip": "Revisit notebook page 7 all season \u2014 have the team draw or write examples of each Core Value in action.",
+     "images": []
+    },
+    {
+     "n": 12,
+     "title": "Materials",
+     "points": [
+      "BIOGLOW Explore Set",
+      "Each session lists the materials needed."
+     ],
+     "tip": "Keep stray pieces in a cup, use the set lid as a tray, and check each LEGO set before dismissing the team.",
+     "images": [
+      "assets/slides/intro/image29.jpeg",
+      "assets/slides/intro/image24.jpeg",
+      "assets/slides/intro/image28.jpeg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Season Videos: UNEARTHED and BIOGLOW",
+     "points": [
+      "Visit the FIRST LEGO League YouTube Channel for more videos.",
+      "Click \"Play\" to view the 2026-2027 BIOGLOW Season Playlist."
+     ],
+     "tip": "",
+     "images": []
+    },
+    {
+     "n": 14,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image31.jpeg"
+     ]
+    },
+    {
+     "n": 15,
+     "title": "Trademarks and Copyright",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/intro/image11.png",
+      "assets/slides/intro/image32.png"
+     ]
+    }
+   ]
+  },
+  "1": {
+   "file": "fll-explore-bioglow-session-slides-1.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 1: Canopy Connections",
+     "points": [
+      "I can work with my team using discovery to explore the BioGlow theme and share what I know about biodiversity.",
+      "I can work with my team to build the tree model.",
+      "I can work with my team to share about what we built.",
+      "Students share what they know about biodiversity, look at the Explore Story, build the tree model, and talk about where animals live."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/1/image9.png",
+      "assets/slides/1/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Introduction",
+     "points": [
+      "Can your team provide examples of how they have used discovery?",
+      "We explore new skills and ideas."
+     ],
+     "tip": "Spend 5-10 minutes on the FIRST Core Values: read the discovery definition (TMG p5), then have everyone draw a discovery example in their notebook.",
+     "images": [
+      "assets/slides/1/image13.jpeg",
+      "assets/slides/1/image12.png"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Biodiversity: the many different types of plant and animal life on Earth",
+      "Canopy: a giant, leafy room that covers a forest",
+      "Habitat: a plant or animal's natural home"
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/1/image17.jpeg",
+      "assets/slides/1/image16.jpeg",
+      "assets/slides/1/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Guiding Questions",
+     "points": [
+      "What do you know about the rainforest and biodiversity?",
+      "What does a wildlife biologist do?",
+      "What do you think is happening in the Explore Story?"
+     ],
+     "tip": "It's okay if they don't know anything about biodiversity yet \u2014 learning is what the experience is about.",
+     "images": [
+      "assets/slides/1/image19.jpg"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Look at the Explore Story on page 4.",
+      "What do you see?",
+      "What are the characters and animals doing?"
+     ],
+     "tip": "Have students look closely at each picture and imagine what the characters and animals might be thinking or doing.",
+     "images": [
+      "assets/slides/1/image23.png",
+      "assets/slides/1/image22.png",
+      "assets/slides/1/image21.png"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Share what you know about animals in rainforests with your team.",
+      "Write or draw what your team shared in your Engineering Notebook on page 8."
+     ],
+     "tip": "Also have the team list their goals on page 6 \u2014 the notebook gives every member space to write or draw their ideas.",
+     "images": [
+      "assets/slides/1/image24.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Guiding Questions",
+     "points": [
+      "What are the different layers of the rainforest?",
+      "What kinds of animals live in trees?",
+      "Why do you think some animals live on the forest floor while others live high up in the canopy?"
+     ],
+     "tip": "Talk through each question now to frame the session \u2014 students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/1/image19.jpg"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Using Book 1 and Bags 1-2, work together to build the tree model."
+     ],
+     "tip": "Rainforest layers are on notebook page 30; the team can rearrange pieces on the tree to create a specific animal habitat.",
+     "images": [
+      "assets/slides/1/image27.png",
+      "assets/slides/1/image26.png"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Talk about what animals live on the forest floor and in the canopy.",
+      "Draw a picture of the animals your team talked about on page 9 of your Engineering Notebook."
+     ],
+     "tip": "Encourage each child to share what they built and explain where animals could live in the tree.",
+     "images": [
+      "assets/slides/1/image24.png"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Challenge",
+     "points": [
+      "Change the tree model by moving the leaves to new places."
+     ],
+     "tip": "Have them draw or describe the animals they talked about; rainforest layers are on notebook page 30.",
+     "images": [
+      "assets/slides/1/image29.png",
+      "assets/slides/1/image28.jpg"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Share",
+     "points": [
+      "Share what you built.",
+      "What do you think happened in the Explore Story?",
+      "What do you know about rainforests?",
+      "What animals might live in your tree?"
+     ],
+     "tip": "Have each team share with the whole room.",
+     "images": [
+      "assets/slides/1/image31.jpg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Career Connection: Wildlife Biologist",
+     "points": [
+      "A wildlife biologist is a scientist who studies wild animals and their homes.",
+      "They investigate what animals eat, how they behave, and what keeps them healthy.",
+      "Their main goal is to protect creatures and make sure their natural habitats stay safe and strong."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/1/image33.png"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Keep the tree model assembled for future sessions; a clean-up song (GoNoodle or YouTube) makes tidying fun.",
+     "images": [
+      "assets/slides/1/image34.jpeg"
+     ]
+    },
+    {
+     "n": 14,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/1/image36.png",
+      "assets/slides/1/image35.png"
+     ]
+    }
+   ]
+  },
+  "2": {
+   "file": "fll-explore-bioglow-session-slides-2.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 2: Creature Creators",
+     "points": [
+      "I can work with my team to build the animals from the Explore Set.",
+      "I can work with my team to create new animals.",
+      "Students build the animal models, learn about their body parts, and where they live in the rainforest."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/2/image9.png",
+      "assets/slides/2/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Review the terms biodiversity and habitat, and recap what wildlife biologists do.",
+     "images": [
+      "assets/slides/2/image13.jpg",
+      "assets/slides/2/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Camouflage: a special way that animals use their colors, patterns, or body shapes to blend right into their surroundings",
+      "Behaviors: the way an animal or plant acts or behaves"
+     ],
+     "tip": "Introduce this session's vocabulary words before starting the activities.",
+     "images": [
+      "assets/slides/2/image16.jpeg",
+      "assets/slides/2/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Guiding Questions",
+     "points": [
+      "What colors and patterns do you notice on the animals?",
+      "How do the animal's body parts help it survive in the rainforest?",
+      "Where in the rainforest do these animals live?"
+     ],
+     "tip": "Talk through each question now to frame the session \u2014 students share their thoughts with their team later.",
+     "images": [
+      "assets/slides/2/image18.jpg"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Introduction",
+     "points": [
+      "We apply what we learn to improve our world.",
+      "Can your team provide examples of how they have used impact?"
+     ],
+     "tip": "5-10 min: read the impact definition (TMG p.5), discuss examples, then have everyone draw one on the Core Values notebook page.",
+     "images": [
+      "assets/slides/2/image21.jpeg",
+      "assets/slides/2/image20.png"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Divide up into groups of two.",
+      "Using Bags 4-6 and Book 2, build the animals."
+     ],
+     "tip": "Split the team into pairs so each pair can build a different animal from the set.",
+     "images": [
+      "assets/slides/2/image25.png",
+      "assets/slides/2/image24.png",
+      "assets/slides/2/image23.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "What do you notice about the animals you built?",
+      "Can you describe them?",
+      "What makes them different from each other?",
+      "Where do these animals live in the rainforest?"
+     ],
+     "tip": "Lead a discussion about each animal and what makes them different from each other.",
+     "images": []
+    },
+    {
+     "n": 8,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Label the parts of the animals.",
+      "Wings, eyes, legs \u2014 what else?"
+     ],
+     "tip": "Have students label the animal parts in their Engineering Notebooks, hunting for parts beyond wings, eyes, and legs.",
+     "images": [
+      "assets/slides/2/image25.png",
+      "assets/slides/2/image24.png",
+      "assets/slides/2/image23.png"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Guiding Questions",
+     "points": [
+      "Where would your new animal live on the mat?",
+      "What behaviors does your new animal have?",
+      "What area of the mat would be the best place for your animal to live?"
+     ],
+     "tip": "Share these questions to frame Activity 2 \u2014 get students thinking before they build.",
+     "images": [
+      "assets/slides/2/image18.jpg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Look at the Explore mat. Talk about the different areas on the mat.",
+      "Where would each animal live?"
+     ],
+     "tip": "Ask teams to explain why they chose each spot; the back of the box can make the mat a more immersive play space.",
+     "images": [
+      "assets/slides/2/image27.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Challenge",
+     "points": [
+      "Take apart your animal, trade some pieces with another animal to make a new animal.",
+      "Where would this new animal live on the mat?",
+      "What would you call this animal?",
+      "What does it like to eat?",
+      "How does it move?",
+      "Is it friendly to other animals?"
+     ],
+     "tip": "There are no wrong ways to design a new animal \u2014 encourage each pair to tell its story and label where it lives on the mat.",
+     "images": []
+    },
+    {
+     "n": 12,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What was different about each animal?",
+      "Why do they live in different places?"
+     ],
+     "tip": "Have the team share with the whole room, using the animal parts and homes they recorded in their Engineering Notebooks.",
+     "images": [
+      "assets/slides/2/image29.jpg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Fold the mat to protect it, keep or rebuild the animals, charge the set, and try a clean-up song (GoNoodle or YouTube Kids).",
+     "images": [
+      "assets/slides/2/image30.jpeg"
+     ]
+    },
+    {
+     "n": 14,
+     "title": "LEGO and FIRST trademark notice",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/2/image32.png",
+      "assets/slides/2/image31.png"
+     ]
+    }
+   ]
+  },
+  "3": {
+   "file": "fll-explore-bioglow-session-slides-3.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 3: Animal Alarm",
+     "points": [
+      "I can work with my team to build the LEGO model from the lesson and explore sensor blocks.",
+      "I can work with my team to learn about how biologists detect animals in the rainforest.",
+      "Students will build a model that could be used by biologists to detect animals in the rainforest and write code to test it."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/3/image9.png",
+      "assets/slides/3/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Discuss the animals, their habitats, and behaviors the students learned about last session.",
+     "images": [
+      "assets/slides/3/image13.jpg",
+      "assets/slides/3/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Detect: to notice, discover, or find something that is hidden or hard to see",
+      "Program: to direct the thinking or behavior of",
+      "Sensor: a special tool or device that detects changes like light, temperature, or movement"
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/3/image17.png",
+      "assets/slides/3/image16.png",
+      "assets/slides/3/image15.png"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "Can your team provide examples of how they have used teamwork?",
+      "We are stronger when we work together."
+     ],
+     "tip": "Spend 5-10 minutes on the teamwork Core Value: read its definition (TMG p. 5), share examples, and draw one in the Engineering Notebook.",
+     "images": [
+      "assets/slides/3/image20.jpeg",
+      "assets/slides/3/image19.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "Which blocks can you use to code the LEGO model?",
+      "How do you change the program so the model shows a different color?"
+     ],
+     "tip": "Talk through each question now to frame the session; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/3/image22.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "In the SPIKE App, complete the Animal Alarm lesson.",
+      "This lesson is in the FIRST LEGO League Explore Unit."
+     ],
+     "tip": "Teams use only the SPIKE Essential set here; if they're new to coding, start with the app's Tutorial Activities and show them where the lesson lives.",
+     "images": [
+      "assets/slides/3/image23.png",
+      "assets/slides/3/image27.png",
+      "assets/slides/3/image26.jpeg"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Code",
+     "points": [
+      "Change the program so the color changes when one of the animals moves in front of the sensor.",
+      "Write your ideas on page 12 of your Engineering Notebook."
+     ],
+     "tip": "Have students trigger the color change with an animal from the Explore Set, then capture their ideas in the notebook before moving on.",
+     "images": [
+      "assets/slides/3/image28.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "What kinds of sounds might you hear in the rainforest?",
+      "How can you test your program to make sure the sound plays at the right time?"
+     ],
+     "tip": "Talk through each question now to frame the activity; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/3/image22.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Record a new animal sound and change the program so it plays when the animal moves by the sensor.",
+      "What animal sounds could you hear in the rainforest?"
+     ],
+     "tip": "Focus on the sound blocks; if recording on the device isn't possible, use the app's built-in sounds, and test with the creatures the team designed.",
+     "images": [
+      "assets/slides/3/image31.png",
+      "assets/slides/3/image30.jpeg",
+      "assets/slides/3/image25.jpeg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Challenge",
+     "points": [
+      "Create a new sound for each animal you built.",
+      "Share about your animal and why it makes that sound."
+     ],
+     "tip": "Place the Animal Alarm and the built animals on the mat, play a sound when each is detected, and have kids tell each animal's story.",
+     "images": [
+      "assets/slides/3/image28.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What coding blocks did you learn?",
+      "What sounds do these animals make?"
+     ],
+     "tip": "Have each team share with the whole room: the coding skills they learned and the sounds each of their animals makes.",
+     "images": [
+      "assets/slides/3/image33.jpg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Take everything apart and return it to storage, charge the LEGO set for next session, and consider a clean-up song (e.g., GoNoodle) while tidying.",
+     "images": [
+      "assets/slides/3/image34.jpeg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/3/image36.png",
+      "assets/slides/3/image35.png"
+     ]
+    }
+   ]
+  },
+  "4": {
+   "file": "fll-explore-bioglow-session-slides-4.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 4: Treehouse Camp",
+     "points": [
+      "I can work with my team to build the LEGO model from the lesson and explore motor-coding blocks.",
+      "I can work with my team to discuss how scientists can observe and learn about wildlife from treehouses.",
+      "Students will learn about motors, build a model, and write code to show how treehouses can be used to observe wildlife."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/4/image9.png",
+      "assets/slides/4/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Recap the coding and sensors used by biologists that students learned about last session.",
+     "images": [
+      "assets/slides/4/image13.jpg",
+      "assets/slides/4/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Motor: a device that creates movement",
+      "Observe: to look closely at something",
+      "Treehouse: a shelter built high up in the branches of a tree"
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/4/image17.jpeg",
+      "assets/slides/4/image16.png",
+      "assets/slides/4/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "We enjoy and celebrate what we do.",
+      "Can your team provide examples of how they have used fun?"
+     ],
+     "tip": "5-10 min: read the Core Value 'fun' definition (TMG p5), share examples, then have everyone draw one in their Engineering Notebook.",
+     "images": [
+      "assets/slides/4/image20.jpeg",
+      "assets/slides/4/image19.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "How can you change the program so the LEGO model opens slowly?",
+      "How can you code the model to make a sound?",
+      "What kind of animals could you watch from a treehouse?"
+     ],
+     "tip": "Use these questions to frame the session \u2014 talk through each now; students share their thoughts with their team later.",
+     "images": [
+      "assets/slides/4/image22.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "In the SPIKE App, complete the Treehouse Camp lesson.",
+      "This lesson is in the FIRST LEGO League Explore Unit."
+     ],
+     "tip": "Focus the team on motor blocks, and give them time to experiment with the program and different coding options.",
+     "images": [
+      "assets/slides/4/image26.png",
+      "assets/slides/4/image25.jpeg",
+      "assets/slides/4/image24.jpeg"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Code",
+     "points": [
+      "Change the program so the treehouse roof can open slowly.",
+      "How could this model help a scientist in the rainforest?",
+      "Write your ideas on page 14 of your Engineering Notebook."
+     ],
+     "tip": "The notebook questions are discussion starters \u2014 use them to generate ideas, not to fill in answers.",
+     "images": [
+      "assets/slides/4/image27.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "How can you change the model so it can be hidden in the rainforest?",
+      "Where could you observe the most animals on the mat?",
+      "How did you include your team members' ideas?"
+     ],
+     "tip": "Talk through each question with the students; they will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/4/image22.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Use the SPIKE Essential set to change the Treehouse Camp model to blend into the rainforest.",
+      "Describe how you camouflaged the model to blend in."
+     ],
+     "tip": "Place the model on the Explore Mat and keep the Explore set separate; as a stretch, change how long the model stays open or closed.",
+     "images": [
+      "assets/slides/4/image29.jpeg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Challenge",
+     "points": [
+      "Change the program so the roof will open for 5 seconds and then close, repeat 3 times.",
+      "Share what you built and explain how you coded the model."
+     ],
+     "tip": "Have the roof open 5 seconds then close 5 seconds, repeating two or three times, before teams share their code.",
+     "images": [
+      "assets/slides/4/image27.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What did you learn about motors?",
+      "What did you learn about coding motors?",
+      "How do biologists use treehouses to study animals in the rainforest?"
+     ],
+     "tip": "Have each team share their motor-coding skills with the whole room.",
+     "images": [
+      "assets/slides/4/image31.jpg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Take everything apart, return it to storage, and charge the LEGO set; a clean-up song (GoNoodle or YouTube) keeps it fun.",
+     "images": [
+      "assets/slides/4/image32.jpeg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/4/image34.png",
+      "assets/slides/4/image33.png"
+     ]
+    }
+   ]
+  },
+  "5": {
+   "file": "fll-explore-bioglow-session-slides-5.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 5: Science Helpers",
+     "points": [
+      "I can work with my team to build the lift platform model and use the provided code.",
+      "I can work with my team to talk about how people collaborate to study the rainforest.",
+      "Students will build and program a lift to move scientists up and down.",
+      "Students will learn how people collaborate to study the rainforest."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/5/image9.png",
+      "assets/slides/5/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Revisit the coding and motors the team used in the treehouse from last session.",
+     "images": [
+      "assets/slides/5/image13.jpg",
+      "assets/slides/5/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Platform: any raised surface used as a place to stand",
+      "Protect: keep safe from danger"
+     ],
+     "tip": "Introduce this session-specific vocabulary before the activities.",
+     "images": [
+      "assets/slides/5/image16.jpg",
+      "assets/slides/5/image15.jpg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "Can your team provide examples of how they have used innovation?",
+      "We use creativity and persistence to solve problems."
+     ],
+     "tip": "Spend 5-10 min on the Core Value: read the innovation definition (TMG p.5), discuss examples, and have kids draw one in their Engineering Notebook.",
+     "images": [
+      "assets/slides/5/image19.jpeg",
+      "assets/slides/5/image18.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "Can you describe what will happen to the lift if you use the provided code?",
+      "How could a scientist use a lift to learn more about biodiversity in the rainforest?",
+      "What other tools could be used to study the rainforest?"
+     ],
+     "tip": "Use these questions to frame the session; kids will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/5/image21.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Using Bag 2 & 7, build the lifting platform and add a scientist on top."
+     ],
+     "tip": "Watch that robots don't fall off the table; have kids take turns changing the program; use only the SPIKE Essential set.",
+     "images": [
+      "assets/slides/5/image27.png",
+      "assets/slides/5/image26.png",
+      "assets/slides/5/image25.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Code",
+     "points": [
+      "Try the program provided to move the lift.",
+      "How could this lift help a scientist in the rainforest?",
+      "Write your ideas on page 16 of your Engineering Notebook."
+     ],
+     "tip": "Open the SPIKE app, run the provided program to raise the scientist, then talk about how the model could help a scientist in the rainforest.",
+     "images": [
+      "assets/slides/5/image28.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "What are some other ways a lifting platform could be used in the rainforest?",
+      "Why is it important for scientists to share their knowledge and skills with each other?",
+      "How can you code the model to raise it to a different height?"
+     ],
+     "tip": "Talk through each question now; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/5/image21.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Change the lift model so that it can be used with the tree model.",
+      "Can it reach all areas of the tree?"
+     ],
+     "tip": "If the Session 1 tree was disassembled, rebuild it first; have the team practice positioning the lift to reach different areas of the tree.",
+     "images": [
+      "assets/slides/5/image31.png",
+      "assets/slides/5/image30.png"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Challenge",
+     "points": [
+      "Change the program so the model will raise and lower the scientists safely.",
+      "Share what you built and explain how you coded the model."
+     ],
+     "tip": "Place the tree and lift on the mat with two scientists; let the team decide what the scientists want to research before recoding.",
+     "images": [
+      "assets/slides/5/image28.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What did you learn about coding?",
+      "Share how scientists collaborate and share their knowledge with each other."
+     ],
+     "tip": "Have each team share with the whole room how they applied coding skills and how scientists collaborate.",
+     "images": [
+      "assets/slides/5/image33.jpg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Keep the tree and lift models assembled for later sessions, charge the LEGO set, and consider playing a clean-up song (GoNoodle/YouTube Kids).",
+     "images": [
+      "assets/slides/5/image34.jpeg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/5/image36.png",
+      "assets/slides/5/image35.png"
+     ]
+    }
+   ]
+  },
+  "6": {
+   "file": "fll-explore-bioglow-session-slides-6.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 6: Research Tools",
+     "points": [
+      "I can work with my team to build tools used by scientists to study animals in the rainforest.",
+      "I can work with my team to add the sensor and hub to the research device model.",
+      "Learning goal: the tools and technology used in the rainforest to study plants and animals, and the jobs of those who use them."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/6/image9.png",
+      "assets/slides/6/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Recap last session: discuss the coding and the lifts scientists use in the rainforest.",
+     "images": [
+      "assets/slides/6/image13.jpg",
+      "assets/slides/6/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Research: a careful study of something in order to find out information about it",
+      "Tool: any thing that helps to get something done"
+     ],
+     "tip": "Introduce this session's vocabulary before starting the activities.",
+     "images": [
+      "assets/slides/6/image16.jpeg",
+      "assets/slides/6/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "Can your team provide examples of how they have used inclusion?",
+      "We respect each other and embrace our differences."
+     ],
+     "tip": "5-10 min: read the inclusion definition (TMG p.5), discuss examples, then everyone draws one on the Core Values page of their Notebook.",
+     "images": [
+      "assets/slides/6/image19.jpeg",
+      "assets/slides/6/image18.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "What are some tools that are used to study the rainforest?",
+      "How do scientists use the tools you talked about with your team?",
+      "Which tools will you draw or describe in your Engineering Notebook?"
+     ],
+     "tip": "Talk through each question now; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/6/image20.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Talk with your team about tools used to study the rainforest.",
+      "What tools are needed for animal observation?",
+      "What tools are used to document or study plants?"
+     ],
+     "tip": "Prototyping pieces are in Bags 9-13; teams can test ideas on the animals from Session 2 and reuse words from earlier sessions.",
+     "images": [
+      "assets/slides/6/image23.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Select a tool to build with your team.",
+      "Use the prototyping pieces to create a tool used in the rainforest.",
+      "Put the tool on the mat."
+     ],
+     "tip": "Encourage building with the Bag 9-13 prototyping pieces and testing the tool with the animals built in Session 2.",
+     "images": []
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "Why do scientists use cameras to learn about nature?",
+      "What other technology could you use in the rainforest?",
+      "What are some jobs that study biodiversity in the rainforest?"
+     ],
+     "tip": "Talk through each question with the students before Activity 2; they will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/6/image20.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Use Book 2 and Bag 8 to build the research device.",
+      "Try the provided program.",
+      "What does the research device do?"
+     ],
+     "tip": "Open the SPIKE app, try the Notebook's code, and use Book 2 to attach the sensor and hub; take turns moving the device around the mat.",
+     "images": [
+      "assets/slides/6/image25.png"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Challenge",
+     "points": [
+      "Change the program so the research device is activated by a different color.",
+      "What does it do when used with the animals you built?",
+      "Write your ideas on page 19 of your Engineering Notebook."
+     ],
+     "tip": "Start from the Notebook's provided code; next session covers jobs \u2014 a preview is on Notebook pages 5, 28, and 29.",
+     "images": [
+      "assets/slides/6/image26.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Career Connections: Wildlife Biologist",
+     "points": [
+      "A wildlife biologist studies animals in the rainforest to learn how they live and what they need to survive.",
+      "They help protect animals by finding ways to keep their homes safe.",
+      "They use tools like cameras and trackers to safely watch animals in their habitats."
+     ],
+     "tip": "Look at the jobs on Notebook pages 5, 28, and 29 to see the tools and technology each one uses.",
+     "images": [
+      "assets/slides/6/image28.png"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Career Connections: Conservation Scientist",
+     "points": [
+      "A conservation scientist helps take care of the rainforest and the animals that live there.",
+      "They find ways to protect nature and fix places that have been damaged.",
+      "They use maps and computer tools to plan how to protect nature and fix damaged areas."
+     ],
+     "tip": "Look at the jobs on Notebook pages 5, 28, and 29 to see the tools and technology each one uses.",
+     "images": [
+      "assets/slides/6/image29.png"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What tools and technology are used in the rainforest?",
+      "What have you learned about biodiversity?"
+     ],
+     "tip": "Have each team share with the whole room: rainforest tools and technology, plus what they've learned about biodiversity so far.",
+     "images": [
+      "assets/slides/6/image31.jpg"
+     ]
+    },
+    {
+     "n": 14,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Keep the research device assembled, charge the LEGO set for next session, and consider a clean-up song (GoNoodle or YouTube Kids).",
+     "images": [
+      "assets/slides/6/image32.jpeg"
+     ]
+    },
+    {
+     "n": 15,
+     "title": "Trademarks and Copyright",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/6/image34.png",
+      "assets/slides/6/image33.png"
+     ]
+    }
+   ]
+  },
+  "7": {
+   "file": "fll-explore-bioglow-session-slides-7.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 7: Dream Treehouse",
+     "points": [
+      "I can work with my team to learn about jobs related to biodiversity.",
+      "I can work with my team to design a treehouse where scientists can conduct their work.",
+      "Students will learn about the different jobs in biodiversity and what kind of training and tools they need.",
+      "Students will build a treehouse for these scientists."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/7/image6.png",
+      "assets/slides/7/image7.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Recap the rainforest tools and technology from last session, plus the two jobs the team learned about.",
+     "images": [
+      "assets/slides/7/image10.jpg",
+      "assets/slides/7/image9.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Ecosystem: a community of living things, together with their environment",
+      "Nature: living things in their natural state"
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/7/image13.jpeg",
+      "assets/slides/7/image12.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "How has your team used discovery throughout the sessions?",
+      "We explore new skills and ideas."
+     ],
+     "tip": "Model Discovery (5-10 min): read the definition (TMG p.5), have the team share examples, then build something with prototyping pieces to show it.",
+     "images": [
+      "assets/slides/7/image16.jpeg",
+      "assets/slides/7/image15.png"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "What jobs support biodiversity in the rainforest?",
+      "What are some animals that people like to study?",
+      "What job studies wild animals in the rainforest?"
+     ],
+     "tip": "Talk through each question now to frame the session \u2014 students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/7/image18.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Explore the biodiversity jobs on pages 5, 28, and 29.",
+      "What jobs interest you?"
+     ],
+     "tip": "Teams can add on to the Explore Set tree model and build examples of job tools from prototyping pieces; Multimedia Resources have photos and activities.",
+     "images": [
+      "assets/slides/7/image20.jpg"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Career Connections: Wildlife Biologist",
+     "points": [
+      "A wildlife biologist studies animals in the rainforest to learn how they live and what they need to survive.",
+      "They help protect animals by finding ways to keep their homes safe.",
+      "They use tools like cameras and trackers to safely watch animals in their habitats."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image22.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Career Connections: Conservation Scientist",
+     "points": [
+      "A conservation scientist helps take care of the rainforest and the animals that live there.",
+      "They find ways to protect nature and fix places that have been damaged.",
+      "They use maps and computer tools to plan how to protect nature and fix damaged areas."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image23.png"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Career Connections: Botanist",
+     "points": [
+      "A botanist studies plants, trees, and flowers in the rainforest.",
+      "They help make sure plants stay healthy so animals and people can use them.",
+      "They use magnifying tools and computers to look closely at plants and record what they see."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image24.png"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Career Connections: Environmental Scientist",
+     "points": [
+      "An environmental scientist studies air, water, soil, plants, and animals in the rainforest.",
+      "They use water testing tools to check water in rivers and streams to make sure it is clean for animals.",
+      "They might also use air and soil sensors to understand how nature changes and how to keep it healthy."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image25.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Career Connections: Ecologist",
+     "points": [
+      "An ecologist studies how plants, animals, and the environment work together in the rainforest.",
+      "They look for patterns to know what happens when one plant or animal is missing.",
+      "They use charts and data tools to study how living things depend on each other."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image26.png"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Career Connections: Forestry Technician",
+     "points": [
+      "A forestry technician helps care for rainforest trees and plants.",
+      "They help plant new trees to replace ones that were cut down or damaged by storms.",
+      "They use measuring tools and GPS devices to check tree growth and track how a forest grows or decreases in size."
+     ],
+     "tip": "Point students to pages 5, 28, and 29 to see the tools and technology this job uses.",
+     "images": [
+      "assets/slides/7/image27.png"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Design a treehouse where a wildlife biologist can safely watch animals.",
+      "Choose an animal.",
+      "What tools would a scientist need to study that animal?",
+      "Write your ideas on page 20 of your Engineering Notebook."
+     ],
+     "tip": "After the design is on paper, have the team build their treehouse with prototyping pieces \u2014 adding on to the Explore Set tree model works well.",
+     "images": []
+    },
+    {
+     "n": 14,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Build a tool or technology that scientists could use in the treehouse.",
+      "Which tool or technology did you build?"
+     ],
+     "tip": "Use the SPIKE Essential set here and return pieces to storage after; a walk outside to look at plants can spark tool ideas.",
+     "images": []
+    },
+    {
+     "n": 15,
+     "title": "Challenge",
+     "points": [
+      "Add a botanist to the treehouse.",
+      "Which tool could you build for these people to study plants?"
+     ],
+     "tip": "Have teams change the treehouse to include plant-study tools and share what they built; rebuilding tools from a previous session counts too.",
+     "images": []
+    },
+    {
+     "n": 16,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "What did you learn about biodiversity jobs?",
+      "What jobs and technology are used to study biodiversity in the rainforest?"
+     ],
+     "tip": "Have each team share with the whole room what they learned about the jobs in their Engineering Notebook.",
+     "images": [
+      "assets/slides/7/image30.jpg"
+     ]
+    },
+    {
+     "n": 17,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Take everything apart and return it to storage, keeping the SPIKE Essential and Explore sets separate; a clean-up song (GoNoodle/YouTube) helps.",
+     "images": [
+      "assets/slides/7/image31.jpeg"
+     ]
+    },
+    {
+     "n": 18,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/7/image33.png",
+      "assets/slides/7/image32.png"
+     ]
+    }
+   ]
+  },
+  "8": {
+   "file": "fll-explore-bioglow-session-slides-8.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 8: Team Model",
+     "points": [
+      "I can work with my team to draw our team model and label different parts.",
+      "I can work with my team to create a team model to share what we learned about biodiversity.",
+      "Students will work together to build their team model and prepare to share what they have learned with the reviewers at their festival."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/8/image9.png",
+      "assets/slides/8/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Recap last session: discuss the jobs and tools of people who work in a rainforest.",
+     "images": [
+      "assets/slides/8/image13.jpg",
+      "assets/slides/8/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Model: construction used to help represent something",
+      "Design: to think up and plan out in the mind",
+      "Label: to name or describe with"
+     ],
+     "tip": "Introduce this session's vocabulary words before diving into the activities.",
+     "images": [
+      "assets/slides/8/image17.jpeg",
+      "assets/slides/8/image16.jpeg",
+      "assets/slides/8/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "How has your team used fun and teamwork throughout the sessions?",
+      "We are stronger when we work together.",
+      "We enjoy and celebrate what we do."
+     ],
+     "tip": "Spend 5-10 min on Core Values: read the teamwork and fun definitions (TMG p5), collect examples, and build something representing them.",
+     "images": [
+      "assets/slides/8/image20.jpeg",
+      "assets/slides/8/image19.jpeg"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "How will you plan your design for your team model?",
+      "What do you think is the most important part for your team model and why?"
+     ],
+     "tip": "Talk through each question with the students; they will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/8/image22.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks: Team Model Requirements",
+     "points": [
+      "Review the requirements for the team model. Include:",
+      "A plant or animal that your team designed",
+      "A job related to the rainforest",
+      "A tool or piece of technology used to study biodiversity",
+      "All parts of the Explore Set and mat",
+      "Use SPIKE Essential to motorize a part of your model; use only LEGO elements"
+     ],
+     "tip": "Build the model over two meetings \u2014 each member can build a part and combine them on the mat. Let the children be creative!",
+     "images": []
+    },
+    {
+     "n": 7,
+     "title": "Activity 1 Tasks: Design Your Team Model",
+     "points": [
+      "Design your team model.",
+      "Make sure to label the different parts.",
+      "Draw your ideas for your team model on pages 22 and 23 of your Engineering Notebook."
+     ],
+     "tip": "The team needs all Explore Set parts (radar and excavation site models) plus the mat \u2014 check for them before drawing begins.",
+     "images": [
+      "assets/slides/8/image24.jpeg"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "What are the strengths of your design?",
+      "What part of the model will you motorize and code?"
+     ],
+     "tip": "Use these questions to frame the session; students think first, then share with their team.",
+     "images": [
+      "assets/slides/8/image22.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Activity 2 Tasks: Build Your Team Model",
+     "points": [
+      "Work together to build your team model.",
+      "Make sure to include everyone's ideas!",
+      "Do you have all the required parts?"
+     ],
+     "tip": "The model should fit on a table and move easily; the team can motorize any part using coding concepts from earlier sessions.",
+     "images": [
+      "assets/slides/8/image24.jpeg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Share",
+     "points": [
+      "Share what you learned.",
+      "Demonstrate the moving part of your model.",
+      "Can you point to each part of the team model and explain it?"
+     ],
+     "tip": "Have the team share with the whole room: identify the required parts on the model, then demonstrate and explain it.",
+     "images": [
+      "assets/slides/8/image27.jpg"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Guiding Questions",
+     "points": [
+      "What part of your team model are you most proud of?",
+      "What will you share with the reviewers at the festival?"
+     ],
+     "tip": "Talk through each question; these preview what the team will tell reviewers at the festival.",
+     "images": [
+      "assets/slides/8/image22.jpg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Keep the team model assembled for the festival; return unused SPIKE Essential and Explore Set pieces to storage. A clean-up song helps!",
+     "images": [
+      "assets/slides/8/image28.jpeg"
+     ]
+    },
+    {
+     "n": 13,
+     "title": "LEGO and FIRST trademark and copyright notice",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/8/image30.png",
+      "assets/slides/8/image29.png"
+     ]
+    }
+   ]
+  },
+  "9": {
+   "file": "fll-explore-bioglow-session-slides-9.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 9: Team Poster",
+     "points": [
+      "Students will work together to design their team poster and prepare for their festival.",
+      "I can work with my team to create a plan for what they will include on their team poster.",
+      "I can work with my team to design and create their team poster.",
+      "I can work with my team to practice presenting their poster."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/9/image9.png",
+      "assets/slides/9/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Discuss with students the models they built in the last few sessions.",
+     "images": [
+      "assets/slides/9/image13.jpg",
+      "assets/slides/9/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Vocabulary",
+     "points": [
+      "Draft: to put into written form",
+      "Team Journey: experience through FIRST LEGO League Explore"
+     ],
+     "tip": "Introduce this session's vocabulary before the activities.",
+     "images": [
+      "assets/slides/9/image16.png",
+      "assets/slides/9/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Introduction",
+     "points": [
+      "How has your team used innovation and inclusion throughout the sessions?",
+      "We use creativity and persistence to solve problems.",
+      "We respect each other and embrace our differences."
+     ],
+     "tip": "Read the Core Values definitions (TMG p5), gather examples from past sessions, then build something with prototyping pieces to represent them (5-10 min).",
+     "images": [
+      "assets/slides/9/image19.jpeg",
+      "assets/slides/9/image18.jpeg"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Guiding Questions",
+     "points": [
+      "What topics do you want to include on the team poster?",
+      "What pictures could you draw or add to your poster?"
+     ],
+     "tip": "Talk through each question now; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/9/image21.jpg"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Activity 1 Tasks",
+     "points": [
+      "Think about your team's journey.",
+      "What did you learn that you want to share?",
+      "Talk with your team about what to include on your poster.",
+      "Write or draw your ideas on page 25 of your Engineering Notebook."
+     ],
+     "tip": "Provide a large (trifold) poster board and art supplies \u2014 but let the team create the poster themselves, spread over two meetings.",
+     "images": [
+      "assets/slides/9/image22.jpeg",
+      "assets/slides/9/image26.jpeg",
+      "assets/slides/9/image25.jpeg"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Activity 2 Tasks",
+     "points": [
+      "Create your team poster.",
+      "Look through your Engineering Notebook and team model for ideas.",
+      "Make sure everyone on your team helps!"
+     ],
+     "tip": "Sample topics are only suggestions \u2014 teams can include anything they feel is needed. Peek at Session 10 to see what reviewers will ask.",
+     "images": [
+      "assets/slides/9/image26.jpeg",
+      "assets/slides/9/image25.jpeg",
+      "assets/slides/9/image23.jpeg"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "How will each person talk about the poster?",
+      "What do you want the reviewers to know about your poster?"
+     ],
+     "tip": "Talk through each question now; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/9/image21.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Share",
+     "points": [
+      "Share what you made.",
+      "Show off your team poster design.",
+      "How will you share what is on your poster?"
+     ],
+     "tip": "Have the team share their poster with the whole room and demonstrate how they'll present it and their model to the reviewers.",
+     "images": [
+      "assets/slides/9/image29.jpg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Guiding Questions",
+     "points": [
+      "What part of your team poster are you most proud of?",
+      "What will you share with the reviewers at the festival?"
+     ],
+     "tip": "Talk through each question now; students will share their thoughts with their team later.",
+     "images": [
+      "assets/slides/9/image21.jpg"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Store the poster somewhere safe, allow extra time for art supplies, and try a clean-up song (GoNoodle or YouTube Kids) to keep it fun.",
+     "images": [
+      "assets/slides/9/image30.jpeg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/9/image32.png",
+      "assets/slides/9/image31.png"
+     ]
+    }
+   ]
+  },
+  "10": {
+   "file": "fll-explore-bioglow-session-slides-10.pptx",
+   "slides": [
+    {
+     "n": 1,
+     "title": "Session 10: Prepare for Your Event",
+     "points": [
+      "I can work with my team to reflect on our BIOGLOW experience.",
+      "I can work with my team to create a plan and practice what we will share at the festival.",
+      "Students will work together to prepare their presentation of the team model and team poster for the festival."
+     ],
+     "tip": "",
+     "images": [
+      "assets/slides/10/image9.png",
+      "assets/slides/10/image10.png"
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What did we do last session?",
+     "points": [
+      "Discussion"
+     ],
+     "tip": "Discuss with students the poster they made in the last session.",
+     "images": [
+      "assets/slides/10/image13.jpg",
+      "assets/slides/10/image12.jpg"
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Introduction",
+     "points": [
+      "How has your team used impact throughout the sessions?",
+      "We apply what we learn to improve our world."
+     ],
+     "tip": "5-10 min: read the definition of impact (TMG p. 5), gather examples from past sessions, and have the team build something representing it.",
+     "images": [
+      "assets/slides/10/image15.jpeg"
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Guiding Questions",
+     "points": [
+      "How has the team demonstrated Core Values?",
+      "How will you present your poster and model at the festival?"
+     ],
+     "tip": "Talk through each question; let students think first, then share their thoughts with the team.",
+     "images": [
+      "assets/slides/10/image17.jpg"
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Session Tasks",
+     "points": [
+      "Get your completed team model and team poster.",
+      "Decide who on the team will share about certain parts of the model and poster.",
+      "\"I'm going to share what we explored.\"",
+      "\"I will describe the team model.\"",
+      "\"I will explain the program and how it motorizes the team model.\"",
+      "\"We will show how the poster captures our team journey \u2014 and reflect on how we used Core Values.\""
+     ],
+     "tip": "Walk through the reviewing sheet and practice responses \u2014 the team doesn't need every answer, just to feel ready for the event.",
+     "images": [
+      "assets/slides/10/image20.png",
+      "assets/slides/10/image19.png"
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Session Tasks",
+     "points": [
+      "Fill in page 27 of your Engineering Notebook.",
+      "Can you describe your team model?",
+      "Explain how your team used innovation and creativity to explore archaeology.",
+      "What did you learn about the season challenge?",
+      "How did you use Core Values?"
+     ],
+     "tip": "Have the team practice their presentation for others before the event to build confidence.",
+     "images": [
+      "assets/slides/10/image21.png"
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Session Tasks",
+     "points": [
+      "Fill in page 27 of your Engineering Notebook.",
+      "What part of your team model is motorized?",
+      "How did you code your motorized part?",
+      "What did you include in your team poster?",
+      "How does the poster show your team journey?"
+     ],
+     "tip": "If you can't attend a festival, plan a celebration of your own \u2014 be sure to celebrate what the children learned and accomplished.",
+     "images": [
+      "assets/slides/10/image21.png"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Guiding Questions",
+     "points": [
+      "What else does your team need before the event?",
+      "How does the team model relate to the season theme?"
+     ],
+     "tip": "Use these questions to frame the session; give students time to think before sharing with their team.",
+     "images": [
+      "assets/slides/10/image17.jpg"
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Guiding Questions",
+     "points": [
+      "Can you explain the program you coded for the motorized model?",
+      "How will your team show your team spirit at events?"
+     ],
+     "tip": "Talk through each question with the students and have them share their thoughts with the team.",
+     "images": [
+      "assets/slides/10/image17.jpg"
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Share",
+     "points": [
+      "Practice in front of everyone.",
+      "Show off the team poster & team model."
+     ],
+     "tip": "Have the team practice both their poster and model presentations in front of the whole room.",
+     "images": [
+      "assets/slides/10/image19.png"
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Clean Up",
+     "points": [],
+     "tip": "Store the model and poster ready to transport, and check you have the device, charging cord, and a fully charged battery for the event.",
+     "images": [
+      "assets/slides/10/image23.jpeg"
+     ]
+    },
+    {
+     "n": 12,
+     "title": "Trademark and copyright notices",
+     "points": [],
+     "tip": "",
+     "images": [
+      "assets/slides/10/image25.png",
+      "assets/slides/10/image24.png"
+     ]
+    }
+   ]
+  }
+ }
+}
