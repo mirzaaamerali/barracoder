@@ -11,7 +11,7 @@ official source so you always have the current revision:
 - FIRST LEGO League season resources: https://www.firstlegoleague.org/season
 - Class packs / Canopy certificates: https://www.firstinspires.org/
 
-## Still to add
+## Complete set
 
-- [ ] BioGlow book, series 1
-- [ ] BioGlow book, series 2
+- [x] Build-instruction Book 1 (tree — bags 1–3) → `season/resources/fll-explore-bioglow-bi-book-1.pdf`
+- [x] Build-instruction Book 2 (animals, lift, research device — bags 4–8) → `season/resources/fll-explore-bioglow-bi-book-2.pdf`

@@ -29,7 +29,7 @@ and every official season document in one place.
 | [season/guides/](season/guides/) | Team Meeting Guide (the season bible), season overview, challenge book |
 | [season/sessions/](season/sessions/) | Slide decks: intro + Sessions 1–10 (one per meeting) |
 | [season/events/](season/events/) | Event introduction + the reviewing packet (sheet, flowchart, fillable docs) |
-| [season/resources/](season/resources/) | Multimedia connections, text-based build instructions |
+| [season/resources/](season/resources/) | Build-instruction Books 1–2, text-based build instructions, multimedia connections |
 | [season/certificates/](season/certificates/) | Participation certificate templates |
 
 The team model requirements in one line: **LEGO elements only**, uses the whole
