@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Barracoder — Daily Meeting</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 <style>
@@ -10,20 +10,28 @@
   --paper:#F6FAF7; --card:#FFFFFF; --ink:#152219; --muted:#5C6F62; --line:#D9E4DB;
   --accent:#1E7A4B; --accent-ink:#FFFFFF; --glow:#0E7F8C; --glow-soft:#E0F2F1;
   --amber:#8A5A18; --amber-soft:#F6ECD9; --rail:#C5D6C9; --deep:#EDF4EE;
+  --alert:#9B3B26; --alert-soft:#FAE9E4;
+  --shadow:0 10px 30px rgba(21,34,25,.08);
 }
 @media (prefers-color-scheme: dark){
   :root{
     --paper:#0E1512; --card:#16201B; --ink:#E3EDE5; --muted:#94A79A; --line:#26332B;
     --accent:#4CC98A; --accent-ink:#0B130E; --glow:#3ED2D8; --glow-soft:#12333A;
     --amber:#E2B267; --amber-soft:#33290F; --rail:#31423A; --deep:#0A110D;
+    --alert:#F0917A; --alert-soft:#3A1C15;
+    --shadow:0 10px 30px rgba(0,0,0,.34);
   }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0; background:var(--paper); color:var(--ink); line-height:1.55; font-size:16px;
-  font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif}
+  font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif;
+  -webkit-text-size-adjust:100%}
+body.running{overflow:hidden}
 .wrap{max-width:880px; margin:0 auto; padding:28px 18px 90px}
 a{color:var(--glow)}
+a:hover{color:var(--accent)}
+.mono{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums}
 .crumbs{display:flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); margin-bottom:20px}
 .crumbs a{color:var(--muted); text-decoration:none; font-weight:600}
 .crumbs a:hover{color:var(--accent)}
@@ -60,6 +68,14 @@ h1.ttl{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:600;
 .count.live{border-color:var(--accent); background:var(--glow-soft)}
 .count.live .n{animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.55}}
+/* run-class launcher */
+.launch{display:flex; align-items:center; gap:14px; flex-wrap:wrap; background:var(--card);
+  border:1px solid var(--accent); border-radius:14px; padding:14px 16px; margin:0 0 22px; box-shadow:var(--shadow)}
+.launch .go{background:var(--accent); color:var(--accent-ink); border:0; border-radius:12px;
+  padding:13px 22px; font:inherit; font-weight:800; font-size:17px; cursor:pointer; letter-spacing:.01em}
+.launch .go:hover{filter:brightness(1.08)}
+.launch .go:focus-visible{outline:3px solid var(--glow); outline-offset:3px}
+.launch p{margin:0; font-size:13.5px; color:var(--muted); max-width:44ch}
 .nav{display:flex; gap:10px; align-items:center; margin:0 0 24px; flex-wrap:wrap}
 .nav button, .nav select{background:var(--card); color:var(--ink); border:1px solid var(--line);
   border-radius:10px; padding:8px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer}
@@ -122,9 +138,167 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
 .slideno{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums}
 .dl{font-size:12.5px; color:var(--muted)}
 .dl a{color:var(--muted)}
-.burst{position:fixed; inset:0; pointer-events:none; z-index:5}
-footer{margin-top:56px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
-@media (prefers-reduced-motion: reduce){ .count.live .n{animation:none} html{scroll-behavior:auto} }
+.burst{position:fixed; inset:0; pointer-events:none; z-index:120}
+.wrap footer{margin-top:56px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+
+/* ============================================================
+   RUN MODE — the teaching view
+   ============================================================ */
+.run{position:fixed; inset:0; z-index:60; background:var(--paper); color:var(--ink);
+  display:grid; grid-template-rows:auto 1fr auto; overflow:hidden}
+.run[hidden]{display:none}
+.run button{font:inherit; cursor:pointer}
+.run button:focus-visible, .run select:focus-visible, .run textarea:focus-visible{outline:3px solid var(--glow); outline-offset:3px}
+/* top bar */
+.runbar{display:flex; align-items:center; gap:12px; padding:10px 16px; border-bottom:1px solid var(--line);
+  background:var(--card); flex-wrap:wrap}
+.rb{background:transparent; color:var(--muted); border:1px solid var(--line); border-radius:10px;
+  padding:8px 12px; font-size:14px; font-weight:700; white-space:nowrap}
+.rb:hover{border-color:var(--accent); color:var(--accent)}
+.rb[aria-pressed="true"]{background:var(--glow-soft); color:var(--glow); border-color:var(--glow)}
+.segs{display:flex; gap:6px; flex:1; min-width:220px; overflow-x:auto; scrollbar-width:none}
+.segs::-webkit-scrollbar{display:none}
+.seg{background:transparent; border:1px solid var(--line); border-radius:99px; padding:7px 14px;
+  font-size:14px; font-weight:700; color:var(--muted); white-space:nowrap; display:flex; align-items:center; gap:7px}
+.seg small{font-weight:600; opacity:.7; font-variant-numeric:tabular-nums}
+.seg:hover{border-color:var(--accent); color:var(--accent)}
+.seg.past{color:var(--accent); border-color:var(--rail)}
+.seg.cur{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.seg.cur small{opacity:.85}
+.clockbox{text-align:right; line-height:1.2}
+.clocknow{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700; font-size:19px; font-variant-numeric:tabular-nums}
+.clockleft{font-size:12px; color:var(--muted)}
+.clockleft.tight{color:var(--alert); font-weight:700}
+/* main */
+.runmain{display:grid; grid-template-columns:minmax(0,1fr) clamp(240px,22vw,400px); grid-template-rows:minmax(0,1fr); min-height:0}
+.panel{min-height:0; overflow-y:auto; padding:clamp(16px,2vw,30px) clamp(16px,2.2vw,36px) 28px; min-width:0}
+.segkick{font-size:clamp(12px,1.1vw,15px); letter-spacing:.18em; text-transform:uppercase; font-weight:800; color:var(--accent)}
+.segttl{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; margin:4px 0 2px;
+  font-size:clamp(30px,4.2vw,78px); line-height:1.02; text-wrap:balance}
+.segsub{color:var(--muted); font-size:clamp(14px,1.3vw,20px); margin:0 0 clamp(14px,1.8vw,26px)}
+.board{display:grid; grid-template-columns:minmax(0,1fr); gap:clamp(14px,1.8vw,26px)}
+@media (min-width:1024px){ .board.split{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); align-items:start} }
+@media (min-width:1500px){ .board.split{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr); gap:clamp(22px,2vw,40px)} }
+.rchecks{display:flex; flex-direction:column; gap:10px; margin:0}
+.rchk{display:flex; gap:14px; align-items:flex-start; background:var(--card); border:2px solid var(--line);
+  border-radius:14px; padding:clamp(12px,1.2vw,18px) clamp(14px,1.4vw,22px); text-align:left; color:var(--ink);
+  font-size:clamp(18px,1.6vw,34px); line-height:1.32; width:100%; transition:border-color .15s, opacity .2s}
+.rchk:hover{border-color:var(--accent)}
+.rchk .box{flex:none; width:clamp(26px,2vw,36px); height:clamp(26px,2vw,36px); border:3px solid var(--accent);
+  border-radius:9px; display:grid; place-items:center; color:var(--accent-ink); font-weight:900;
+  font-size:clamp(15px,1.2vw,22px); margin-top:2px}
+.rchk.on{opacity:.5}
+.rchk.on .box{background:var(--accent)}
+.rchk.on .t{text-decoration:line-through}
+.rcard{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:clamp(14px,1.4vw,22px); box-shadow:var(--shadow)}
+.rcard h3{margin:0 0 12px; font-size:clamp(12px,1.05vw,17px); letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:800}
+.qlist{margin:0; padding-left:1.1em}
+.qlist li{font-size:clamp(18px,1.6vw,33px); line-height:1.3; margin:.42em 0; text-wrap:pretty}
+.vocab{display:flex; flex-wrap:wrap; gap:10px}
+.vword{background:var(--glow-soft); border:1px solid var(--glow); border-radius:14px; padding:12px 18px; max-width:34ch; flex:1 1 260px}
+.vword b{display:block; font-size:clamp(18px,1.5vw,31px); color:var(--glow); font-family:Futura,"Avenir Next",system-ui,sans-serif}
+.vword span{font-size:clamp(14px,1.15vw,22px); color:var(--ink); opacity:.85; line-height:1.3}
+/* slide card in run mode */
+.rslide{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+  display:flex; flex-direction:column; box-shadow:var(--shadow)}
+.rslide .body{padding:clamp(14px,1.4vw,22px); flex:1}
+.rslide h4{margin:0 0 10px; font-family:Futura,"Avenir Next",system-ui,sans-serif; color:var(--glow);
+  font-size:clamp(19px,1.8vw,38px); text-wrap:balance}
+.rslide ul{margin:0; padding-left:1.1em}
+.rslide li{font-size:clamp(16px,1.4vw,29px); line-height:1.32; margin:.35em 0; text-wrap:pretty}
+.rimgs{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+.rimgs img{max-height:clamp(140px,30vh,440px); max-width:100%; border-radius:10px; border:1px solid var(--line); background:#fff}
+.rslidebar{display:flex; align-items:center; gap:10px; padding:10px 14px; border-top:1px solid var(--line); background:var(--paper)}
+.rslidebar button{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px 16px; font-weight:800; color:var(--ink)}
+.rslidebar button:disabled{opacity:.3}
+.rslidebar .n{margin-left:auto; font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; color:var(--muted)}
+.rtip{background:var(--amber-soft); color:var(--amber); border:1px solid var(--amber); border-radius:12px;
+  padding:12px 16px; margin-top:14px; font-size:clamp(15px,1.2vw,24px); line-height:1.35}
+/* timer rail */
+.timerside{min-height:0; overflow-y:auto; border-left:1px solid var(--line); background:var(--card); display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:10px; padding:clamp(12px,1.6vw,26px); min-width:0}
+.ring{position:relative; width:min(24vw,240px); aspect-ratio:1; display:grid; place-items:center}
+.ring svg{position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg)}
+.ring .trk{fill:none; stroke:var(--deep); stroke-width:9}
+.ring .prg{fill:none; stroke:var(--accent); stroke-width:9; stroke-linecap:round; transition:stroke-dashoffset .9s linear}
+.ring .lab{position:relative; font-size:clamp(11px,.9vw,14px); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); font-weight:800; text-align:center}
+.tdigits{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(52px,7.6vw,132px); line-height:.95; letter-spacing:-.02em; color:var(--accent)}
+.tstate{font-size:clamp(12px,1vw,16px); color:var(--muted); font-weight:700; letter-spacing:.1em; text-transform:uppercase; min-height:1.2em}
+.over .tdigits, .over .ring .prg{color:var(--alert); stroke:var(--alert)}
+.over .tstate{color:var(--alert)}
+.tadj{display:flex; gap:8px; align-items:center}
+.tadj button{background:var(--paper); border:1px solid var(--line); border-radius:10px; width:44px; height:44px;
+  font-size:19px; font-weight:800; color:var(--ink)}
+.tadj button:hover{border-color:var(--accent); color:var(--accent)}
+.tadj span{font-size:13px; color:var(--muted); min-width:8ch; text-align:center}
+/* short viewports (laptop in a browser window): shrink the rail so nothing clips */
+@media (max-height:760px) and (min-width:901px){
+  .ring{width:min(15vw,130px)}
+  .tdigits{font-size:clamp(42px,5.4vw,86px)}
+  .timerside{gap:8px}
+}
+.flash{animation:flash .5s ease 3}
+@keyframes flash{50%{background:var(--alert-soft)}}
+/* bottom controls */
+.runfoot{display:grid; grid-template-columns:1fr 1.3fr 1fr; gap:12px; padding:12px clamp(12px,1.6vw,24px);
+  border-top:1px solid var(--line); background:var(--card)}
+.big{border:2px solid var(--line); background:var(--paper); color:var(--ink); border-radius:16px;
+  padding:clamp(12px,1.4vw,20px); font-size:clamp(16px,1.5vw,26px); font-weight:800; min-height:60px}
+.big:hover{border-color:var(--accent); color:var(--accent)}
+.big.play{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.big.play:hover{filter:brightness(1.08); color:var(--accent-ink)}
+.big:disabled{opacity:.3}
+@media (max-width:900px){
+  .runmain{grid-template-columns:1fr; grid-template-rows:auto minmax(0,1fr)}
+  .timerside{overflow:visible}
+  .timerside{border-left:0; border-bottom:1px solid var(--line); flex-direction:row; flex-wrap:wrap; gap:14px; padding:12px 16px}
+  .ring{width:92px}
+  .tdigits{font-size:clamp(46px,15vw,80px)}
+  .tadj{margin-left:auto}
+  .clockbox{text-align:left}
+}
+/* jobs */
+.jobgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr)); gap:clamp(14px,1.2vw,20px)}
+.jobcard{background:var(--card); border:2px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+.jobcard .role{font-size:clamp(11px,.95vw,13px); letter-spacing:.16em; text-transform:uppercase; font-weight:800; color:var(--accent)}
+.jobcard .who{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:clamp(24px,2.4vw,46px); margin:6px 0 4px; line-height:1.1}
+.jobcard .meta{font-size:13px; color:var(--muted)}
+.jobcard .meta.first{color:var(--glow); font-weight:700}
+.jobcard select{margin-top:10px; width:100%; background:var(--paper); color:var(--ink); border:1px solid var(--line);
+  border-radius:10px; padding:8px 10px; font:inherit; font-size:14px}
+.jobcard.in{animation:dealin .34s cubic-bezier(.2,.8,.3,1) both}
+@keyframes dealin{from{opacity:0; transform:translateY(14px) rotate(-1.2deg)} to{opacity:1; transform:none}}
+.jobtools{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+.jobtools .go{background:var(--accent); color:var(--accent-ink); border:0; border-radius:12px; padding:12px 20px; font-size:16px; font-weight:800}
+.jobtools .go:hover{filter:brightness(1.08)}
+.htable{width:100%; border-collapse:collapse; font-size:14px; margin-top:6px}
+.htable th, .htable td{border:1px solid var(--line); padding:7px 9px; text-align:center}
+.htable th:first-child, .htable td:first-child{text-align:left; font-weight:700}
+.htable th{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:800}
+.htable td.zero{background:var(--amber-soft); color:var(--amber); font-weight:800}
+.rosterbox{width:100%; min-height:150px; background:var(--paper); color:var(--ink); border:1px solid var(--line);
+  border-radius:12px; padding:12px; font:inherit; font-size:16px; line-height:1.7}
+/* closer */
+.mustdo{border:2px solid var(--alert); background:var(--alert-soft); border-radius:16px; padding:clamp(14px,1.4vw,22px)}
+.mustdo h3{color:var(--alert); margin:0 0 14px; font-size:clamp(13px,1.1vw,19px); letter-spacing:.16em; text-transform:uppercase; font-weight:900}
+.mustdo .rchk{border-color:var(--alert); background:var(--card)}
+.mustdo .rchk .box{border-color:var(--alert)}
+.mustdo .rchk.on .box{background:var(--alert)}
+.party{text-align:center; padding:clamp(20px,3vw,44px); border:2px solid var(--accent); background:var(--glow-soft);
+  border-radius:20px; margin-bottom:18px}
+.party b{display:block; font-family:Futura,"Avenir Next",system-ui,sans-serif; font-size:clamp(26px,3.4vw,52px); color:var(--accent); line-height:1.1}
+.party span{font-size:clamp(14px,1.3vw,20px); color:var(--muted)}
+.empty{color:var(--muted); font-size:clamp(15px,1.3vw,20px); background:var(--card); border:1px dashed var(--line);
+  border-radius:14px; padding:18px}
+.keys{margin-top:22px; font-size:13px; color:var(--muted)}
+.keys kbd{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; background:var(--card); border:1px solid var(--line);
+  border-bottom-width:2px; border-radius:6px; padding:1px 6px; font-size:12px}
+@media (prefers-reduced-motion: reduce){
+  .count.live .n{animation:none} html{scroll-behavior:auto}
+  .jobcard.in{animation:none} .flash{animation:none} .ring .prg{transition:none}
+}
 </style>
 </head>
 <body>
@@ -143,6 +317,12 @@ footer{margin-top:56px; padding-top:16px; border-top:1px solid var(--line); colo
   <div class="datebar"><div class="bigdate" id="bigdate">Loading…</div><span class="pill" id="pill" hidden></span></div>
   <h1 class="ttl" id="title"></h1>
   <div class="count" id="count" hidden><span class="n" id="countn"></span><span class="l" id="countl"></span></div>
+
+  <div class="launch">
+    <button class="go" id="runbtn">▶ Run class</button>
+    <p>Full-screen teaching mode: one segment at a time, a big countdown, jobs dealt fairly, and the clean-up
+       checks nobody can miss. Everything you tick here stays ticked in the plan below.</p>
+  </div>
 
   <div class="nav">
     <button id="prev" aria-label="Previous meeting">← Prev</button>
@@ -180,6 +360,43 @@ footer{margin-top:56px; padding-top:16px; border-top:1px solid var(--line); colo
 
   <footer>Barracoder · FIRST LEGO League Explore · BioGlow season · <a href="index.html">full season plan</a> · content © FIRST &amp; the LEGO Group</footer>
 </div>
+
+<!-- ============ RUN MODE ============ -->
+<div class="run" id="run" hidden>
+  <header class="runbar">
+    <button class="rb" id="rexit" title="Exit run mode (Esc)">✕ Exit</button>
+    <div class="segs" id="rsegs" role="tablist" aria-label="Class segments"></div>
+    <div class="clockbox"><div class="clocknow mono" id="rclock">--:--</div><div class="clockleft" id="rleft"></div></div>
+    <button class="rb" id="rsound" aria-pressed="false" title="Timer sounds (S)">🔇 Sound off</button>
+    <button class="rb" id="rfull" title="Full screen (F)">⛶</button>
+  </header>
+  <div class="runmain">
+    <main class="panel" id="rpanel" tabindex="-1"></main>
+    <aside class="timerside" id="tside">
+      <div class="ring">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="trk" cx="50" cy="50" r="44"></circle>
+          <circle class="prg" id="tring" cx="50" cy="50" r="44" stroke-dasharray="276.5" stroke-dashoffset="0"></circle>
+        </svg>
+        <div class="lab" id="tlab">Intro</div>
+      </div>
+      <div class="tdigits mono" id="tdigits" role="timer" aria-live="off">10:00</div>
+      <div class="tstate" id="tstate">Paused</div>
+      <div class="tadj">
+        <button id="tminus" aria-label="One minute less">−</button>
+        <span id="tlen">10 min</span>
+        <button id="tplus" aria-label="One minute more">+</button>
+      </div>
+      <button class="rb" id="treset">↺ Reset segment</button>
+    </aside>
+  </div>
+  <footer class="runfoot">
+    <button class="big" id="rprev">◀ Back</button>
+    <button class="big play" id="rplay">▶ Start timer</button>
+    <button class="big" id="rnext">Next ▶</button>
+  </footer>
+</div>
+
 <canvas class="burst" id="burst" aria-hidden="true"></canvas>
 
 <script>
@@ -191,7 +408,10 @@ let DATA = null, M = [], cur = 0, slideIdx = 0, tipOn = false, SCRIM = null;
 fetch('meetings.json').then(r => r.json()).then(d => { DATA = d; M = d.meetings; boot(); })
   .catch(() => { $('bigdate').textContent = 'Could not load meetings.json'; });
 
+/* ---------- storage helpers (existing keys preserved exactly) ---------- */
 const LS = k => { try { return JSON.parse(localStorage.getItem('bar:' + k) || '[]'); } catch(e){ return []; } };
+const LSset = (k, v) => { try { localStorage.setItem('bar:' + k, JSON.stringify(v)); } catch(e){} };
+const OBJ = (k, d) => { try { return JSON.parse(localStorage.getItem('bar:' + k) || 'null') || d; } catch(e){ return d; } };
 
 function todayIso() {
   const now = new Date();
@@ -213,7 +433,8 @@ function boot() {
     o.value = i; o.textContent = `${m.day} ${mo}/${da} — ${m.title.length > 42 ? m.title.slice(0,40)+'…' : m.title}`;
     sel.appendChild(o);
   });
-  const q = new URLSearchParams(location.search).get('date');
+  const params = new URLSearchParams(location.search);
+  const q = params.get('date');
   const qi = q ? M.findIndex(m => m.date === q) : -1;
   show(qi >= 0 ? qi : todayIdx());
   $('prev').onclick = () => show(cur-1); $('next').onclick = () => show(cur+1);
@@ -222,6 +443,7 @@ function boot() {
   $('sprev').onclick = () => slide(slideIdx-1); $('snext').onclick = () => slide(slideIdx+1);
   $('tipbtn').onclick = () => { tipOn = !tipOn; renderSlide(); };
   document.addEventListener('keydown', e => {
+    if (RUN.open) return keysRun(e);
     if (e.target.tagName === 'SELECT') return;
     if (e.key === 'ArrowLeft') slide(slideIdx-1);
     if (e.key === 'ArrowRight') slide(slideIdx+1);
@@ -235,16 +457,18 @@ function boot() {
     tx = null;
   }, {passive:true});
   setInterval(tickCount, 1000);
+  wireRun();
+  if (params.get('run') === '1') openRun();
 }
 const DAYNAMES = {Sun:'Sunday', Mon:'Monday', Tue:'Tuesday', Wed:'Wednesday', Thu:'Thursday', Fri:'Friday', Sat:'Saturday'};
+const MN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function show(i) {
   cur = Math.max(0, Math.min(M.length-1, i));
   const m = M[cur];
-  history.replaceState(null, '', '?date=' + m.date);
+  syncUrl();
   $('datesel').value = cur;
   $('prev').disabled = cur === 0; $('next').disabled = cur === M.length-1;
   const [y,mo,da] = m.date.split('-');
-  const MN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   $('phasename').textContent = m.phase;
   $('bigdate').textContent = `${DAYNAMES[m.day] || m.day} ${MN[+mo]} ${+da}`;
   $('title').textContent = m.title;
@@ -270,11 +494,19 @@ function show(i) {
     renderSlide();
   }
   refreshProgress(); tickCount();
-  scrollTo({top: 0, behavior: REDUCED ? 'auto' : 'smooth'});
+  if (!RUN.open) scrollTo({top: 0, behavior: REDUCED ? 'auto' : 'smooth'});
+}
+function syncUrl(){
+  history.replaceState(null, '', '?date=' + M[cur].date + (RUN.open ? '&run=1' : ''));
 }
 function fillList(id, items, cls) {
   const el = $(id); el.innerHTML = '';
   items.forEach(t => { const d = document.createElement('div'); d.className = cls; d.textContent = t; el.appendChild(d); });
+}
+function toggleIdx(key, i) {
+  const s = LS(key), on = s.includes(i);
+  LSset(key, on ? s.filter(x => x !== i) : [...s, i]);
+  return !on;
 }
 function buildCheck(id, items, key, onchange) {
   const el = $(id); el.innerHTML = '';
@@ -282,16 +514,16 @@ function buildCheck(id, items, key, onchange) {
   items.forEach((t, i) => {
     const b = document.createElement('button');
     b.className = 'chk' + (saved.includes(i) ? ' on' : ''); b.type = 'button';
+    b.setAttribute('aria-pressed', saved.includes(i) ? 'true' : 'false');
     b.innerHTML = '<span class="box">' + (saved.includes(i) ? '✓' : '') + '</span><span class="t"></span>';
     b.querySelector('.t').textContent = t;
     b.onclick = () => {
-      const s = LS(key);
-      const on = s.includes(i);
-      const ns = on ? s.filter(x => x !== i) : [...s, i];
-      localStorage.setItem('bar:' + key, JSON.stringify(ns));
-      b.classList.toggle('on', !on);
-      b.querySelector('.box').textContent = on ? '' : '✓';
+      const now = toggleIdx(key, i);
+      b.classList.toggle('on', now);
+      b.setAttribute('aria-pressed', now ? 'true' : 'false');
+      b.querySelector('.box').textContent = now ? '✓' : '';
       onchange();
+      if (RUN.open) renderPanel();
     };
     el.appendChild(b);
   });
@@ -307,14 +539,12 @@ function refreshProgress() {
   const pct = total ? Math.round(100 * done / total) : 0;
   $('pbar').style.width = pct + '%';
   $('ppct').textContent = pct + '%';
-  if (pct === 100 && !REDUCED) burst();
-  // overall
+  if (pct === 100 && !REDUCED && !RUN.open) burst();
   let T = 0, D = 0;
   M.forEach(x => { const p = meetingPct(x); T += p.total; D += p.done; });
   const opct = T ? Math.round(100 * D / T) : 0;
   $('sbar').style.width = opct + '%';
   $('spct').textContent = opct + '%';
-  // per-section
   const phases = [];
   M.forEach(x => {
     let ph = phases.find(p => p.name === x.phase);
@@ -341,7 +571,6 @@ function refreshProgress() {
 }
 function tickCount() {
   const m = M[cur]; if (!m) return;
-  // scrimmage strip
   if (SCRIM) {
     const days = Math.ceil((new Date(SCRIM.date + 'T09:00:00') - new Date()) / 86400000);
     $('scrimn').textContent = days > 1 ? days + ' days' : days === 1 ? 'tomorrow!' : days === 0 ? 'TODAY! ✨' : 'done ✓';
@@ -404,6 +633,608 @@ function renderSlide() {
     d.onclick = () => slide(i); dots.appendChild(d);
   });
 }
+
+/* ============================================================
+   RUN MODE
+   ============================================================ */
+const SEGS = [
+  {id:'jobs',  name:'Jobs',       sub:'Who does what tonight',                  def:5},
+  {id:'intro', name:'Intro',      sub:'Story, vocabulary, guiding questions',   def:10},
+  {id:'act1',  name:'Activity 1', sub:'',                                        def:25},
+  {id:'act2',  name:'Activity 2', sub:'',                                        def:25},
+  {id:'share', name:'Share',      sub:'Show the room what we made',              def:10},
+  {id:'close', name:'Close',      sub:'Done-when checks, clean up, charge up',   def:15}
+];
+const JOBS = ['Material Manager','Reporter','Builder','LEGO Element Finder','Coder','Researcher'];
+const EXTRA_JOBS = ['Builder 2','Coder 2','LEGO Element Finder 2','Reporter 2','Researcher 2','Material Manager 2'];
+const RUN = {open:false, seg:0, slide:0, sound:false, celebrated:false};
+const TIMER = {endsAt:null, remaining:null, running:false, warned:false, ended:false};
+
+/* --- durations --- */
+function segMins(){ const d = OBJ('segmins', {}); const o = {}; SEGS.forEach(s => o[s.id] = d[s.id] || s.def); return o; }
+function setSegMin(id, v){ const d = OBJ('segmins', {}); d[id] = Math.max(1, Math.min(60, v)); LSset('segmins', d); }
+
+/* --- slide → segment mapping (drives which slides attach to which activity) --- */
+function slideSeg(title, i, seenTasks){
+  const t = (title || '').toLowerCase();
+  if (/trademark|copyright/.test(t)) return null;
+  if (/clean ?up/.test(t)) return 'close';
+  if (/^share|career connection/.test(t)) return 'share';
+  if (/activity 1|^code$/.test(t)) return 'act1';
+  if (/activity 2|^challenge/.test(t)) return 'act2';
+  if (/session tasks/.test(t)) return seenTasks.n++ === 0 ? 'act1' : 'act2';
+  if (/guiding questions/.test(t)) return 'pending';
+  return 'intro';
+}
+function segmentDeck(m){
+  const out = {jobs:[], intro:[], act1:[], act2:[], share:[], close:[]};
+  const deck = m.deck && DATA.decks[m.deck];
+  if (!deck) return out;
+  const seen = {n:0}; let pending = [];
+  const resolved = deck.slides.map((s, i) => ({s, seg: slideSeg(s.title, i, seen)}));
+  resolved.forEach((r, i) => {
+    if (r.seg === 'pending') { pending.push(r.s); return; }
+    if (r.seg === null) return;
+    if (pending.length) { pending.forEach(p => out[r.seg].push(p)); pending = []; }
+    out[r.seg].push(r.s);
+  });
+  pending.forEach(p => out.share.push(p));
+  return out;
+}
+/* --- plan items → segment mapping.
+   Activities are compound sentences ("Share to the room; clean up — KEEP tree assembled").
+   Split them on ';' so each clause lands on the screen where it is actually done.
+   Every clause keeps its ORIGINAL index, so ticks still write to bar:<date>:plan. --- */
+const RX_CLOSE = /clean ?up|charge|keep .*assembl|stay.? assembl|store .*assembl|put away|inventor|take home|send home|collect signed|fold\/store/i;
+const RX_SHARE = /^share|^celebrat|career connection|present to the room/i;
+const RX_INTRO = /vocabular|recap|^intro|core value|what did we do|explore story|roles|team journey|watch a|watch the/i;
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+/* Split on ';' only at bracket depth 0 — "(TMG p.5 definition; draw example)" is one thought. */
+function clauses(t){
+  const parts = []; let buf = '', depth = 0;
+  for (const ch of String(t)){
+    if (ch === '(' || ch === '[') depth++;
+    else if (ch === ')' || ch === ']') depth = Math.max(0, depth - 1);
+    if (ch === ';' && depth === 0){ parts.push(buf); buf = ''; continue; }
+    buf += ch;
+  }
+  parts.push(buf);
+  return parts.map(s => s.trim()).filter(Boolean).map(cap);
+}
+/* Only pull a sentence apart when a clause genuinely belongs on another screen.
+   Everything else stays one item, so nothing fragments into "Write/draw on p.8". */
+function splitActivity(t){
+  const cs = clauses(t);
+  if (cs.length < 2) return [{text: cap(String(t).trim()), seg: null}];
+  const close = cs.filter(c => RX_CLOSE.test(c)), share = cs.filter(c => RX_SHARE.test(c));
+  if (!close.length && !share.length) return [{text: cap(String(t).trim()), seg: null}];
+  const rest = cs.filter(c => !RX_CLOSE.test(c) && !RX_SHARE.test(c));
+  const out = [];
+  if (rest.length) out.push({text: rest.join('; '), seg: null});
+  if (share.length) out.push({text: share.join('; '), seg: 'share'});
+  if (close.length) out.push({text: close.join('; '), seg: 'close'});
+  return out;
+}
+function segmentPlan(m){
+  const out = {jobs:[], intro:[], act1:[], act2:[], share:[], close:[]}, mid = [];
+  (m.activities || []).forEach((t, i) => {
+    const parts = splitActivity(t);
+    parts.forEach((part, p) => {
+      const e = {i, p, n: parts.length, text: part.text}, c = part.text;
+      if (part.seg) out[part.seg].push(e);
+      else if (RX_CLOSE.test(c)) out.close.push(e);
+      else if (RX_SHARE.test(c)) out.share.push(e);
+      else if (!mid.length && !out.intro.length && RX_INTRO.test(c)) out.intro.push(e);
+      else mid.push(e);
+    });
+  });
+  const half = Math.ceil(mid.length / 2);
+  out.act1 = mid.slice(0, half); out.act2 = mid.slice(half);
+  // Every session needs something to open on: borrow the first clause rather than
+  // ever showing an empty Intro screen.
+  if (!out.intro.length){
+    if (out.act1.length) out.intro.push(out.act1.shift());
+    else if (out.act2.length) out.intro.push(out.act2.shift());
+    else if (out.share.length) out.intro.push(out.share.shift());
+  }
+  return out;
+}
+function vocabFor(m){
+  const deck = m.deck && DATA.decks[m.deck]; if (!deck) return [];
+  const out = [];
+  deck.slides.filter(s => /vocabulary/i.test(s.title)).forEach(s => s.points.forEach(p => {
+    const i = p.indexOf(':');
+    if (i > 0 && i < 40) out.push({w: p.slice(0, i).trim(), d: p.slice(i+1).trim()});
+    else out.push({w: p.trim(), d: ''});
+  }));
+  return out;
+}
+function questionsFor(m, segId){
+  const deck = m.deck && DATA.decks[m.deck]; if (!deck) return [];
+  const map = segmentDeck(m); const out = [];
+  map[segId].forEach(s => { if (/guiding questions/i.test(s.title)) s.points.forEach(p => out.push(p)); });
+  return out;
+}
+/* The two non-negotiables, plus anything the deck's Clean Up slide adds.
+   Session-specific clean-up instructions come from the routed plan clauses instead,
+   so nothing is listed twice. */
+function cleanupItems(m){
+  const out = ['SPIKE Essential hub is plugged in and charging', 'Models that must stay built are stored assembled'];
+  const deck = m.deck && DATA.decks[m.deck];
+  if (deck) deck.slides.filter(s => /clean ?up/i.test(s.title))
+    .forEach(s => s.points.forEach(p => { if (String(p).trim()) out.push(String(p).trim()); }));
+  const seen = new Set(); const dedup = [];
+  out.forEach(x => { const k = x.toLowerCase().replace(/[^a-z]/g,'').slice(0,40); if (!seen.has(k)) { seen.add(k); dedup.push(x); } });
+  return dedup.slice(0, 6);
+}
+
+/* --- jobs --- */
+function roster(){ return OBJ('roster', []); }
+function jobHist(){ return OBJ('jobs', {}); }
+function activeJobs(n){
+  let list = JOBS.slice();
+  if (OBJ('captain', false)) list.push('Team Captain');
+  let k = 0;
+  while (list.length < n && k < EXTRA_JOBS.length) list.push(EXTRA_JOBS[k++]);
+  return list;
+}
+const baseJob = j => j.replace(/ \d$/, '');
+function jobStats(){
+  const h = jobHist(), R = roster();
+  const dates = Object.keys(h).sort();
+  const count = {}, last = {};
+  R.forEach(n => { count[n] = {}; last[n] = {}; });
+  dates.forEach((d, i) => Object.entries(h[d] || {}).forEach(([job, name]) => {
+    const b = baseJob(job);
+    if (!count[name]) { count[name] = {}; last[name] = {}; }
+    count[name][b] = (count[name][b] || 0) + 1;
+    last[name][b] = i;
+  }));
+  return {count, last, dates};
+}
+function dealJobs(){
+  const R = roster(); if (!R.length) return null;
+  const date = M[cur].date;
+  const h = jobHist(); delete h[date];
+  const dates = Object.keys(h).sort();
+  const held = {}, recency = {}, tot = {};
+  R.forEach(n => { held[n] = {}; recency[n] = {}; tot[n] = 0; });
+  dates.forEach((d, i) => Object.entries(h[d] || {}).forEach(([job, name]) => {
+    if (!held[name]) { held[name] = {}; recency[name] = {}; tot[name] = 0; }
+    const b = baseJob(job);
+    held[name][b] = (held[name][b] || 0) + 1; recency[name][b] = i; tot[name]++;
+  }));
+  const jobs = activeJobs(R.length);
+  const order = jobs.slice().sort(() => Math.random() - .5);
+  const assign = {}, tonight = {};
+  R.forEach(n => tonight[n] = 0);
+  order.forEach(job => {
+    const b = baseJob(job);
+    const minT = Math.min.apply(null, R.map(n => tonight[n]));
+    const pool = R.filter(n => tonight[n] === minT);
+    pool.sort((a, x) =>
+      (held[a][b] || 0) - (held[x][b] || 0) ||
+      (recency[a][b] === undefined ? -1 : recency[a][b]) - (recency[x][b] === undefined ? -1 : recency[x][b]) ||
+      (tot[a] || 0) - (tot[x] || 0) || Math.random() - .5);
+    assign[job] = pool[0]; tonight[pool[0]]++;
+  });
+  const all = jobHist(); all[date] = assign; LSset('jobs', all);
+  return assign;
+}
+function setJob(job, name){
+  const all = jobHist(), d = M[cur].date;
+  all[d] = all[d] || {}; all[d][job] = name; LSset('jobs', all);
+}
+
+/* --- open / close --- */
+function openRun(){
+  RUN.open = true; RUN.celebrated = false;
+  $('run').hidden = false; document.body.classList.add('running');
+  restoreTimer();
+  renderSegs(); renderPanel(); paintTimer();
+  syncUrl(); $('rpanel').focus();
+}
+function closeRun(){
+  RUN.open = false; $('run').hidden = true; document.body.classList.remove('running');
+  syncUrl(); refreshProgress();
+}
+function wireRun(){
+  $('runbtn').onclick = openRun;
+  $('rexit').onclick = closeRun;
+  $('rprev').onclick = () => goSeg(RUN.seg - 1);
+  $('rnext').onclick = () => goSeg(RUN.seg + 1);
+  $('rplay').onclick = toggleTimer;
+  $('treset').onclick = () => resetTimer(true);
+  $('tminus').onclick = () => bumpLen(-1);
+  $('tplus').onclick = () => bumpLen(1);
+  $('rsound').onclick = () => {
+    RUN.sound = !RUN.sound;
+    $('rsound').setAttribute('aria-pressed', RUN.sound ? 'true' : 'false');
+    $('rsound').textContent = RUN.sound ? '🔊 Sound on' : '🔇 Sound off';
+    if (RUN.sound) beep(880, .12, .18);
+  };
+  $('rfull').onclick = () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+  };
+  setInterval(tickTimer, 250);
+}
+function keysRun(e){
+  const tag = (e.target.tagName || '').toLowerCase();
+  if (tag === 'select' || tag === 'textarea' || tag === 'input') { if (e.key === 'Escape') e.target.blur(); return; }
+  if (e.key === 'Escape') { closeRun(); return; }
+  if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggleTimer(); return; }
+  if (e.key === 's' || e.key === 'S') { $('rsound').click(); return; }
+  if (e.key === 'f' || e.key === 'F') { $('rfull').click(); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); e.shiftKey ? goSeg(RUN.seg+1) : stepSlide(1); }
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); e.shiftKey ? goSeg(RUN.seg-1) : stepSlide(-1); }
+}
+function goSeg(i){
+  const n = Math.max(0, Math.min(SEGS.length - 1, i));
+  if (n === RUN.seg) return;
+  RUN.seg = n; RUN.slide = 0;
+  resetTimer(false);
+  renderSegs(); renderPanel(); paintTimer();
+  $('rpanel').scrollTop = 0;
+}
+function stepSlide(d){
+  const list = segmentDeck(M[cur])[SEGS[RUN.seg].id];
+  if (!list.length) { goSeg(RUN.seg + d); return; }
+  const n = RUN.slide + d;
+  if (n < 0 || n >= list.length) { goSeg(RUN.seg + d); return; }
+  RUN.slide = n; renderPanel();
+}
+
+/* --- timer --- */
+function segLenMs(){ return segMins()[SEGS[RUN.seg].id] * 60000; }
+function restoreTimer(){
+  const t = OBJ('timer', null);
+  if (t && t.date === M[cur].date && typeof t.seg === 'number') {
+    RUN.seg = t.seg; TIMER.running = !!t.running;
+    TIMER.endsAt = t.endsAt; TIMER.remaining = t.remaining;
+    TIMER.warned = !!t.warned; TIMER.ended = !!t.ended;
+  } else resetTimer(false);
+}
+function saveTimer(){
+  LSset('timer', {date:M[cur].date, seg:RUN.seg, running:TIMER.running, endsAt:TIMER.endsAt,
+    remaining:TIMER.remaining, warned:TIMER.warned, ended:TIMER.ended});
+}
+function resetTimer(paint){
+  TIMER.running = false; TIMER.endsAt = null; TIMER.remaining = segLenMs();
+  TIMER.warned = false; TIMER.ended = false;
+  saveTimer(); if (paint) paintTimer();
+}
+function toggleTimer(){
+  if (TIMER.running) { TIMER.remaining = TIMER.endsAt - Date.now(); TIMER.running = false; TIMER.endsAt = null; }
+  else { TIMER.endsAt = Date.now() + (TIMER.remaining == null ? segLenMs() : TIMER.remaining); TIMER.running = true; }
+  saveTimer(); paintTimer();
+}
+function bumpLen(d){
+  const id = SEGS[RUN.seg].id, cur2 = segMins()[id];
+  setSegMin(id, cur2 + d);
+  const delta = (segMins()[id] - cur2) * 60000;
+  if (TIMER.running) TIMER.endsAt += delta; else TIMER.remaining = (TIMER.remaining || 0) + delta;
+  saveTimer(); paintTimer();
+}
+function leftMs(){
+  if (TIMER.running) return TIMER.endsAt - Date.now();
+  return TIMER.remaining == null ? segLenMs() : TIMER.remaining;
+}
+function fmt(ms){
+  const over = ms < 0; const t = Math.floor(Math.abs(ms) / 1000);
+  return (over ? '+' : '') + Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0');
+}
+function paintTimer(){
+  const ms = leftMs(), total = segLenMs(), id = SEGS[RUN.seg].id;
+  $('tdigits').textContent = fmt(ms);
+  $('tlab').textContent = SEGS[RUN.seg].name;
+  $('tlen').textContent = segMins()[id] + ' min';
+  $('tstate').textContent = ms < 0 ? 'Over time' : TIMER.running ? 'Running' : 'Paused';
+  $('rplay').textContent = TIMER.running ? '⏸ Pause' : (TIMER.remaining != null && TIMER.remaining < total ? '▶ Resume' : '▶ Start timer');
+  $('tside').classList.toggle('over', ms < 0);
+  const frac = Math.max(0, Math.min(1, ms / total));
+  $('tring').style.strokeDashoffset = (276.5 * (1 - frac)).toFixed(1);
+  $('rprev').disabled = RUN.seg === 0; $('rnext').disabled = RUN.seg === SEGS.length - 1;
+}
+function tickTimer(){
+  if (!RUN.open) return;
+  const now = new Date();
+  $('rclock').textContent = (now.getHours() % 12 || 12) + ':' + String(now.getMinutes()).padStart(2, '0');
+  const end = new Date(M[cur].date + 'T19:30:00');
+  const mins = Math.round((end - now) / 60000);
+  const le = $('rleft');
+  if (M[cur].date !== todayIso()) { le.textContent = 'class window 6:00–7:30'; le.classList.remove('tight'); }
+  else if (mins > 0) { le.textContent = mins + ' min until 7:30 pm'; le.classList.toggle('tight', mins <= 10); }
+  else { le.textContent = 'past 7:30 pm'; le.classList.add('tight'); }
+  const ms = leftMs();
+  $('tdigits').textContent = fmt(ms);
+  const frac = Math.max(0, Math.min(1, ms / segLenMs()));
+  $('tring').style.strokeDashoffset = (276.5 * (1 - frac)).toFixed(1);
+  if (TIMER.running) {
+    if (!TIMER.warned && ms <= 60000 && ms > 0) { TIMER.warned = true; beep(660, .18, .16); saveTimer(); }
+    if (!TIMER.ended && ms <= 0) {
+      TIMER.ended = true; saveTimer();
+      $('tside').classList.add('over');
+      $('tstate').textContent = 'Over time';
+      if (!REDUCED) { const el = $('tside'); el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+        setTimeout(() => el.classList.remove('flash'), 1600); }
+      beep(523, .16, .2); setTimeout(() => beep(659, .16, .2), 190); setTimeout(() => beep(784, .3, .2), 380);
+    }
+  }
+}
+let AC = null;
+function beep(freq, dur, vol){
+  if (!RUN.sound) return;
+  try {
+    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
+    if (AC.state === 'suspended') AC.resume();
+    const o = AC.createOscillator(), g = AC.createGain();
+    o.type = 'sine'; o.frequency.value = freq; o.connect(g); g.connect(AC.destination);
+    const t = AC.currentTime;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.start(t); o.stop(t + dur + .05);
+  } catch(e){}
+}
+
+/* --- rendering --- */
+function renderSegs(){
+  const w = $('rsegs'); w.innerHTML = ''; const mins = segMins();
+  SEGS.forEach((s, i) => {
+    const b = document.createElement('button');
+    b.className = 'seg' + (i === RUN.seg ? ' cur' : i < RUN.seg ? ' past' : '');
+    b.type = 'button'; b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', i === RUN.seg ? 'true' : 'false');
+    b.innerHTML = '<span></span><small>' + mins[s.id] + 'm</small>';
+    b.querySelector('span').textContent = s.name;
+    b.onclick = () => goSeg(i);
+    w.appendChild(b);
+  });
+}
+function el(tag, cls, text){ const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function runCheck(label, key, idx){
+  const on = LS(key).includes(idx);
+  const b = el('button', 'rchk' + (on ? ' on' : ''));
+  b.type = 'button'; b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  b.dataset.k = key; b.dataset.i = idx;
+  const box = el('span', 'box', on ? '✓' : ''); const t = el('span', 't', label);
+  b.append(box, t);
+  b.onclick = () => {
+    const now = toggleIdx(key, idx);
+    document.querySelectorAll('#rpanel .rchk[data-k="' + key + '"][data-i="' + idx + '"]').forEach(o => {
+      o.classList.toggle('on', now); o.setAttribute('aria-pressed', now ? 'true' : 'false');
+      o.querySelector('.box').textContent = now ? '✓' : '';
+    });
+    refreshProgress();
+    buildCheck('plan', M[cur].activities, M[cur].date + ':plan', refreshProgress);
+    buildCheck('donelist', M[cur].deliverables || [], M[cur].date + ':done', () => {});
+    if (SEGS[RUN.seg].id === 'close') checkParty();
+  };
+  return b;
+}
+/* A split activity has more clauses than the plan array has slots, so each clause gets
+   its own entry in bar:<date>:clause. The whole activity is marked done in
+   bar:<date>:plan only when every one of its clauses is ticked — so the plan view and
+   season bar stay honest, and no screen can tick a clause belonging to another screen. */
+function planCheck(m, e){
+  if (e.n < 2) return runCheck(e.text, m.date + ':plan', e.i);
+  const ck = m.date + ':clause', id = e.i + '.' + e.p;
+  const map = OBJ(ck, {});
+  const on = id in map ? !!map[id] : LS(m.date + ':plan').includes(e.i);
+  const b = el('button', 'rchk' + (on ? ' on' : ''));
+  b.type = 'button'; b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  b.dataset.k = ck; b.dataset.i = id;
+  const box = el('span', 'box', on ? '✓' : '');
+  b.append(box, el('span', 't', e.text));
+  b.onclick = () => {
+    const mp = OBJ(ck, {}), planned = LS(m.date + ':plan');
+    const now = !(id in mp ? !!mp[id] : planned.includes(e.i));
+    mp[id] = now; LSset(ck, mp);
+    let all = true;
+    for (let q = 0; q < e.n; q++){ const k2 = e.i + '.' + q; if (!(k2 in mp ? mp[k2] : false)) all = false; }
+    const has = planned.includes(e.i);
+    if (all && !has) LSset(m.date + ':plan', planned.concat([e.i]));
+    if (!all && has) LSset(m.date + ':plan', planned.filter(x => x !== e.i));
+    document.querySelectorAll('#rpanel .rchk[data-k="' + ck + '"][data-i="' + id + '"]').forEach(o => {
+      o.classList.toggle('on', now); o.setAttribute('aria-pressed', now ? 'true' : 'false');
+      o.querySelector('.box').textContent = now ? '✓' : '';
+    });
+    refreshProgress();
+    buildCheck('plan', m.activities, m.date + ':plan', refreshProgress);
+    if (SEGS[RUN.seg].id === 'close') checkParty();
+  };
+  return b;
+}
+function clauseDone(m, e){
+  if (e.n < 2) return LS(m.date + ':plan').includes(e.i);
+  const map = OBJ(m.date + ':clause', {}), id = e.i + '.' + e.p;
+  return id in map ? !!map[id] : LS(m.date + ':plan').includes(e.i);
+}
+function renderPanel(){
+  const p = $('rpanel'), m = M[cur], seg = SEGS[RUN.seg];
+  p.innerHTML = '';
+  const head = el('div');
+  head.append(el('div', 'segkick', seg.name + ' · ' + segMins()[seg.id] + ' minutes'));
+  head.append(el('h2', 'segttl', segTitle(m, seg)));
+  head.append(el('p', 'segsub', seg.id === 'jobs' || seg.id === 'close' ? seg.sub : m.title));
+  p.append(head);
+  if (seg.id === 'jobs') renderJobs(p);
+  else if (seg.id === 'close') renderClose(p);
+  else renderBoard(p, m, seg);
+  const keys = el('div', 'keys');
+  keys.innerHTML = '<kbd>Space</kbd> start/pause · <kbd>←</kbd><kbd>→</kbd> slides · <kbd>Shift</kbd>+<kbd>←</kbd><kbd>→</kbd> segment · <kbd>S</kbd> sound · <kbd>F</kbd> full screen · <kbd>Esc</kbd> exit';
+  p.append(keys);
+}
+function segTitle(m, seg){
+  if (seg.id === 'jobs') return 'Tonight’s jobs';
+  if (seg.id === 'close') return 'Before anyone leaves';
+  if (seg.id === 'intro') return 'Let’s get started';
+  if (seg.id === 'share') return 'Share what you made';
+  return seg.name;
+}
+function renderBoard(p, m, seg){
+  const plan = segmentPlan(m)[seg.id];
+  const slides = segmentDeck(m)[seg.id];
+  const qs = questionsFor(m, seg.id);
+  const board = el('div', 'board' + (slides.length ? ' split' : ''));
+  const left = el('div');
+  if (plan.length){
+    const list = el('div', 'rchecks');
+    plan.forEach(e => list.append(planCheck(m, e)));
+    left.append(list);
+  } else if (seg.id === 'share'){
+    const c = el('div', 'rcard');
+    c.append(el('h3', null, 'Go around the room'));
+    const ul = el('ul', 'qlist');
+    ['Each teammate shows what they made or worked on.',
+     'Say one thing you learned and one thing that surprised you.',
+     'Reporter: grab a photo or a note for the festival poster.'].forEach(x => ul.append(el('li', null, x)));
+    c.append(ul); left.append(c);
+  } else {
+    left.append(el('div', 'empty', 'Nothing scheduled in this segment tonight — Shift+→ to jump ahead.'));
+  }
+  if (qs.length){
+    const c = el('div', 'rcard'); c.append(el('h3', null, 'Ask the room'));
+    const ul = el('ul', 'qlist'); qs.forEach(q => ul.append(el('li', null, q))); c.append(ul);
+    left.append(c);
+  }
+  if (seg.id === 'intro'){
+    const v = vocabFor(m);
+    if (v.length){
+      const c = el('div', 'rcard'); c.append(el('h3', null, 'Words for tonight'));
+      const w = el('div', 'vocab');
+      v.forEach(x => { const d = el('div', 'vword'); d.append(el('b', null, x.w)); if (x.d) d.append(el('span', null, x.d)); w.append(d); });
+      c.append(w); left.append(c);
+    }
+  }
+  board.append(left);
+  if (slides.length){
+    RUN.slide = Math.min(RUN.slide, slides.length - 1);
+    const s = slides[RUN.slide];
+    const card = el('div', 'rslide');
+    const body = el('div', 'body');
+    body.append(el('h4', null, s.title));
+    if (s.points.length){ const ul = el('ul'); s.points.forEach(x => ul.append(el('li', null, x))); body.append(ul); }
+    if (s.images.length){
+      const iw = el('div', 'rimgs');
+      s.images.slice(0, 2).forEach(src => { const im = new Image(); im.src = src; im.alt = ''; im.loading = 'lazy'; iw.append(im); });
+      body.append(iw);
+    }
+    if (s.tip){ const t = el('div', 'rtip'); t.append(el('b', null, 'Coach tip — ')); t.append(document.createTextNode(s.tip)); body.append(t); }
+    card.append(body);
+    const bar = el('div', 'rslidebar');
+    const pb = el('button', null, '←'); pb.type = 'button'; pb.setAttribute('aria-label', 'Previous slide');
+    pb.disabled = RUN.slide === 0; pb.onclick = () => { RUN.slide--; renderPanel(); };
+    const nb = el('button', null, '→'); nb.type = 'button'; nb.setAttribute('aria-label', 'Next slide');
+    nb.disabled = RUN.slide === slides.length - 1; nb.onclick = () => { RUN.slide++; renderPanel(); };
+    bar.append(pb, nb, el('span', 'n', 'slide ' + (RUN.slide + 1) + ' of ' + slides.length + ' in this segment'));
+    card.append(bar);
+    board.append(card);
+  }
+  p.append(board);
+}
+function renderJobs(p){
+  const R = roster(), date = M[cur].date, h = jobHist(), tonightJobs = h[date] || null;
+  const tools = el('div', 'jobtools');
+  const deal = el('button', 'go', tonightJobs ? '🎲 Re-deal' : '🎲 Deal tonight’s jobs'); deal.type = 'button';
+  deal.onclick = () => { dealJobs(); renderPanel(); };
+  const rost = el('button', 'rb', '👥 Roster'); rost.type = 'button';
+  const hist = el('button', 'rb', '📋 Who’s had what'); hist.type = 'button';
+  const cap = el('button', 'rb', 'Team Captain: ' + (OBJ('captain', false) ? 'on' : 'off')); cap.type = 'button';
+  cap.setAttribute('aria-pressed', OBJ('captain', false) ? 'true' : 'false');
+  cap.onclick = () => { LSset('captain', !OBJ('captain', false)); renderPanel(); };
+  tools.append(deal, rost, hist, cap);
+  p.append(tools);
+
+  const rosterPane = el('div', 'rcard'); rosterPane.hidden = R.length > 0;
+  rosterPane.append(el('h3', null, 'Team roster — one name per line'));
+  const ta = el('textarea', 'rosterbox'); ta.value = R.join('\n'); ta.setAttribute('aria-label', 'Team roster');
+  const save = el('button', 'go', 'Save roster'); save.type = 'button';
+  save.style.marginTop = '10px';
+  save.onclick = () => { LSset('roster', ta.value.split('\n').map(s => s.trim()).filter(Boolean)); renderPanel(); };
+  rosterPane.append(ta, save);
+  rost.onclick = () => { rosterPane.hidden = !rosterPane.hidden; if (!rosterPane.hidden) ta.focus(); };
+  p.append(rosterPane);
+
+  const histPane = el('div', 'rcard'); histPane.hidden = true;
+  histPane.append(el('h3', null, 'Season coverage — amber means never yet'));
+  histPane.append(coverageTable());
+  hist.onclick = () => { histPane.hidden = !histPane.hidden; };
+  p.append(histPane);
+
+  if (!R.length){ p.append(el('div', 'empty', 'Add the team’s names above, then deal. Jobs rotate automatically so everyone gets every role across the season.')); return; }
+  if (!tonightJobs){ p.append(el('div', 'empty', 'Nobody assigned yet. Hit “Deal tonight’s jobs” — it picks whoever has held each job least often.')); return; }
+
+  const {count} = jobStats();
+  const grid = el('div', 'jobgrid');
+  Object.entries(tonightJobs).forEach(([job, name], i) => {
+    const c = el('div', 'jobcard' + (REDUCED ? '' : ' in'));
+    if (!REDUCED) c.style.animationDelay = (i * 55) + 'ms';
+    c.append(el('div', 'role', job));
+    c.append(el('div', 'who', name));
+    const n = ((count[name] || {})[baseJob(job)] || 0);
+    const meta = el('div', 'meta' + (n <= 1 ? ' first' : ''), n <= 1 ? 'First time in this job' : n + ' times this season');
+    c.append(meta);
+    const sel = el('select'); sel.setAttribute('aria-label', 'Who is ' + job);
+    R.forEach(nm => { const o = el('option', null, nm); o.value = nm; if (nm === name) o.selected = true; sel.append(o); });
+    sel.value = name;
+    sel.onchange = e => { setJob(job, e.target.value); renderPanel(); };
+    c.append(sel);
+    grid.append(c);
+  });
+  p.append(grid);
+}
+function coverageTable(){
+  const R = roster(); const {count} = jobStats();
+  const jobs = JOBS.concat(OBJ('captain', false) ? ['Team Captain'] : []);
+  const t = el('table', 'htable');
+  const hr = el('tr'); hr.append(el('th', null, 'Teammate'));
+  jobs.forEach(j => hr.append(el('th', null, j.replace('LEGO Element Finder', 'Element Finder').replace('Material Manager', 'Materials'))));
+  t.append(hr);
+  if (!R.length){ const tr = el('tr'); const td = el('td', null, 'No roster yet'); td.colSpan = jobs.length + 1; tr.append(td); t.append(tr); return t; }
+  R.forEach(n => {
+    const tr = el('tr'); tr.append(el('td', null, n));
+    jobs.forEach(j => { const v = (count[n] || {})[j] || 0; tr.append(el('td', v ? '' : 'zero', v ? String(v) : '—')); });
+    t.append(tr);
+  });
+  return t;
+}
+function renderClose(p){
+  const m = M[cur];
+  const party = el('div', 'party'); party.id = 'party'; party.hidden = true;
+  party.append(el('b', null, 'All clear, Barracoder.'));
+  party.append(el('span', null, 'Everything is ticked, packed and charging. See you next session.'));
+  p.append(party);
+
+  const must = el('div', 'mustdo');
+  must.append(el('h3', null, 'Clean up · charge up — nobody leaves until these are ticked'));
+  const list = el('div', 'rchecks');
+  cleanupItems(m).forEach((t, i) => list.append(runCheck(t, m.date + ':close', i)));
+  segmentPlan(m).close.forEach(e => list.append(planCheck(m, e)));
+  must.append(list);
+  p.append(must);
+
+  if ((m.deliverables || []).length){
+    const c = el('div', 'rcard'); c.style.marginTop = '18px';
+    c.append(el('h3', null, 'Done when'));
+    const list2 = el('div', 'rchecks');
+    m.deliverables.forEach((t, i) => list2.append(runCheck(t, m.date + ':done', i)));
+    c.append(list2); p.append(c);
+  }
+  setTimeout(checkParty, 0);
+}
+function checkParty(){
+  const m = M[cur], party = $('party'); if (!party) return;
+  const cl = cleanupItems(m).length, dl = (m.deliverables || []).length;
+  const okC = LS(m.date + ':close').length >= cl;
+  const okD = LS(m.date + ':done').length >= dl;
+  const okP = segmentPlan(m).close.every(e => clauseDone(m, e));
+  const all = okC && okD && okP && cl > 0;
+  party.hidden = !all;
+  if (all && !RUN.celebrated){ RUN.celebrated = true; if (!REDUCED) burst(); if (RUN.sound){ beep(659,.14,.2); setTimeout(()=>beep(784,.14,.2),150); setTimeout(()=>beep(1047,.34,.2),300); } }
+  if (!all) RUN.celebrated = false;
+}
+
 /* brief completion celebration (no ambient animation) */
 let bursting = false;
 function burst() {
