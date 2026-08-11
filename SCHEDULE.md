@@ -1,13 +1,13 @@
 # Barracoder — BioGlow season schedule
 
 **Meetings:** Tuesdays & Thursdays, 6:00–7:30 pm  
-**Scrimmage (dry-run festival):** Tue **Nov 10, 2026**  
+**Scrimmage (dry-run festival):** Sun **Nov 8, 2026**  
 **Main festival:** December 2026 (date TBD — register at the Session 7 checkpoint)  
 **All paperwork done by:** Fri Oct 31, 2026 (final audit Oct 27 — see [DOCUMENTS.md](docs/DOCUMENTS.md))
 
 ## How the season maps
 
-The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions, with Sessions 8 (Team Model) and 9 (Team Poster) explicitly designed to run over two meetings each — 13 official session-meetings in all, and the TMG expressly allows splitting/revisiting sessions. These map 1:1 in order onto the earliest Tue/Thu dates: intro on Aug 11 (team formation + paperwork kickoff), Sessions 1-7 one meeting each through Sep 8, Session 8 across Sep 15/17, Session 9 across Sep 24/29, and Session 10 on Oct 6. Remaining pre-scrimmage slots carry TMG-sanctioned buffers (SPIKE Tutorial Activities before the first coding session, S8/S9 overflow, coding-narration drills) plus mock reviewing sessions built from the reviewing packet's 25-minute flow, and three dedicated scrimmage rehearsals (Oct 29, Nov 3, Nov 5) finish before the Nov 10 scrimmage. All paperwork closes by the Oct 27 final audit, ahead of the Oct 31 deadline. Ten post-scrimmage meetings turn reviewer feedback into model/poster/presentation improvements, peak with December main-festival dress rehearsals, and end with the TMG's post-season wrap-up (inventory, reflection, certificates).
+The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions, with Sessions 8 (Team Model) and 9 (Team Poster) explicitly designed to run over two meetings each — 13 official session-meetings in all, and the TMG expressly allows splitting/revisiting sessions. These map 1:1 in order onto the earliest Tue/Thu dates: intro on Aug 11 (team formation + paperwork kickoff), Sessions 1-7 one meeting each through Sep 8, Session 8 across Sep 15/17, Session 9 across Sep 24/29, and Session 10 on Oct 6. Remaining pre-scrimmage slots carry TMG-sanctioned buffers (SPIKE Tutorial Activities before the first coding session, S8/S9 overflow, coding-narration drills) plus mock reviewing sessions built from the reviewing packet's 25-minute flow, and three dedicated scrimmage rehearsals (Oct 29, Nov 3, Nov 5) finish before the Nov 8 scrimmage. All paperwork closes by the Oct 27 final audit, ahead of the Oct 31 deadline. Ten post-scrimmage meetings turn reviewer feedback into model/poster/presentation improvements, peak with December main-festival dress rehearsals, and end with the TMG's post-season wrap-up (inventory, reflection, certificates).
 
 ## Season at a glance
 
@@ -52,13 +52,14 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-11-10 | Tue | [SCRIMMAGE (dry-run festival — treat like the real event)](#2026-11-10-tue--scrimmage-dry-run-festival--treat-like-the-real-event) |
+| 2026-11-08 | Sun | [SCRIMMAGE (dry-run festival — treat like the real event)](#2026-11-08-sun--scrimmage-dry-run-festival--treat-like-the-real-event) |
 
 ### Phase 4 — Improve for the main festival
 
 | Date | Day | Meeting |
 |------|-----|---------|
-| 2026-11-12 | Thu | [Scrimmage debrief: feedback into a fix list](#2026-11-12-thu--scrimmage-debrief-feedback-into-a-fix-list) |
+| 2026-11-10 | Tue | [Scrimmage debrief: feedback into a fix list](#2026-11-10-tue--scrimmage-debrief-feedback-into-a-fix-list) |
+| 2026-11-12 | Thu | [Improvement kickoff: quick wins from scrimmage feedback](#2026-11-12-thu--improvement-kickoff-quick-wins-from-scrimmage-feedback) |
 | 2026-11-17 | Tue | [Improvement 1: team model + code](#2026-11-17-tue--improvement-1-team-model--code) |
 | 2026-11-19 | Thu | [Improvement 2: poster + presentation](#2026-11-19-thu--improvement-2-poster--presentation) |
 | 2026-11-24 | Tue | [Mock reviewing 3 with improved artifacts](#2026-11-24-tue--mock-reviewing-3-with-improved-artifacts) |
@@ -260,7 +261,7 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 - Design a treehouse where a wildlife biologist safely watches a chosen animal; write/draw on EN p.20; build it from prototyping pieces (can extend the tree model)
 - Build a tool/technology for the treehouse; Challenge: add a botanist + plant-study tool; optional outdoor plant walk
 - Share jobs + technology learnings; clean up: take EVERYTHING apart; store SPIKE and Explore sets separately
-- Coach: verify checkpoint 2 (hub/attachment practice, tools/jobs explored) and confirm Nov 10 scrimmage + December festival registration, details sent to families
+- Coach: verify checkpoint 2 (hub/attachment practice, tools/jobs explored) and confirm Nov 8 scrimmage + December festival registration, details sent to families
 
 **Done when**
 - [ ] Mid-season checkpoint 2 met
@@ -562,11 +563,11 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 **Plan (90 min)**
 - Final timed 5-minute presentation + verbatim 9-question drill
 - Surprise STEM mini-challenge (Special Activities simulation)
-- Family logistics brief for Nov 10; pack everything transport-ready (model, poster, set, device, cord, charged battery)
+- Family logistics brief for Nov 8; pack everything transport-ready (model, poster, set, device, cord, charged battery)
 - Watch 'How to Prepare for your Festival' (1:39) and celebrate with the GoNoodle dance — HAVE FUN is the overriding goal
 
 **Done when**
-- [ ] Everything packed and transport-ready for Nov 10
+- [ ] Everything packed and transport-ready for Nov 8
 - [ ] Every child confident in their speaking part
 
 ---
@@ -574,7 +575,7 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 ## Phase 3 — Scrimmage
 
 
-### 2026-11-10 Tue — SCRIMMAGE (dry-run festival — treat like the real event)
+### 2026-11-08 Sun — SCRIMMAGE (dry-run festival — treat like the real event)
 
 **Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Event introduction](season/events/fll-explore-bioglow-event-introduction.pdf)
 
@@ -596,7 +597,7 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 ## Phase 4 — Improve for the main festival
 
 
-### 2026-11-12 Thu — Scrimmage debrief: feedback into a fix list
+### 2026-11-10 Tue — Scrimmage debrief: feedback into a fix list
 
 **Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf)
 
@@ -611,6 +612,24 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 **Done when**
 - [ ] Prioritized improvement backlog mapped to the 9 reviewing criteria
+
+### 2026-11-12 Thu — Improvement kickoff: quick wins from scrimmage feedback
+
+**Materials:** [Reviewing sheet](season/events/fll-explore-bioglow-reviewing-sheet.pdf) · [Session 8 slides](season/sessions/fll-explore-bioglow-session-slides-8.pptx)
+
+**Goals**
+- Turn the freshest scrimmage feedback into visible progress while it's still exciting
+- Knock out the easiest items on the improvement backlog
+
+**Plan (90 min)**
+- Re-read the prioritized backlog from the debrief; kids pick the quick wins to attack first
+- Fix small model issues from transport or reviewer comments; verify the motorized part still runs
+- Re-run the coded program and practice narrating any changes
+- Update the Core Values example bank with scrimmage-day moments (Gracious Professionalism sightings count)
+
+**Done when**
+- [ ] At least two backlog items closed
+- [ ] Model verified working post-scrimmage
 
 ### 2026-11-17 Tue — Improvement 1: team model + code
 
@@ -767,7 +786,7 @@ The TMG defines an intro meeting ("Let's Get Started") plus 10 numbered sessions
 
 - Main festival date is TBD (December) — the Dec 8/10 meetings are built as flex, but if the festival lands the week of Dec 1-3 the polish/dress-rehearsal meetings compress; register at the Session 7 checkpoint (Sep 8) and pin the date as early as possible.
 - Team is likely new to coding — the TMG warns new coders need SPIKE app Tutorial Activities time; one buffer meeting (Aug 20) is reserved, but Sessions 3-6 may still run long since two of the four model criteria hinge on kids explaining code.
-- The team model must stay assembled from Sep 17 through the December festival (~3 months) including a round trip to the Nov 10 scrimmage — secure dedicated storage and rehearse transport, or a damaged model derails multiple criteria at once.
+- The team model must stay assembled from Sep 17 through the December festival (~3 months) including a round trip to the Nov 8 scrimmage — secure dedicated storage and rehearse transport, or a damaged model derails multiple criteria at once.
 - Hub/device charging is a recurring single point of failure: every coding session (3-6, 8, all rehearsals, both events) needs a charged SPIKE Essential hub and working device — an uncharged hub wastes an entire 90-minute meeting.
 - Festival/scrimmage registration depends on the local Program Delivery Partner's timelines, which may differ from the TMG's Session 7 deadline — confirm PDP deadlines in August, not September.
 - Paperwork deadline (Oct 31) falls on a Saturday after the Oct 29 meeting — the plan front-loads sign-off to Oct 27; any consent form still missing then has only one meeting of slack.

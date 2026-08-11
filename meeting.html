@@ -7,108 +7,140 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 <style>
 :root{
-  --night:#071310; --pool:#0D1F18; --deep:#0A1913; --ink:#EAF7ED; --moss:#9DBCA6;
-  --glow:#3FE8CE; --glow-dim:#1D6E64; --fern:#4ED887; --firefly:#D9F76C; --ember:#FFC66E;
-  --line:rgba(122,204,164,.18); --glow-soft:rgba(63,232,206,.12); --ember-soft:rgba(255,198,110,.12);
+  --paper:#F6FAF7; --card:#FFFFFF; --ink:#152219; --muted:#5C6F62; --line:#D9E4DB;
+  --accent:#1E7A4B; --accent-ink:#FFFFFF; --glow:#0E7F8C; --glow-soft:#E0F2F1;
+  --amber:#8A5A18; --amber-soft:#F6ECD9; --rail:#C5D6C9; --deep:#EDF4EE;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0E1512; --card:#16201B; --ink:#E3EDE5; --muted:#94A79A; --line:#26332B;
+    --accent:#4CC98A; --accent-ink:#0B130E; --glow:#3ED2D8; --glow-soft:#12333A;
+    --amber:#E2B267; --amber-soft:#33290F; --rail:#31423A; --deep:#0A110D;
+  }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0; background:var(--night); color:var(--ink); line-height:1.55; font-size:16px;
-  font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif;
-  background-image:radial-gradient(1100px 500px at 80% -10%, rgba(63,232,206,.07), transparent 60%),
-                   radial-gradient(900px 420px at 8% 12%, rgba(78,216,135,.06), transparent 55%);}
-#sky{position:fixed; inset:0; pointer-events:none; z-index:0}
-.wrap{position:relative; z-index:1; max-width:880px; margin:0 auto; padding:28px 18px 90px}
+body{margin:0; background:var(--paper); color:var(--ink); line-height:1.55; font-size:16px;
+  font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:880px; margin:0 auto; padding:28px 18px 90px}
 a{color:var(--glow)}
-.crumbs{display:flex; align-items:center; gap:10px; font-size:13px; color:var(--moss); margin-bottom:22px}
-.crumbs a{color:var(--moss); text-decoration:none; font-weight:600}
-.crumbs a:hover{color:var(--glow)}
+.crumbs{display:flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); margin-bottom:20px}
+.crumbs a{color:var(--muted); text-decoration:none; font-weight:600}
+.crumbs a:hover{color:var(--accent)}
 .crumbs .sep{opacity:.5}
-.eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--fern); font-weight:700}
-.datebar{display:flex; align-items:center; gap:14px; margin:10px 0 4px; flex-wrap:wrap}
+/* season strip */
+.season{display:grid; grid-template-columns:1fr auto; gap:14px; align-items:center;
+  background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin-bottom:24px}
+.season .lab{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
+.sbarwrap{display:flex; align-items:center; gap:10px; margin-top:5px}
+.sbar{flex:1; height:8px; background:var(--deep); border:1px solid var(--line); border-radius:99px; overflow:hidden}
+.sbar>div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--glow)); transition:width .35s}
+.spct{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; font-weight:700;
+  color:var(--accent); min-width:42px; text-align:right; font-variant-numeric:tabular-nums}
+.scrim{background:var(--glow-soft); border:1px solid var(--glow); border-radius:10px; padding:8px 14px; text-align:center}
+.scrim .n{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700; font-size:20px;
+  color:var(--glow); font-variant-numeric:tabular-nums}
+.scrim .l{font-size:11.5px; color:var(--muted)}
+@media (max-width:560px){ .season{grid-template-columns:1fr} .scrim{text-align:left} }
+/* header */
+.eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:700}
+.datebar{display:flex; align-items:center; gap:14px; margin:8px 0 4px; flex-wrap:wrap}
 .bigdate{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700;
-  font-size:clamp(30px,6vw,46px); letter-spacing:.01em; text-wrap:balance}
+  font-size:clamp(28px,5.6vw,42px); text-wrap:balance}
 h1.ttl{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:600;
-  font-size:clamp(19px,3.4vw,26px); margin:2px 0 14px; color:var(--ink); text-wrap:balance; max-width:34ch}
-.pill{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
-  padding:4px 12px; border-radius:99px; white-space:nowrap}
-.pill.phase{background:var(--glow-soft); color:var(--glow); border:1px solid var(--glow-dim)}
-.pill.gate{background:var(--ember-soft); color:var(--ember); border:1px solid var(--ember)}
-.pill.event{background:var(--glow); color:#06231E}
-.count{display:inline-flex; align-items:baseline; gap:8px; background:var(--pool);
-  border:1px solid var(--line); border-radius:12px; padding:8px 14px; margin:2px 0 20px}
-.count .n{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700;
-  font-size:18px; color:var(--firefly); font-variant-numeric:tabular-nums}
-.count .l{font-size:13px; color:var(--moss)}
-.count.live{border-color:var(--firefly); box-shadow:0 0 22px rgba(217,247,108,.15)}
+  font-size:clamp(18px,3.2vw,25px); margin:2px 0 14px; text-wrap:balance; max-width:36ch}
+.pill{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:4px 12px; border-radius:99px; white-space:nowrap}
+.pill.gate{background:var(--amber-soft); color:var(--amber); border:1px solid var(--amber)}
+.pill.event{background:var(--glow); color:var(--accent-ink)}
+.count{display:inline-flex; align-items:baseline; gap:8px; background:var(--card);
+  border:1px solid var(--line); border-radius:12px; padding:8px 14px; margin:2px 0 18px}
+.count .n{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-weight:700; font-size:17px;
+  color:var(--accent); font-variant-numeric:tabular-nums}
+.count .l{font-size:13px; color:var(--muted)}
+.count.live{border-color:var(--accent); background:var(--glow-soft)}
 .count.live .n{animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.55}}
-.nav{display:flex; gap:10px; align-items:center; margin:0 0 26px; flex-wrap:wrap}
-.nav button, .nav select{background:var(--pool); color:var(--ink); border:1px solid var(--line);
+.nav{display:flex; gap:10px; align-items:center; margin:0 0 24px; flex-wrap:wrap}
+.nav button, .nav select{background:var(--card); color:var(--ink); border:1px solid var(--line);
   border-radius:10px; padding:8px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer}
-.nav button:hover{border-color:var(--glow); color:var(--glow)}
-.nav button:focus-visible, .nav select:focus-visible, .chk:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
-section{margin:30px 0}
-h2{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-size:15px; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--fern); font-weight:700; margin:0 0 12px;
+.nav button:hover{border-color:var(--accent); color:var(--accent)}
+.nav button:focus-visible, .nav select:focus-visible, .chk:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+section{margin:28px 0}
+h2{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-size:14px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); font-weight:700; margin:0 0 12px;
   display:flex; align-items:center; gap:10px}
 h2 .bar{flex:1; height:1px; background:var(--line)}
 .goals{display:flex; flex-direction:column; gap:8px}
-.goal{background:var(--pool); border:1px solid var(--line); border-left:3px solid var(--fern);
+.goal{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
   border-radius:10px; padding:10px 14px; font-size:15px}
 .progresswrap{display:flex; align-items:center; gap:12px; margin-bottom:12px}
 .progress{flex:1; height:8px; background:var(--deep); border-radius:99px; overflow:hidden; border:1px solid var(--line)}
-.progress>div{height:100%; width:0%; background:linear-gradient(90deg,var(--fern),var(--glow)); border-radius:99px; transition:width .35s ease}
-.pct{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; color:var(--moss); min-width:44px; text-align:right}
+.progress>div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--glow)); border-radius:99px; transition:width .35s ease}
+.pct{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; color:var(--muted); min-width:44px; text-align:right; font-variant-numeric:tabular-nums}
 .check{display:flex; flex-direction:column; gap:8px}
-.chk{display:flex; gap:12px; align-items:flex-start; background:var(--pool); border:1px solid var(--line);
-  border-radius:10px; padding:11px 14px; cursor:pointer; font-size:15px; user-select:none; transition:opacity .2s}
-.chk .box{flex:none; width:22px; height:22px; border:2px solid var(--glow-dim); border-radius:7px;
-  margin-top:1px; display:grid; place-items:center; color:#06231E; font-weight:900; font-size:14px; transition:all .15s}
-.chk.on{opacity:.6}
-.chk.on .box{background:var(--firefly); border-color:var(--firefly)}
-.chk.on .t{text-decoration:line-through; text-decoration-color:var(--moss)}
+.chk{display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line);
+  border-radius:10px; padding:11px 14px; cursor:pointer; font:inherit; font-size:15px; color:var(--ink);
+  text-align:left; user-select:none; transition:opacity .2s; width:100%}
+.chk:hover{border-color:var(--accent)}
+.chk .box{flex:none; width:22px; height:22px; border:2px solid var(--accent); border-radius:7px;
+  margin-top:1px; display:grid; place-items:center; color:var(--accent-ink); font-weight:900; font-size:14px; transition:all .15s}
+.chk.on{opacity:.65}
+.chk.on .box{background:var(--accent)}
+.chk.on .t{text-decoration:line-through; text-decoration-color:var(--muted)}
 .done .chk .box{border-radius:50%}
 .mats{display:flex; flex-wrap:wrap; gap:10px}
-.mats a{display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:700; color:var(--glow);
-  border:1px solid var(--glow-dim); background:var(--pool); border-radius:99px; padding:7px 15px; text-decoration:none}
-.mats a:hover{border-color:var(--glow); box-shadow:0 0 14px rgba(63,232,206,.18)}
+.mats a{display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:700; color:var(--accent);
+  border:1px solid var(--line); background:var(--card); border-radius:99px; padding:7px 15px; text-decoration:none}
+.mats a:hover{border-color:var(--accent)}
+/* section (phase) progress */
+.phases{display:flex; flex-direction:column; gap:9px}
+.phrow{display:grid; grid-template-columns:160px 1fr 48px; gap:12px; align-items:center;
+  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:9px 14px}
+.phrow.cur{border-color:var(--accent)}
+.phname{font-size:13.5px; font-weight:700}
+.phname small{display:block; font-weight:500; color:var(--muted); font-size:11.5px}
+@media (max-width:520px){ .phrow{grid-template-columns:1fr; gap:6px} .phrow .pct{text-align:left} }
 /* slide viewer */
-.viewer{background:var(--pool); border:1px solid var(--line); border-radius:16px; overflow:hidden}
-.stage{position:relative; min-height:280px; padding:22px 22px 14px}
-.slide-title{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; color:var(--firefly); text-wrap:balance}
+.viewer{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden}
+.stage{position:relative; min-height:260px; padding:22px 22px 14px}
+.slide-title{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; color:var(--glow); text-wrap:balance}
 .slide-points{margin:0 0 12px; padding-left:20px}
 .slide-points li{margin:5px 0; font-size:15px}
 .slide-imgs{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px}
 .slide-imgs img{max-width:min(100%,320px); max-height:230px; border-radius:10px; border:1px solid var(--line); background:#fff}
-.tip{margin-top:12px; font-size:13.5px; color:var(--night); background:var(--ember); border-radius:10px; padding:9px 13px; display:none}
+.tip{margin-top:12px; font-size:13.5px; color:var(--amber); background:var(--amber-soft); border:1px solid var(--amber); border-radius:10px; padding:9px 13px; display:none}
 .tip.show{display:block}
-.tip b{letter-spacing:.06em}
 .vbar{display:flex; align-items:center; gap:10px; padding:12px 16px; border-top:1px solid var(--line); flex-wrap:wrap}
-.vbar button{background:var(--deep); color:var(--ink); border:1px solid var(--line); border-radius:10px;
+.vbar button{background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:10px;
   padding:8px 16px; font:inherit; font-weight:700; cursor:pointer; font-size:14px}
-.vbar button:hover:not(:disabled){border-color:var(--glow); color:var(--glow)}
+.vbar button:hover:not(:disabled){border-color:var(--accent); color:var(--accent)}
 .vbar button:disabled{opacity:.35; cursor:default}
-.vbar button:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
+.vbar button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 .dots{flex:1; display:flex; gap:5px; justify-content:center; flex-wrap:wrap}
-.dots i{width:7px; height:7px; border-radius:50%; background:var(--glow-dim); cursor:pointer}
-.dots i.on{background:var(--firefly)}
-.slideno{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:12.5px; color:var(--moss); font-variant-numeric:tabular-nums}
-.dl{font-size:12.5px; color:var(--moss)}
-.dl a{color:var(--moss)}
+.dots i{width:7px; height:7px; border-radius:50%; background:var(--rail); cursor:pointer}
+.dots i.on{background:var(--accent)}
+.slideno{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.dl{font-size:12.5px; color:var(--muted)}
+.dl a{color:var(--muted)}
 .burst{position:fixed; inset:0; pointer-events:none; z-index:5}
-.empty{color:var(--moss); font-size:14px; background:var(--pool); border:1px dashed var(--line); border-radius:12px; padding:14px 16px}
-footer{margin-top:60px; padding-top:16px; border-top:1px solid var(--line); color:var(--moss); font-size:13px}
+footer{margin-top:56px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
 @media (prefers-reduced-motion: reduce){ .count.live .n{animation:none} html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
-<canvas id="sky" aria-hidden="true"></canvas>
 <div class="wrap">
   <nav class="crumbs"><a href="index.html">← Barracoder team hub</a><span class="sep">·</span><span>Daily meeting page</span></nav>
 
+  <div class="season">
+    <div>
+      <div class="lab">Season progress · plan items ticked</div>
+      <div class="sbarwrap"><div class="sbar"><div id="sbar"></div></div><span class="spct" id="spct">0%</span></div>
+    </div>
+    <div class="scrim"><div class="n" id="scrimn">–</div><div class="l">until scrimmage · Sun Nov 8</div></div>
+  </div>
+
   <div class="eyebrow" id="phasename">…</div>
-  <div class="datebar"><div class="bigdate" id="bigdate">Loading…</div><span class="pill phase" id="pill" hidden></span></div>
+  <div class="datebar"><div class="bigdate" id="bigdate">Loading…</div><span class="pill" id="pill" hidden></span></div>
   <h1 class="ttl" id="title"></h1>
   <div class="count" id="count" hidden><span class="n" id="countn"></span><span class="l" id="countl"></span></div>
 
@@ -121,7 +153,7 @@ footer{margin-top:60px; padding-top:16px; border-top:1px solid var(--line); colo
 
   <section id="goalsec"><h2>Tonight's goals<span class="bar"></span></h2><div class="goals" id="goals"></div></section>
 
-  <section id="plansec"><h2>The 90-minute plan<span class="bar"></span></h2>
+  <section id="plansec"><h2>The 90-minute plan — tick as you go<span class="bar"></span></h2>
     <div class="progresswrap"><div class="progress"><div id="pbar"></div></div><span class="pct" id="ppct">0%</span></div>
     <div class="check" id="plan"></div>
   </section>
@@ -144,27 +176,36 @@ footer{margin-top:60px; padding-top:16px; border-top:1px solid var(--line); colo
 
   <section id="donesec" class="done"><h2>Done when<span class="bar"></span></h2><div class="check" id="donelist"></div></section>
 
+  <section id="phasesec"><h2>Section progress<span class="bar"></span></h2><div class="phases" id="phases"></div></section>
+
   <footer>Barracoder · FIRST LEGO League Explore · BioGlow season · <a href="index.html">full season plan</a> · content © FIRST &amp; the LEGO Group</footer>
 </div>
 <canvas class="burst" id="burst" aria-hidden="true"></canvas>
 
 <script>
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const DARK = matchMedia('(prefers-color-scheme: dark)');
 const $ = id => document.getElementById(id);
-let DATA = null, M = [], cur = 0, slideIdx = 0, tipOn = false;
+let DATA = null, M = [], cur = 0, slideIdx = 0, tipOn = false, SCRIM = null;
 
 fetch('meetings.json').then(r => r.json()).then(d => { DATA = d; M = d.meetings; boot(); })
   .catch(() => { $('bigdate').textContent = 'Could not load meetings.json'; });
 
-function todayIdx() {
+const LS = k => { try { return JSON.parse(localStorage.getItem('bar:' + k) || '[]'); } catch(e){ return []; } };
+
+function todayIso() {
   const now = new Date();
-  const iso = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  return now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+}
+function todayIdx() {
+  const iso = todayIso();
   let i = M.findIndex(m => m.date === iso);
   if (i >= 0) return i;
   i = M.findIndex(m => m.date > iso);
   return i >= 0 ? i : M.length - 1;
 }
 function boot() {
+  SCRIM = M.find(m => m.kind === 'event') || null;
   const sel = $('datesel');
   M.forEach((m, i) => {
     const o = document.createElement('option');
@@ -193,9 +234,9 @@ function boot() {
     if (Math.abs(dx) > 45) slide(slideIdx + (dx < 0 ? 1 : -1));
     tx = null;
   }, {passive:true});
-  if (!REDUCED) fireflies();
   setInterval(tickCount, 1000);
 }
+const DAYNAMES = {Sun:'Sunday', Mon:'Monday', Tue:'Tuesday', Wed:'Wednesday', Thu:'Thursday', Fri:'Friday', Sat:'Saturday'};
 function show(i) {
   cur = Math.max(0, Math.min(M.length-1, i));
   const m = M[cur];
@@ -205,14 +246,14 @@ function show(i) {
   const [y,mo,da] = m.date.split('-');
   const MN = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   $('phasename').textContent = m.phase;
-  $('bigdate').textContent = `${m.day === 'Tue' ? 'Tuesday' : 'Thursday'} ${MN[+mo]} ${+da}`;
+  $('bigdate').textContent = `${DAYNAMES[m.day] || m.day} ${MN[+mo]} ${+da}`;
   $('title').textContent = m.title;
   const pill = $('pill');
   pill.hidden = m.kind === 'meeting';
   pill.className = 'pill ' + (m.kind === 'event' ? 'event' : 'gate');
   pill.textContent = m.kind === 'event' ? '✨ Event day' : '⏳ Deadline';
   fillList('goals', m.goals, 'goal');
-  buildCheck('plan', m.activities, m.date + ':plan', updateProgress);
+  buildCheck('plan', m.activities, m.date + ':plan', refreshProgress);
   buildCheck('donelist', m.deliverables || [], m.date + ':done', () => {});
   $('donesec').hidden = !(m.deliverables && m.deliverables.length);
   const mats = $('mats'); mats.innerHTML = '';
@@ -228,7 +269,7 @@ function show(i) {
     $('dl').innerHTML = 'Prefer the original? <a href="season/sessions/' + deck.file + '">Download the PowerPoint</a>.';
     renderSlide();
   }
-  updateProgress(); tickCount();
+  refreshProgress(); tickCount();
   scrollTo({top: 0, behavior: REDUCED ? 'auto' : 'smooth'});
 }
 function fillList(id, items, cls) {
@@ -237,14 +278,14 @@ function fillList(id, items, cls) {
 }
 function buildCheck(id, items, key, onchange) {
   const el = $(id); el.innerHTML = '';
-  const saved = JSON.parse(localStorage.getItem('bar:' + key) || '[]');
+  const saved = LS(key);
   items.forEach((t, i) => {
     const b = document.createElement('button');
     b.className = 'chk' + (saved.includes(i) ? ' on' : ''); b.type = 'button';
     b.innerHTML = '<span class="box">' + (saved.includes(i) ? '✓' : '') + '</span><span class="t"></span>';
     b.querySelector('.t').textContent = t;
     b.onclick = () => {
-      const s = JSON.parse(localStorage.getItem('bar:' + key) || '[]');
+      const s = LS(key);
       const on = s.includes(i);
       const ns = on ? s.filter(x => x !== i) : [...s, i];
       localStorage.setItem('bar:' + key, JSON.stringify(ns));
@@ -255,30 +296,76 @@ function buildCheck(id, items, key, onchange) {
     el.appendChild(b);
   });
 }
-function updateProgress() {
-  const m = M[cur]; if (!m) return;
-  const saved = JSON.parse(localStorage.getItem('bar:' + m.date + ':plan') || '[]');
+function meetingPct(m) {
   const total = m.activities.length;
-  const pct = total ? Math.round(100 * Math.min(saved.length, total) / total) : 0;
+  if (!total) return {done: 0, total: 0};
+  return {done: Math.min(LS(m.date + ':plan').length, total), total};
+}
+function refreshProgress() {
+  const m = M[cur]; if (!m) return;
+  const {done, total} = meetingPct(m);
+  const pct = total ? Math.round(100 * done / total) : 0;
   $('pbar').style.width = pct + '%';
   $('ppct').textContent = pct + '%';
   if (pct === 100 && !REDUCED) burst();
+  // overall
+  let T = 0, D = 0;
+  M.forEach(x => { const p = meetingPct(x); T += p.total; D += p.done; });
+  const opct = T ? Math.round(100 * D / T) : 0;
+  $('sbar').style.width = opct + '%';
+  $('spct').textContent = opct + '%';
+  // per-section
+  const phases = [];
+  M.forEach(x => {
+    let ph = phases.find(p => p.name === x.phase);
+    if (!ph) { ph = {name: x.phase, from: x.date, to: x.date, done: 0, total: 0}; phases.push(ph); }
+    ph.to = x.date;
+    const p = meetingPct(x); ph.done += p.done; ph.total += p.total;
+  });
+  const wrap = $('phases'); wrap.innerHTML = '';
+  const curPhase = M[cur].phase;
+  phases.forEach(ph => {
+    const pct2 = ph.total ? Math.round(100 * ph.done / ph.total) : 0;
+    const row = document.createElement('div');
+    row.className = 'phrow' + (ph.name === curPhase ? ' cur' : '');
+    row.innerHTML = '<div class="phname"></div>' +
+      '<div class="progress"><div style="width:' + pct2 + '%"></div></div>' +
+      '<span class="pct">' + pct2 + '%</span>';
+    const nm = row.querySelector('.phname');
+    nm.textContent = ph.name;
+    const sm = document.createElement('small');
+    sm.textContent = ph.from.slice(5).replace('-', '/') + ' – ' + ph.to.slice(5).replace('-', '/');
+    nm.appendChild(sm);
+    wrap.appendChild(row);
+  });
 }
 function tickCount() {
   const m = M[cur]; if (!m) return;
-  const start = new Date(m.date + 'T18:00:00'), end = new Date(m.date + 'T19:30:00'), now = new Date();
+  // scrimmage strip
+  if (SCRIM) {
+    const days = Math.ceil((new Date(SCRIM.date + 'T09:00:00') - new Date()) / 86400000);
+    $('scrimn').textContent = days > 1 ? days + ' days' : days === 1 ? 'tomorrow!' : days === 0 ? 'TODAY! ✨' : 'done ✓';
+  }
+  const isEvent = m.kind === 'event';
+  const start = new Date(m.date + (isEvent ? 'T09:00:00' : 'T18:00:00'));
+  const end = new Date(m.date + (isEvent ? 'T23:59:00' : 'T19:30:00'));
+  const now = new Date();
   const c = $('count'); c.hidden = false; c.classList.remove('live');
   if (now >= start && now <= end) {
     c.classList.add('live');
-    const left = Math.floor((end - now) / 60000);
-    $('countn').textContent = '● LIVE'; $('countl').textContent = left + ' min left — have fun!';
+    if (isEvent) { $('countn').textContent = '● TODAY'; $('countl').textContent = 'scrimmage day — have fun and be gracious!'; }
+    else {
+      const left = Math.floor((end - now) / 60000);
+      $('countn').textContent = '● LIVE'; $('countl').textContent = left + ' min left — have fun!';
+    }
   } else if (now < start) {
     const mins = Math.floor((start - now) / 60000);
     const d = Math.floor(mins / 1440), h = Math.floor((mins % 1440) / 60), mm = mins % 60;
     $('countn').textContent = d > 0 ? `${d}d ${h}h` : `${h}h ${String(mm).padStart(2,'0')}m`;
-    $('countl').textContent = 'until this meeting · 6:00 pm';
+    $('countl').textContent = isEvent ? 'until scrimmage day' : 'until this meeting · 6:00 pm';
   } else {
-    $('countn').textContent = '✓'; $('countl').textContent = 'this meeting is done — great job, team';
+    $('countn').textContent = '✓';
+    $('countl').textContent = isEvent ? 'scrimmage complete — on to the festival!' : 'this meeting is done — great job, team';
   }
 }
 function slide(i) {
@@ -317,42 +404,17 @@ function renderSlide() {
     d.onclick = () => slide(i); dots.appendChild(d);
   });
 }
-/* ambient fireflies */
-function fireflies() {
-  const cv = $('sky'), cx = cv.getContext('2d');
-  let W, H, P = [];
-  const resize = () => { W = cv.width = innerWidth; H = cv.height = innerHeight;
-    P = Array.from({length: Math.min(46, W/28)}, () => ({
-      x: Math.random()*W, y: Math.random()*H, r: 1.2 + Math.random()*2.2,
-      a: Math.random()*Math.PI*2, sp: .15 + Math.random()*.4, ph: Math.random()*Math.PI*2 })); };
-  resize(); addEventListener('resize', resize);
-  (function tick(t) {
-    if (document.hidden) { requestAnimationFrame(tick); return; }
-    cx.clearRect(0,0,W,H);
-    P.forEach(p => {
-      p.a += (Math.random()-.5)*.12; p.x += Math.cos(p.a)*p.sp; p.y += Math.sin(p.a)*p.sp*.7;
-      if (p.x < -20) p.x = W+20; if (p.x > W+20) p.x = -20;
-      if (p.y < -20) p.y = H+20; if (p.y > H+20) p.y = -20;
-      const glow = .25 + .75*Math.abs(Math.sin(t/900 + p.ph));
-      const g = cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*7);
-      g.addColorStop(0, `rgba(217,247,108,${.75*glow})`);
-      g.addColorStop(.35, `rgba(63,232,206,${.22*glow})`);
-      g.addColorStop(1, 'rgba(63,232,206,0)');
-      cx.fillStyle = g; cx.beginPath(); cx.arc(p.x,p.y,p.r*7,0,7); cx.fill();
-    });
-    requestAnimationFrame(tick);
-  })(0);
-}
-/* completion celebration */
+/* brief completion celebration (no ambient animation) */
 let bursting = false;
 function burst() {
   if (bursting) return; bursting = true;
   const cv = $('burst'), cx = cv.getContext('2d');
   cv.width = innerWidth; cv.height = innerHeight;
-  const P = Array.from({length: 90}, () => ({
+  const colors = DARK.matches ? ['76,201,138','62,210,216'] : ['30,122,75','14,127,140'];
+  const P = Array.from({length: 80}, () => ({
     x: innerWidth/2, y: innerHeight*.35, a: Math.random()*Math.PI*2,
-    v: 2.5 + Math.random()*5.5, r: 1.5 + Math.random()*2.5, life: 1,
-    c: Math.random() < .5 ? '217,247,108' : '63,232,206' }));
+    v: 2.5 + Math.random()*5, r: 1.5 + Math.random()*2.5, life: 1,
+    c: colors[Math.random() < .5 ? 0 : 1] }));
   (function tick() {
     cx.clearRect(0,0,cv.width,cv.height);
     let alive = false;

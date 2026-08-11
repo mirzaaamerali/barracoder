@@ -1,4 +1,4 @@
-# Scrimmage readiness — Tue Nov 10, 2026
+# Scrimmage readiness — Sun Nov 8, 2026
 
 The scrimmage is a full dry run of the December festival. Everything below comes from the official reviewing packet ([season/events/](../season/events/)) — it is exactly what reviewers will look for.
 
@@ -16,7 +16,7 @@ The scrimmage is a full dry run of the December festival. Everything below comes
 - [ ] Core Values criterion 8: banked concrete examples of teamwork and of using discovery, inclusion, innovation, impact, and fun while creating the model and poster
 - [ ] Core Values criterion 9: banked examples of new skills and ideas learned by working as a team
 - [ ] Full 25-minute session flow rehearsed to format: introductions 2 min -> presentation 5 min -> Q&A up to 10 min -> positive feedback 3 min -> reviewer deliberation 5 min
-- [ ] Mock scoring with the printed/fillable reviewing sheet (Team Name/#, Reviewing Group, 9x3 Beginning/Accomplished/Exceeds boxes) — target 'Accomplished' on every line before Nov 10
+- [ ] Mock scoring with the printed/fillable reviewing sheet (Team Name/#, Reviewing Group, 9x3 Beginning/Accomplished/Exceeds boxes) — target 'Accomplished' on every line before Nov 8
 - [ ] Transport readiness: model stays assembled and re-stages intact; poster, LEGO Education set, device, charging cord, and fully charged battery packed per the team checklist
 - [ ] Expectations set with kids and parents: celebration not competition — showcase, Special STEM Activities with other teams, reviewers visit the table, and every team receives exactly one award at the closing ceremony
 
@@ -28,7 +28,7 @@ The scrimmage is a full dry run of the December festival. Everything below comes
 4. Positive feedback to the team — 3 min
 5. Reviewer deliberation — 5 min
 
-Mock sessions on **Oct 8, Oct 15, Oct 29, Nov 3, Nov 5** (and Nov 24 post-scrimmage) run this exact flow with a printed reviewing sheet, targeting **Accomplished** on all 9 criteria before Nov 10.
+Mock sessions on **Oct 8, Oct 15, Oct 29, Nov 3, Nov 5** (and Nov 24 post-scrimmage) run this exact flow with a printed reviewing sheet, targeting **Accomplished** on all 9 criteria before Nov 8.
 
 ## Packing list (team-owned)
 

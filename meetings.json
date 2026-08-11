@@ -296,7 +296,7 @@
     "Design a treehouse where a wildlife biologist safely watches a chosen animal; write/draw on EN p.20; build it from prototyping pieces (can extend the tree model)",
     "Build a tool/technology for the treehouse; Challenge: add a botanist + plant-study tool; optional outdoor plant walk",
     "Share jobs + technology learnings; clean up: take EVERYTHING apart; store SPIKE and Explore sets separately",
-    "Coach: verify checkpoint 2 (hub/attachment practice, tools/jobs explored) and confirm Nov 10 scrimmage + December festival registration, details sent to families"
+    "Coach: verify checkpoint 2 (hub/attachment practice, tools/jobs explored) and confirm Nov 8 scrimmage + December festival registration, details sent to families"
    ],
    "deliverables": [
     "Mid-season checkpoint 2 met",
@@ -835,11 +835,11 @@
    "activities": [
     "Final timed 5-minute presentation + verbatim 9-question drill",
     "Surprise STEM mini-challenge (Special Activities simulation)",
-    "Family logistics brief for Nov 10; pack everything transport-ready (model, poster, set, device, cord, charged battery)",
+    "Family logistics brief for Nov 8; pack everything transport-ready (model, poster, set, device, cord, charged battery)",
     "Watch 'How to Prepare for your Festival' (1:39) and celebrate with the GoNoodle dance \u2014 HAVE FUN is the overriding goal"
    ],
    "deliverables": [
-    "Everything packed and transport-ready for Nov 10",
+    "Everything packed and transport-ready for Nov 8",
     "Every child confident in their speaking part"
    ],
    "materials": [
@@ -855,8 +855,8 @@
    "deck": null
   },
   {
-   "date": "2026-11-10",
-   "day": "Tue",
+   "date": "2026-11-08",
+   "day": "Sun",
    "title": "SCRIMMAGE (dry-run festival \u2014 treat like the real event)",
    "phase": "Scrimmage",
    "kind": "event",
@@ -890,8 +890,8 @@
    "deck": null
   },
   {
-   "date": "2026-11-12",
-   "day": "Thu",
+   "date": "2026-11-10",
+   "day": "Tue",
    "title": "Scrimmage debrief: feedback into a fix list",
    "phase": "Improve for the festival",
    "kind": "meeting",
@@ -914,6 +914,38 @@
     }
    ],
    "deck": null
+  },
+  {
+   "date": "2026-11-12",
+   "day": "Thu",
+   "title": "Improvement kickoff: quick wins from scrimmage feedback",
+   "phase": "Improve for the festival",
+   "kind": "meeting",
+   "goals": [
+    "Turn the freshest scrimmage feedback into visible progress while it's still exciting",
+    "Knock out the easiest items on the improvement backlog"
+   ],
+   "activities": [
+    "Re-read the prioritized backlog from the debrief; kids pick the quick wins to attack first",
+    "Fix small model issues from transport or reviewer comments; verify the motorized part still runs",
+    "Re-run the coded program and practice narrating any changes",
+    "Update the Core Values example bank with scrimmage-day moments (Gracious Professionalism sightings count)"
+   ],
+   "deliverables": [
+    "At least two backlog items closed",
+    "Model verified working post-scrimmage"
+   ],
+   "materials": [
+    {
+     "label": "Reviewing sheet",
+     "href": "season/events/fll-explore-bioglow-reviewing-sheet.pdf"
+    },
+    {
+     "label": "Session 8 slides",
+     "href": "season/sessions/fll-explore-bioglow-session-slides-8.pptx"
+    }
+   ],
+   "deck": "8"
   },
   {
    "date": "2026-11-17",

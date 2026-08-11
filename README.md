@@ -16,7 +16,7 @@ browser. Notes and ideas live in [notes/](notes/).
 |------|------|
 | Tue & Thu, 6:00–7:30 pm | Team meetings |
 | **Fri Oct 31, 2026** | All paperwork & completion documents done ([checklist](docs/DOCUMENTS.md)) |
-| **Tue Nov 10, 2026** | **Scrimmage** — dry run of the main event ([readiness](docs/SCRIMMAGE.md)) |
+| **Sun Nov 8, 2026** | **Scrimmage** — dry run of the main event ([readiness](docs/SCRIMMAGE.md)) |
 | December 2026 (TBD) | Main festival |
 
 ## Start here
