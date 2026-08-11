@@ -16,6 +16,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 | Date | Day | Meeting |
 |------|-----|---------|
+| 2026-08-11 | Tue | [Kickoff: Let's Get Started — team formation](#2026-08-11-tue--kickoff-lets-get-started--team-formation) |
 | 2026-08-13 | Thu | [Session 1 (part 1): BIOGLOW theme immersion + mission model build begins](#2026-08-13-thu--session-1-part-1-bioglow-theme-immersion--mission-model-build-begins) |
 | 2026-08-18 | Tue | [Session 1 (part 2): finish mission models + field setup](#2026-08-18-tue--session-1-part-2-finish-mission-models--field-setup) |
 | 2026-08-20 | Thu | [Session 2: team goals + Training Camp 1 (Driving Around)](#2026-08-20-thu--session-2-team-goals--training-camp-1-driving-around) |
@@ -81,6 +82,28 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ## Phase 1 — Core sessions (TMG Sessions 1–12)
 
+
+### 2026-08-11 Tue — Kickoff: Let's Get Started — team formation
+
+**Materials:** [▶ Season welcome video](https://youtu.be/MPKxFy3qV2M) · [Intro session slides](season/sessions/fll-challenge-bioglow-session-slide-intro.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o)
+
+**Goals**
+- Form the team: name, members, and first goals in the Engineering Notebook
+- Understand the three-part season: robot game, innovation project, and robot design judging
+- Launch all season paperwork with families
+
+**Plan (90 min)**
+- Welcome + watch the Season welcome video together
+- Walk the intro deck: Core Values, the team journey, and the three parts of Challenge — three 2.5-minute robot game matches, a 5-minute innovation project presentation, and a 5-minute robot design explanation
+- Choose the team name and record team info in the Engineering Notebook (tour pp. 3-9: Project Sparks p. 6, Team Progress p. 8, team roles p. 9)
+- Introduce the Challenge team roles (intro deck: Researcher, Creative Designer, Team Captain, Project Manager, Communicator, Builder, Material Manager, Coder, Mission Strategist) — everyone rotates
+- Show the SPIKE Prime set and the BioGlow Challenge Set — keep mission-model bags sealed until Thursday
+- Send home consent/registration forms; share the Tue/Thu cadence, the Sun Nov 8 scrimmage, and the December event with parents; recruit 1-2 parent build helpers for Thursday's model build
+
+**Done when**
+- [ ] Team name chosen; Engineering Notebook started
+- [ ] Consent forms distributed; schedule + key dates shared with families
+- [ ] At least one parent build helper recruited for Aug 13
 
 ### 2026-08-13 Thu — Session 1 (part 1): BIOGLOW theme immersion + mission model build begins
 

@@ -1,6 +1,87 @@
 {
  "meetings": [
   {
+   "date": "2026-08-11",
+   "day": "Tue",
+   "title": "Kickoff: Let's Get Started \u2014 team formation",
+   "phase": "Core sessions",
+   "kind": "meeting",
+   "goals": [
+    "Form the team: name, members, and first goals in the Engineering Notebook",
+    "Understand the three-part season: robot game, innovation project, and robot design judging",
+    "Launch all season paperwork with families"
+   ],
+   "activities": [
+    "Welcome + watch the Season welcome video together",
+    "Walk the intro deck: Core Values, the team journey, and the three parts of Challenge \u2014 three 2.5-minute robot game matches, a 5-minute innovation project presentation, and a 5-minute robot design explanation",
+    "Choose the team name and record team info in the Engineering Notebook (tour pp. 3-9: Project Sparks p. 6, Team Progress p. 8, team roles p. 9)",
+    "Introduce the Challenge team roles (intro deck: Researcher, Creative Designer, Team Captain, Project Manager, Communicator, Builder, Material Manager, Coder, Mission Strategist) \u2014 everyone rotates",
+    "Show the SPIKE Prime set and the BioGlow Challenge Set \u2014 keep mission-model bags sealed until Thursday",
+    "Send home consent/registration forms; share the Tue/Thu cadence, the Sun Nov 8 scrimmage, and the December event with parents; recruit 1-2 parent build helpers for Thursday's model build"
+   ],
+   "activity_refs": [
+    [],
+    [],
+    [
+     {
+      "label": "EN p.3\u20139",
+      "href": "season/guides/fll-challenge-bioglow-en.pdf",
+      "page": 3
+     },
+     {
+      "label": "EN p.6",
+      "href": "season/guides/fll-challenge-bioglow-en.pdf",
+      "page": 6
+     },
+     {
+      "label": "EN p.8",
+      "href": "season/guides/fll-challenge-bioglow-en.pdf",
+      "page": 8
+     },
+     {
+      "label": "EN p.9",
+      "href": "season/guides/fll-challenge-bioglow-en.pdf",
+      "page": 9
+     }
+    ],
+    [],
+    [],
+    []
+   ],
+   "deliverables": [
+    "Team name chosen; Engineering Notebook started",
+    "Consent forms distributed; schedule + key dates shared with families",
+    "At least one parent build helper recruited for Aug 13"
+   ],
+   "materials": [
+    {
+     "label": "\u25b6 Season welcome video",
+     "href": "https://youtu.be/MPKxFy3qV2M"
+    },
+    {
+     "label": "Intro session slides",
+     "href": "season/sessions/fll-challenge-bioglow-session-slide-intro.pptx"
+    },
+    {
+     "label": "Robot Game Rulebook",
+     "href": "season/guides/fll-challenge-bioglow-rgr.pdf"
+    },
+    {
+     "label": "Engineering Notebook",
+     "href": "season/guides/fll-challenge-bioglow-en.pdf"
+    },
+    {
+     "label": "Paperwork checklist",
+     "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    }
+   ],
+   "deck": "intro"
+  },
+  {
    "date": "2026-08-13",
    "day": "Thu",
    "title": "Session 1 (part 1): BIOGLOW theme immersion + mission model build begins",
