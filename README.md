@@ -1,5 +1,7 @@
 # Barracoder 🐟🤖
 
+<img src="assets/brand/barracoder-logo.png" alt="Barracoder logo" width="520">
+
 **FIRST® LEGO® League Challenge — BioGlow season — White Lake Robotics**
 
 Team hub for the Barracoder team: season schedule, paperwork tracking, event prep,
