@@ -84,7 +84,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-08-13 Thu — Session 1 (part 1): BIOGLOW theme immersion + mission model build begins
 
-**Materials:** [Session 1 slides](season/sessions/fll-challenge-bioglow-session-slide-1.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [▶ Season welcome video](https://youtu.be/MPKxFy3qV2M) · [Session 1 slides](season/sessions/fll-challenge-bioglow-session-slide-1.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ)
 
 **Goals**
 - Explore the BIOGLOW biodiversity theme and how FLL Challenge works
@@ -93,22 +93,24 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 **Plan (90 min)**
 - Watch BIOGLOW season videos (FIRST LEGO League YouTube playlist)
 - Read Engineering Notebook pp. 3-9 on how FLL Challenge works; vocabulary: mission model, project spark, innovation project
-- Build mission models from bags 1-10 (M01 Drone Survey, M02 Exploding Seeds, M03 Flip the Rock, M04 Lucky Leaves, M05 Reaching Roots, M06 Leafcutter Frenzy, M07 Humongous Fungus) split in pairs; coach inspects/tests each model
+- Start mission-model builds in pairs — aim for bags 1-10 (M01 Drone Survey through M07 Humongous Fungus) but treat it as a two-meeting job: whatever isn't finished rolls to Aug 18. Coach inspects/tests models as pairs finish (rolling, not at the end)
 - Explore how models connect to Project Sparks (EN p6); write model notes on EN p10
 - Reflection questions + clean up (bag unfinished builds)
+- If parent helpers volunteered at kickoff, run them as a parallel build pair — model building is the one task extra adult hands are allowed to speed up
 
 **Done when**
-- [ ] Roughly half the mission models built and tested
+- [ ] At least half the mission models built, inspected, and stored safely (rest roll to Aug 18)
 
 ### 2026-08-18 Tue — Session 1 (part 2): finish mission models + field setup
 
-**Materials:** [Session 1 slides](season/sessions/fll-challenge-bioglow-session-slide-1.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [▶ Season welcome video](https://youtu.be/MPKxFy3qV2M) · [Session 1 slides](season/sessions/fll-challenge-bioglow-session-slide-1.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ)
 
 **Goals**
 - Complete all 15 mission models and the three interchangeable dock models
 - Set up the game field exactly per Robot Game Rulebook pp. 7-8
 
 **Plan (90 min)**
+- Finish all remaining mission models carried over from Aug 13 before starting field setup
 - Build remaining models from bags 11-24 (M08 Tangled, M09 Research Platform, M10 Fragile Microhabitats both placements, M11 Window to the Past, M12 Forest Elder, M13 Keystone Species, M14 Seeds of Renewal, M15 Biocentric Architecture, three docks)
 - Lay mat aligned to bottom wall, place Dual Lock on wireframe marks, seat models on outlines; watch Field Setup Video
 - Wireframe audit using the A-J x 1-6 grid diagram; sort six Precision Tokens into a referee bag
@@ -119,7 +121,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-08-20 Thu — Session 2: team goals + Training Camp 1 (Driving Around)
 
-**Materials:** [Session 2 slides](season/sessions/fll-challenge-bioglow-session-slide-2.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 2 slides](season/sessions/fll-challenge-bioglow-session-slide-2.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ)
 
 **Goals**
 - Build a driving base that drives forward/backward and turns
@@ -140,7 +142,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-08-25 Tue — Session 3: problem statement locked (TMG deadline) + Training Camp 2
 
-**Materials:** [Session 3 slides](season/sessions/fll-challenge-bioglow-session-slide-3.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 3 slides](season/sessions/fll-challenge-bioglow-session-slide-3.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Decide and record the innovation project problem statement (hard TMG deadline this session)
@@ -158,7 +160,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-08-27 Thu — Session 4: research plan + Training Camp 3 (Reacting to Lines) — Checkpoint 1
 
-**Materials:** [Session 4 slides](season/sessions/fll-challenge-bioglow-session-slide-4.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 4 slides](season/sessions/fll-challenge-bioglow-session-slide-4.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Plan what research is needed on existing solutions
@@ -178,7 +180,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-01 Tue — Session 5 (part 1, project track): research with sources + choose the solution
 
-**Materials:** [Session 5 slides](season/sessions/fll-challenge-bioglow-session-slide-5.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 5 slides](season/sessions/fll-challenge-bioglow-session-slide-5.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Research the chosen problem with cited sources
@@ -198,7 +200,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-03 Thu — Session 5 (part 2, robot track): Guided Mission until consistent
 
-**Materials:** [Session 5 slides](season/sessions/fll-challenge-bioglow-session-slide-5.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 5 slides](season/sessions/fll-challenge-bioglow-session-slide-5.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Complete the SPIKE app Guided Mission reliably
@@ -217,7 +219,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-08 Tue — Session 6 (part 1): Halfway There milestone + solution development plan
 
-**Materials:** [Session 6 slides](season/sessions/fll-challenge-bioglow-session-slide-6.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 6 slides](season/sessions/fll-challenge-bioglow-session-slide-6.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Complete the mid-season 'Halfway There' checkpoint
@@ -238,7 +240,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-10 Thu — Session 6 (part 2): mission strategy on the mat + pseudocode
 
-**Materials:** [Session 6 slides](season/sessions/fll-challenge-bioglow-session-slide-6.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 6 slides](season/sessions/fll-challenge-bioglow-session-slide-6.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Build the mission-strategy plan around easiest-scoring missions first
@@ -276,7 +278,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-17 Thu — Session 7 (part 2): robot iteration + launch-position discipline
 
-**Materials:** [Session 7 slides](season/sessions/fll-challenge-bioglow-session-slide-7.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 7 slides](season/sessions/fll-challenge-bioglow-session-slide-7.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Iterate robot and attachments across attempted missions
@@ -316,7 +318,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-24 Thu — Session 8 (part 2): reliable mission programs — Checkpoint 2
 
-**Materials:** [Session 8 slides](season/sessions/fll-challenge-bioglow-session-slide-8.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 8 slides](season/sessions/fll-challenge-bioglow-session-slide-8.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Add another mission to the strategy and make it reliable
@@ -336,7 +338,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-09-29 Tue — Session 9: iterate both tracks + back up programs
 
-**Materials:** [Session 9 slides](season/sessions/fll-challenge-bioglow-session-slide-9.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 9 slides](season/sessions/fll-challenge-bioglow-session-slide-9.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Refine mission strategy on the mat and iterate robot and project from testing/feedback
@@ -400,7 +402,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-08 Thu — Session 10 (part 2): first full timed 2:30 matches
 
-**Materials:** [Session 10 slides](season/sessions/fll-challenge-bioglow-session-slide-10.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 10 slides](season/sessions/fll-challenge-bioglow-session-slide-10.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Run complete timed robot game matches and score them
@@ -420,7 +422,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-13 Tue — Session 11 (part 1): robot design explanation + Event Time milestone
 
-**Materials:** [Session 11 slides](season/sessions/fll-challenge-bioglow-session-slide-11.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 11 slides](season/sessions/fll-challenge-bioglow-session-slide-11.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Plan the 5-minute robot design explanation against the robot design rubric
@@ -459,7 +461,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-20 Tue — Session 12 (part 1): full judging dress rehearsal
 
-**Materials:** [Session 12 slides](season/sessions/fll-challenge-bioglow-session-slide-12.pptx) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 12 slides](season/sessions/fll-challenge-bioglow-session-slide-12.pptx) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Rehearse the complete judging session end-to-end with outside feedback
@@ -476,7 +478,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-22 Thu — Session 12 (part 2): scored matches + contingency plan + packing list
 
-**Materials:** [Session 12 slides](season/sessions/fll-challenge-bioglow-session-slide-12.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Session 12 slides](season/sessions/fll-challenge-bioglow-session-slide-12.pptx) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Run multiple scored practice matches with correct program run order
@@ -495,7 +497,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-27 Tue — Scrimmage rehearsal 1: full match simulation with referee
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [▶ Field set-up video](https://youtu.be/wDan0826cn0) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o)
 
 **Goals**
 - Simulate event-format robot game matches under real refereeing
@@ -515,7 +517,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-10-29 Thu — Scrimmage rehearsal 2: pit/table logistics + mock inspection — paperwork closes Oct 31
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Paperwork checklist](docs/DOCUMENTS.md) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o)
 
 **Goals**
 - Drill the event-day equipment inspection and setup window
@@ -535,7 +537,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-03 Tue — Scrimmage rehearsal 3: full judging simulation + matches
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Run the judging session exactly per the flowchart, in case the scrimmage offers judging
@@ -553,7 +555,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-05 Thu — Scrimmage rehearsal 4: final polish + pack for Sunday
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Field set-up video](https://youtu.be/wDan0826cn0) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Close remaining gaps and pack for the Nov 8 scrimmage
@@ -577,7 +579,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-08 Sun — SCRIMMAGE — dry run of the main event (robot game + judging if offered)
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o)
 
 **Goals**
 - Compete in event-format matches treating it as a real qualifier
@@ -601,7 +603,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-10 Tue — Scrimmage debrief: build the improvement backlog
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Convert scrimmage results into a prioritized robot/mission and judging improvement plan
@@ -618,7 +620,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-12 Thu — Robot iteration 1: fix top scrimmage misses
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Repair the highest-value failed missions from the scrimmage
@@ -635,7 +637,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-17 Tue — Judging improvements from scrimmage feedback
 
-**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Scrimmage readiness](docs/SCRIMMAGE.md) · [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Revise both 5-minute presentations using scrimmage feedback and the rubrics
@@ -652,7 +654,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-19 Thu — Robot iteration 2 + full timed matches
 
-**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Attempt to add one more mission if it fits 2:30
@@ -669,7 +671,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-11-24 Tue — Combined rehearsal before Thanksgiving break
 
-**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Bank a complete judging + match rehearsal before the week off
@@ -705,7 +707,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-12-03 Thu — Peak dress rehearsal 1: full event simulation
 
-**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Run judging and best-of-three matches as one continuous event simulation
@@ -721,7 +723,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-12-08 Tue — Final Checkpoint + last dress rehearsal (flexes with main-event date TBD)
 
-**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [▶ Preparing for your event video](https://youtu.be/9TMFtLKYT6o) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Close the TMG Final Checkpoint
@@ -780,7 +782,7 @@ The season runs in four phases across Tue/Thu 90-minute meetings. Phase 1 — Fo
 
 ### 2026-12-17 Thu — Wrap-up part 2: disassembly + inventory
 
-**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
+**Materials:** [Robot Game Rulebook](season/guides/fll-challenge-bioglow-rgr.pdf) · [Engineering Notebook](season/guides/fll-challenge-bioglow-en.pdf) · [Field setup guide](season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf) · [▶ Robot game missions video](https://youtu.be/uhZZ8O1StiQ) · [Team Meeting Guide](season/guides/fll-challenge-bioglow-tmg.pdf)
 
 **Goals**
 - Return all materials to season-ready state

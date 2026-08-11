@@ -21,6 +21,13 @@ official source so you always have the current revision:
 - Guided mission SPIKE Prime program (`.llsp3`)
 - Multimedia resources; certificate templates
 
+## Season videos (official)
+
+- [Season welcome](https://youtu.be/MPKxFy3qV2M)
+- [Robot game missions](https://youtu.be/uhZZ8O1StiQ) · [offline MP4, 1.4 GB](https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-robot-game-missions.mp4)
+- [Preparing for your event](https://youtu.be/9TMFtLKYT6o)
+- [Field set-up](https://youtu.be/wDan0826cn0)
+
 ## Still to add
 
 - [ ] Challenge judging rubrics (innovation project + robot design) — separate download

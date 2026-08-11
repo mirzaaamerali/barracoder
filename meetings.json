@@ -13,9 +13,10 @@
    "activities": [
     "Watch BIOGLOW season videos (FIRST LEGO League YouTube playlist)",
     "Read Engineering Notebook pp. 3-9 on how FLL Challenge works; vocabulary: mission model, project spark, innovation project",
-    "Build mission models from bags 1-10 (M01 Drone Survey, M02 Exploding Seeds, M03 Flip the Rock, M04 Lucky Leaves, M05 Reaching Roots, M06 Leafcutter Frenzy, M07 Humongous Fungus) split in pairs; coach inspects/tests each model",
+    "Start mission-model builds in pairs \u2014 aim for bags 1-10 (M01 Drone Survey through M07 Humongous Fungus) but treat it as a two-meeting job: whatever isn't finished rolls to Aug 18. Coach inspects/tests models as pairs finish (rolling, not at the end)",
     "Explore how models connect to Project Sparks (EN p6); write model notes on EN p10",
-    "Reflection questions + clean up (bag unfinished builds)"
+    "Reflection questions + clean up (bag unfinished builds)",
+    "If parent helpers volunteered at kickoff, run them as a parallel build pair \u2014 model building is the one task extra adult hands are allowed to speed up"
    ],
    "activity_refs": [
     [],
@@ -39,12 +40,17 @@
       "page": 10
      }
     ],
+    [],
     []
    ],
    "deliverables": [
-    "Roughly half the mission models built and tested"
+    "At least half the mission models built, inspected, and stored safely (rest roll to Aug 18)"
    ],
    "materials": [
+    {
+     "label": "\u25b6 Season welcome video",
+     "href": "https://youtu.be/MPKxFy3qV2M"
+    },
     {
      "label": "Session 1 slides",
      "href": "season/sessions/fll-challenge-bioglow-session-slide-1.pptx"
@@ -62,8 +68,8 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     }
    ],
    "deck": "1"
@@ -79,6 +85,7 @@
     "Set up the game field exactly per Robot Game Rulebook pp. 7-8"
    ],
    "activities": [
+    "Finish all remaining mission models carried over from Aug 13 before starting field setup",
     "Build remaining models from bags 11-24 (M08 Tangled, M09 Research Platform, M10 Fragile Microhabitats both placements, M11 Window to the Past, M12 Forest Elder, M13 Keystone Species, M14 Seeds of Renewal, M15 Biocentric Architecture, three docks)",
     "Lay mat aligned to bottom wall, place Dual Lock on wireframe marks, seat models on outlines; watch Field Setup Video",
     "Wireframe audit using the A-J x 1-6 grid diagram; sort six Precision Tokens into a referee bag",
@@ -88,12 +95,17 @@
     [],
     [],
     [],
+    [],
     []
    ],
    "deliverables": [
     "All 15 mission models + docks built, field wireframe-verified (Checkpoint 1 model requirement met)"
    ],
    "materials": [
+    {
+     "label": "\u25b6 Season welcome video",
+     "href": "https://youtu.be/MPKxFy3qV2M"
+    },
     {
      "label": "Session 1 slides",
      "href": "season/sessions/fll-challenge-bioglow-session-slide-1.pptx"
@@ -111,8 +123,8 @@
      "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     }
    ],
    "deck": "1"
@@ -176,8 +188,8 @@
      "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     }
    ],
    "deck": "2"
@@ -244,6 +256,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -291,6 +307,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
@@ -349,6 +369,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -395,6 +419,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
@@ -464,6 +492,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -527,6 +559,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
@@ -644,6 +680,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -749,6 +789,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -807,6 +851,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
@@ -955,6 +1003,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1009,6 +1061,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
@@ -1117,6 +1173,10 @@
      "href": "season/guides/fll-challenge-bioglow-en.pdf"
     },
     {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1169,6 +1229,10 @@
      "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1219,8 +1283,16 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
+     "label": "\u25b6 Field set-up video",
+     "href": "https://youtu.be/wDan0826cn0"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     }
    ],
    "deck": null
@@ -1277,8 +1349,8 @@
      "href": "https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     }
    ],
    "deck": null
@@ -1326,6 +1398,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     },
     {
      "label": "Team Meeting Guide",
@@ -1382,6 +1458,14 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Field set-up video",
+     "href": "https://youtu.be/wDan0826cn0"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1435,8 +1519,12 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
-     "label": "Team Meeting Guide",
-     "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     }
    ],
    "deck": null
@@ -1481,6 +1569,14 @@
      "href": "season/guides/fll-challenge-bioglow-en.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1521,6 +1617,14 @@
     {
      "label": "Robot Game Rulebook",
      "href": "season/guides/fll-challenge-bioglow-rgr.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     },
     {
      "label": "Team Meeting Guide",
@@ -1573,6 +1677,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1618,6 +1726,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1653,6 +1765,10 @@
     {
      "label": "Robot Game Rulebook",
      "href": "season/guides/fll-challenge-bioglow-rgr.pdf"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     },
     {
      "label": "Team Meeting Guide",
@@ -1747,6 +1863,10 @@
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
     },
     {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
+    },
+    {
      "label": "Team Meeting Guide",
      "href": "season/guides/fll-challenge-bioglow-tmg.pdf"
     }
@@ -1785,6 +1905,10 @@
     {
      "label": "Robot Game Rulebook",
      "href": "season/guides/fll-challenge-bioglow-rgr.pdf"
+    },
+    {
+     "label": "\u25b6 Preparing for your event video",
+     "href": "https://youtu.be/9TMFtLKYT6o"
     },
     {
      "label": "Team Meeting Guide",
@@ -1925,6 +2049,10 @@
     {
      "label": "Field setup guide",
      "href": "season/robot-game/fll-challenge-bioglow-field-setup-reference-guide.pdf"
+    },
+    {
+     "label": "\u25b6 Robot game missions video",
+     "href": "https://youtu.be/uhZZ8O1StiQ"
     },
     {
      "label": "Team Meeting Guide",
