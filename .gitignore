@@ -6,3 +6,10 @@ node_modules/
 **/filled/
 **/*-signed.*
 roster*
+# Worker secrets & local state — the API key and passcode must never be committed
+.dev.vars
+**/.dev.vars
+.wrangler/
+**/.wrangler/
+*.key
+
