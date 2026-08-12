@@ -7,16 +7,6 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
 <style>
 :root{
-  --paper:#F4F8F5; --card:#FFFFFF; --ink:#152219; --muted:#5C6F62; --line:#DCE6DE;
-  --accent:#1E7A4B; --accent-ink:#FFFFFF; --glow:#0E7F8C; --glow-soft:#E0F2F1;
-  --amber:#8A5A18; --amber-soft:#F6ECD9; --deep:#EAF1EB;
-  --alert:#9B3B26; --alert-soft:#FAE9E4; --violet:#5F4B9E; --violet-soft:#ECE7F8;
-  --ph-core:#1E7A4B; --ph-prep:#0E7F8C; --ph-scrim:#B0426A; --ph-scrim-soft:#F9E6EE;
-  --ph-improve:#5F4B9E; --ph-wrap:#8A5A18;
-  --shadow:0 8px 24px rgba(21,34,25,.07);
-}
-@media (prefers-color-scheme: dark){
-  :root{
     --paper:#0D1411; --card:#161F1A; --ink:#E3EDE5; --muted:#94A79A; --line:#26332B;
     --accent:#4CC98A; --accent-ink:#0B130E; --glow:#3ED2D8; --glow-soft:#12333A;
     --amber:#E2B267; --amber-soft:#33290F; --deep:#0A100C;
@@ -25,7 +15,7 @@
     --ph-improve:#B9A3E8; --ph-wrap:#E2B267;
     --shadow:0 8px 24px rgba(0,0,0,.35);
   }
-}
+
 *{box-sizing:border-box}
 body{margin:0; background:var(--paper); color:var(--ink); line-height:1.5; font-size:15.5px;
   font-family:"Avenir Next",Avenir,Seravek,"Segoe UI",system-ui,sans-serif}
@@ -37,7 +27,7 @@ button{font:inherit; color:inherit; cursor:pointer}
 .top{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; margin-bottom:22px}
 .eyebrow{font-size:11.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); font-weight:700}
 .biglogo{width:min(280px,55vw); height:auto; margin-top:2px}
-@media (prefers-color-scheme: dark){ .biglogo{filter:drop-shadow(0 0 18px rgba(255,255,255,.10))} }
+.biglogo{filter:drop-shadow(0 0 18px rgba(255,255,255,.10))}
 .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 h1{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-size:clamp(26px,4.6vw,36px); margin:.1em 0 0; text-wrap:balance}
 /* tabs */

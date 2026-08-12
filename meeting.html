@@ -7,21 +7,13 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 <style>
 :root{
-  --paper:#F6FAF7; --card:#FFFFFF; --ink:#152219; --muted:#5C6F62; --line:#D9E4DB;
-  --accent:#1E7A4B; --accent-ink:#FFFFFF; --glow:#0E7F8C; --glow-soft:#E0F2F1;
-  --amber:#8A5A18; --amber-soft:#F6ECD9; --rail:#C5D6C9; --deep:#EDF4EE;
-  --alert:#9B3B26; --alert-soft:#FAE9E4;
-  --shadow:0 10px 30px rgba(21,34,25,.08);
-}
-@media (prefers-color-scheme: dark){
-  :root{
     --paper:#0E1512; --card:#16201B; --ink:#E3EDE5; --muted:#94A79A; --line:#26332B;
     --accent:#4CC98A; --accent-ink:#0B130E; --glow:#3ED2D8; --glow-soft:#12333A;
     --amber:#E2B267; --amber-soft:#33290F; --rail:#31423A; --deep:#0A110D;
     --alert:#F0917A; --alert-soft:#3A1C15;
     --shadow:0 10px 30px rgba(0,0,0,.34);
   }
-}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0; background:var(--paper); color:var(--ink); line-height:1.55; font-size:16px;
@@ -317,7 +309,7 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
 .pvbox iframe{flex:1; width:100%; border:0; background:#525659}
 .logohome{display:inline-block; line-height:0; margin-bottom:8px}
 .logohome img{height:44px; width:auto}
-@media (prefers-color-scheme: dark){ .logohome img{filter:drop-shadow(0 0 10px rgba(255,255,255,.12))} }
+.logohome img{filter:drop-shadow(0 0 10px rgba(255,255,255,.12))}
 </style>
 </head>
 <body>
@@ -1270,7 +1262,7 @@ function burst() {
   if (bursting) return; bursting = true;
   const cv = $('burst'), cx = cv.getContext('2d');
   cv.width = innerWidth; cv.height = innerHeight;
-  const colors = DARK.matches ? ['76,201,138','62,210,216'] : ['30,122,75','14,127,140'];
+  const colors = ['76,201,138','62,210,216'];
   const P = Array.from({length: 80}, () => ({
     x: innerWidth/2, y: innerHeight*.35, a: Math.random()*Math.PI*2,
     v: 2.5 + Math.random()*5, r: 1.5 + Math.random()*2.5, life: 1,
