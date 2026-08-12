@@ -2,7 +2,19 @@
 
 <img src="assets/brand/barracoder-logo.png" alt="Barracoder logo" width="520">
 
-**FIRST® LEGO® League Challenge — BioGlow season — White Lake Robotics**
+**FIRST® LEGO® League Challenge — BIOGLOW™ Founders Edition — 2026–27**
+
+| | |
+|---|---|
+| **Team number** | 16651 |
+| **Team name** | BarraCoders |
+| **Organization** | Ealy Elementary School |
+| **Location** | Whitehall, MI, USA |
+| **Program** | FIRST LEGO League Challenge |
+| **Season** | 2026–2027 · BIOGLOW™ Founders Edition |
+
+> Team 16651 is the number the kids write on the scoresheet and give to referees
+> and judges. It's on the site footer too, so it's readable on event day.
 
 Team hub for the Barracoder team: season schedule, paperwork tracking, event prep,
 and every official season document in one place.
