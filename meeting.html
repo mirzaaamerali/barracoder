@@ -307,19 +307,6 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
 .pvhead a{font-size:12.5px; font-weight:700; text-decoration:none; color:var(--accent)}
 .pvhead button{background:var(--deep); border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-weight:700; font-size:13px; color:var(--ink); cursor:pointer}
 .pvbox iframe{flex:1; width:100%; border:0; background:#525659}
-.airow{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
-.aibtn{background:var(--accent); color:var(--accent-ink); border:1px solid var(--accent);
-  border-radius:99px; padding:9px 17px; font:inherit; font-size:13.5px; font-weight:700; cursor:pointer}
-.aibtn:hover{filter:brightness(1.08)}
-.aibtn:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
-.ainote{margin-top:12px; background:var(--card); border:1px solid var(--line);
-  border-radius:12px; padding:12px 14px; display:grid; gap:10px}
-.ailabel{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
-#ainotetext, #ainoteby{background:var(--deep); color:var(--ink); border:1px solid var(--line);
-  border-radius:9px; padding:9px 11px; font:inherit; font-size:14px}
-#ainotetext{width:100%; resize:vertical; min-height:64px}
-#ainoteby{flex:0 1 190px; min-width:140px}
-#ainotetext:focus-visible, #ainoteby:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
 .logohome{display:inline-block; line-height:0; margin-bottom:8px}
 .logohome img{height:44px; width:auto}
 .logohome img{filter:drop-shadow(0 0 10px rgba(255,255,255,.12))}
@@ -328,7 +315,7 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
 <body>
 <div class="wrap">
   <a class="logohome" href="index.html"><img src="assets/brand/barracoder-logo-web.png" alt="Barracoder team hub"></a>
-  <nav class="crumbs"><a href="index.html">← Barracoder team hub</a><span class="sep">·</span><span>Daily meeting page</span></nav>
+  <nav class="crumbs"><a href="index.html">← Barracoder team hub</a><span class="sep">·</span><span>Daily meeting page</span><span class="sep jsep" hidden>·</span><a class="jlink" href="index.html?tab=journal" hidden>📝 Team journal</a></nav>
 
   <div class="season">
     <div>
@@ -380,18 +367,6 @@ h2 .bar{flex:1; height:1px; background:var(--line)}
   <section id="matsec"><h2>Materials for tonight<span class="bar"></span></h2><div class="mats" id="mats"></div></section>
 
   <section id="donesec" class="done"><h2>Done when<span class="bar"></span></h2><div class="check" id="donelist"></div></section>
-
-  <section id="aisec" hidden><h2>Assistant<span class="bar"></span></h2>
-    <div class="airow"><button type="button" class="aibtn" id="airecap">✨ Recap tonight for parents</button></div>
-    <div class="ainote">
-      <label class="ailabel" for="ainotetext">Rough notes from tonight</label>
-      <textarea id="ainotetext" rows="3" placeholder="scrappy is fine — spelling, order, none of it matters"></textarea>
-      <div class="airow">
-        <input id="ainoteby" type="text" placeholder="your first name" autocomplete="given-name">
-        <button type="button" class="aibtn" id="aitidy">📝 Tidy this into a journal entry</button>
-      </div>
-    </div>
-  </section>
 
   <section id="phasesec"><h2>Section progress<span class="bar"></span></h2><div class="phases" id="phases"></div></section>
 
@@ -1340,50 +1315,13 @@ document.addEventListener('keydown', e => {
   </div>
 </div>
 
-<script src="assets/ai-config.js"></script>
-<script src="assets/ai.js"></script>
+<script src="assets/collab-config.js"></script>
 <script>
-/* Assistant wiring. Stays completely hidden until the Worker endpoint is set in
-   assets/ai-config.js, so nobody ever clicks a button that can't work. */
+/* Show the journal link only once a Google Form is configured. */
 (function () {
-  var ep = window.BARRACODER_AI_ENDPOINT;
-  if (!ep || !window.BarracoderAI) return;
-  BarracoderAI.configure({ endpoint: ep });
-  document.getElementById('aisec').hidden = false;
-
-  var noteEl = document.getElementById('ainotetext');
-  var byEl = document.getElementById('ainoteby');
-
-  document.getElementById('airecap').onclick = function () {
-    var m = M[cur];
-    if (!m) return;
-    var ticked = LS(m.date + ':plan');
-    var acts = m.activities || [];
-    BarracoderAI.panel({
-      title: 'Recap for parents',
-      intro: 'A draft — read it before you send it.',
-      task: 'recap',
-      input: {
-        date: m.date,
-        title: m.title,
-        goals: m.goals,
-        done: acts.filter(function (_, i) { return ticked.indexOf(i) >= 0; }),
-        notDone: acts.filter(function (_, i) { return ticked.indexOf(i) < 0; }),
-        notes: noteEl.value
-      }
-    });
-  };
-
-  document.getElementById('aitidy').onclick = function () {
-    var text = noteEl.value.trim();
-    if (!text) { noteEl.focus(); return; }
-    BarracoderAI.panel({
-      title: 'Tidied journal entry',
-      intro: 'Paste this wherever the team journal lives.',
-      task: 'tidy',
-      input: { text: text, author: byEl.value.trim() }
-    });
-  };
+  if (!(window.BARRACODER_COLLAB || {}).formEmbedUrl) return;
+  var els = document.querySelectorAll('.jsep, .jlink');
+  for (var i = 0; i < els.length; i++) els[i].hidden = false;
 })();
 </script>
 </body>

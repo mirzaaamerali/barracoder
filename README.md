@@ -26,8 +26,8 @@ browser. Notes and ideas live in [notes/](notes/).
 - **[SCHEDULE.md](SCHEDULE.md)** — every meeting from kickoff (Aug 11) through the
   season celebration (Dec 17): goals, 90-minute plan, and exit criteria per meeting.
 - **[docs/DOCUMENTS.md](docs/DOCUMENTS.md)** — the paperwork checklist with due dates.
-- **[docs/ai-assistant.md](docs/ai-assistant.md)** — the site's optional AI helper:
-  what it drafts, the team passcode, and the rules about what never gets typed into it.
+- **[docs/collaboration.md](docs/collaboration.md)** — how teachers and volunteers
+  add notes and ideas without needing a GitHub account.
 - **[docs/SCRIMMAGE.md](docs/SCRIMMAGE.md)** — the 9 reviewing criteria and the
   25-minute reviewing flow the team must be ready for on Nov 10.
 

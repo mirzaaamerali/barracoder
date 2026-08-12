@@ -37,14 +37,12 @@ h1{font-family:Futura,"Avenir Next",system-ui,sans-serif; font-weight:700; font-
 .tab:hover{color:var(--ink); background:var(--deep)}
 .tab.on{color:var(--accent); border-bottom-color:var(--accent)}
 .tab:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
-.askbar{display:flex; gap:8px; margin:-4px 0 20px}
-.askbar input{flex:1; min-width:0; background:var(--card); color:var(--ink); border:1px solid var(--line);
-  border-radius:99px; padding:9px 16px; font:inherit; font-size:14px}
-.askbar input:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
-.askgo{background:var(--accent); color:var(--accent-ink); border:1px solid var(--accent); border-radius:99px;
-  padding:9px 18px; font:inherit; font-weight:700; font-size:14px; cursor:pointer; white-space:nowrap}
-.askgo:hover{filter:brightness(1.08)}
-.askgo:focus-visible{outline:2px solid var(--glow); outline-offset:2px}
+/* journal */
+.journalwrap{display:grid; gap:18px}
+.jcard{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow)}
+.jcard h3{margin:0 0 4px; font-size:16px; font-family:Futura,"Avenir Next",system-ui,sans-serif}
+.jhint{margin:0 0 12px; font-size:13px; color:var(--muted)}
+.jcard iframe{width:100%; border:0; border-radius:10px; background:#fff; min-height:540px; display:block}
 .tabtoday{margin-left:auto; align-self:center; background:var(--accent); color:var(--accent-ink);
   font-weight:700; font-size:13.5px; padding:7px 15px; border-radius:99px; text-decoration:none; margin-bottom:6px}
 .tabtoday:hover{filter:brightness(1.08)}
@@ -179,19 +177,31 @@ footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); colo
     <button class="tab on" role="tab" data-v="board" aria-selected="true">Board</button>
     <button class="tab" role="tab" data-v="cal" aria-selected="false">Calendar</button>
     <button class="tab" role="tab" data-v="lib" aria-selected="false">Library</button>
+    <button class="tab" role="tab" data-v="journal" aria-selected="false" id="tab-journal" hidden>Journal</button>
     <a class="tabtoday" href="meeting.html">✨ Today</a>
   </div>
 
-  <form class="askbar" id="askbar" hidden>
-    <input id="askq" type="text" autocomplete="off"
-           placeholder="Ask about the season — “when is the paperwork due?”">
-    <button type="submit" class="askgo">Ask</button>
-  </form>
 
   <div class="view on" id="v-board"></div>
   <div class="view" id="v-cal"><div class="cal" id="calgrid"></div>
     <div class="legend" id="callegend"></div></div>
   <div class="view" id="v-lib"><div class="lib" id="libgrid"></div></div>
+
+  <div class="view" id="v-journal">
+    <div class="journalwrap">
+      <div class="jcard">
+        <h3>Add a note or an idea</h3>
+        <p class="jhint">No account, no sign-in — type it and hit submit. Keep students'
+          personal details out of it; this page is public.</p>
+        <iframe id="jform" title="Team journal form" loading="lazy"></iframe>
+      </div>
+      <div class="jcard" id="jresponses" hidden>
+        <h3>What the team has written</h3>
+        <p class="jhint">Everything submitted so far, newest at the bottom.</p>
+        <iframe id="jsheet" title="Team journal entries" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
 
   <footer>Barracoder · FIRST LEGO League Challenge · BioGlow season · materials © FIRST &amp; the LEGO Group ·
     <a href="https://github.com/mirzaaamerali/barracoder">GitHub repo</a> ·
@@ -208,32 +218,40 @@ footer{margin-top:52px; padding-top:16px; border-top:1px solid var(--line); colo
   </div>
 </div>
 
-<script src="assets/ai-config.js"></script>
-<script src="assets/ai.js"></script>
+<script src="assets/collab-config.js"></script>
 <script>
-/* Assistant wiring — hidden entirely until the Worker endpoint is configured. */
+/* Journal tab — appears only once a Google Form URL is configured. */
 (function () {
-  var ep = window.BARRACODER_AI_ENDPOINT;
-  if (!ep || !window.BarracoderAI) return;
-  BarracoderAI.configure({ endpoint: ep });
-  var bar = document.getElementById('askbar');
-  bar.hidden = false;
-  bar.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var q = document.getElementById('askq').value.trim();
-    if (!q) return;
-    /* Only the question goes over the wire — the Worker builds the season
-       context itself from meetings.json, so this can't be used to smuggle in
-       an arbitrary prompt. */
-    BarracoderAI.panel({
-      title: 'About the season',
-      intro: 'Answered from the season plan on this site.',
-      task: 'ask',
-      input: { question: q }
-    });
-  });
+  var C = window.BARRACODER_COLLAB || {};
+  var tab = document.getElementById('tab-journal');
+  var view = document.getElementById('v-journal');
+
+  if (!C.formEmbedUrl) {
+    if (tab) tab.remove();
+    if (view) view.remove();
+    /* If someone's last-used tab was the journal, don't strand them on a
+       view that no longer exists. */
+    if (localStorage.getItem('bar:tab') === 'journal') {
+      localStorage.setItem('bar:tab', 'board');
+      document.querySelector('.tab[data-v="board"]').click();
+    }
+    return;
+  }
+
+  tab.hidden = false;
+  document.getElementById('jform').src = C.formEmbedUrl;
+  if (C.responsesEmbedUrl) {
+    document.getElementById('jresponses').hidden = false;
+    document.getElementById('jsheet').src = C.responsesEmbedUrl;
+  }
+
+  /* Allow deep links like index.html?tab=journal from the daily page. */
+  var want = new URLSearchParams(location.search).get('tab');
+  var wanted = want && document.querySelector('.tab[data-v="' + want + '"]');
+  if (wanted && !wanted.hidden) wanted.click();
 })();
 </script>
+
 
 <script>
 const $ = s => document.querySelector(s);
