@@ -1,0 +1,324 @@
+{
+ "issues": [
+  {
+   "title": "Paperwork: Team registration with the local Program Delivery Partner (Pre-Season Checkpoint",
+   "body": "Must be complete before Session 1 per the TMG Pre-Season Checkpoint; verify before the first working meeting.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-08-13"
+  },
+  {
+   "title": "Paperwork: Signed consent/participation forms (sent home at the Aug 11 kickoff)",
+   "body": "Collect at the Aug 20 meeting; chase stragglers weekly. Hard backstop: all paperwork done by 2026-10-31.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-08-20"
+  },
+  {
+   "title": "Paperwork: Scrimmage (Nov 8) event registration + event-specific requirements review",
+   "body": "Treat like a real qualifier: confirm start/end times, whether judging is offered, travel, and any event-specific rules (they vary by event type).",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-31"
+  },
+  {
+   "title": "Paperwork: Main December event registration (date TBD)",
+   "body": "Register as soon as the organizer posts the date; confirm event type/organizer, times, travel, and requirements at the Final Checkpoint (Dec 8).",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-31"
+  },
+  {
+   "title": "Paperwork: Judging rubrics, scoresheets, and judging session flowchart printed and handed t",
+   "body": "Checkpoint 2 requirement after Session 8. Sequencing: innovation project rubric needed before Oct 6 (Session 10), robot design rubric before Oct 13 (Session 11), scoresheets in use from Oct 8 onward.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-09-24"
+  },
+  {
+   "title": "Paperwork: Innovation Project Planning sheet (Engineering Notebook p29) \u2014 all boxes",
+   "body": "Dated boxes: Problem Statement by Aug 25 (Session 3, hard TMG deadline), Research by Sep 1 (Session 5), Solution Planning by Sep 8 (Session 6), Feedback by Sep 22 (Session 8), 'Summarize Your Project' before the event \u2014 final check Nov 5.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-31"
+  },
+  {
+   "title": "Paperwork: Team Progress sheet (Engineering Notebook p8) \u2014 all three sections",
+   "body": "Start Here at Aug 20 (Session 2), Halfway There at Sep 8 (Session 6), Event Time at Oct 13 (Session 11); reviewed again in Session 12 and at wrap-up.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-13"
+  },
+  {
+   "title": "Paperwork: Pseudocode worksheet (Engineering Notebook p28) for a selected mission",
+   "body": "Completed in Session 6; reusable for later missions.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-09-10"
+  },
+  {
+   "title": "Paperwork: Robot Design Notes / mission notes (Engineering Notebook p30, photocopied per mi",
+   "body": "Ongoing every meeting from Session 1; judges want documented iteration evidence \u2014 this feeds the robot design explanation.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-31"
+  },
+  {
+   "title": "Paperwork: Robot program backups to USB stick or online storage",
+   "body": "First full backup at Session 9; refresh after every change (programs downloaded to the controller cannot be pulled back for editing).",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-09-29"
+  },
+  {
+   "title": "Paperwork: Accommodations request to event organizer (if any member needs one)",
+   "body": "TMG says contact the organizer no later than Session 11; applies to both the scrimmage and the main event.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-15"
+  },
+  {
+   "title": "Paperwork: Event packing checklist (Engineering Notebook p26)",
+   "body": "Written in Session 12; includes robot + labeled attachment bags, device/chargers, program-notes paper (one sheet per home area), spare batteries/power pack, microSD, prototype/visuals/scripts. Refreshed Nov 5 for the scrimmage and Dec 8 for the main event.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-22"
+  },
+  {
+   "title": "Paperwork: Challenge Updates review (official rule updates/clarifications)",
+   "body": "Recurring: check throughout the season; mandatory rechecks Nov 5 (pre-scrimmage) and Dec 1 (pre-main-event) \u2014 updates supersede the Rulebook for later events.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-31"
+  },
+  {
+   "title": "Paperwork: Printed Field Setup Guide (4-up color) as table-reset checklist",
+   "body": "Needed for scrimmage-rehearsal field-reset drills and as the pit/setup reference on event days.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-10-27"
+  },
+  {
+   "title": "Paperwork: Student Participation Certificates printed",
+   "body": "Source (Multimedia Resources) sets this at season end \u2014 awarded at the Dec 15 celebration; the only checklist item allowed past Oct 31 by its source.",
+   "labels": [
+    "paperwork"
+   ],
+   "due": "2026-12-15"
+  },
+  {
+   "title": "At least half the mission models built, inspected, and stored safely (rest roll to Aug 18)",
+   "body": "From **2026-08-13 \u2014 Session 1 (part 1): BIOGLOW theme immersion + mission model build begins**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-08-13"
+  },
+  {
+   "title": "All 15 mission models + docks built, field wireframe-verified (Checkpoint 1 model requirem",
+   "body": "From **2026-08-18 \u2014 Session 1 (part 2): finish mission models + field setup**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-08-18"
+  },
+  {
+   "title": "Team Progress p8 'Start Here' completed",
+   "body": "From **2026-08-20 \u2014 Session 2: team goals + Training Camp 1 (Driving Around)**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-08-20"
+  },
+  {
+   "title": "Problem statement recorded on EN p29",
+   "body": "From **2026-08-25 \u2014 Session 3: problem statement locked (TMG deadline) + Training Camp 2**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-08-25"
+  },
+  {
+   "title": "Checkpoint 1 passed",
+   "body": "From **2026-08-27 \u2014 Session 4: research plan + Training Camp 3 (Reacting to Lines) \u2014 Checkpoint 1**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-08-27"
+  },
+  {
+   "title": "EN p8 'Halfway There' completed",
+   "body": "From **2026-09-08 \u2014 Session 6 (part 1): Halfway There milestone + solution development plan**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-09-08"
+  },
+  {
+   "title": "EN p29 Solution Planning box completed",
+   "body": "From **2026-09-08 \u2014 Session 6 (part 1): Halfway There milestone + solution development plan**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-09-08"
+  },
+  {
+   "title": "Pseudocode sheet (EN p28) completed",
+   "body": "From **2026-09-10 \u2014 Session 6 (part 2): mission strategy on the mat + pseudocode**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-09-10"
+  },
+  {
+   "title": "Checkpoint 2 passed",
+   "body": "From **2026-09-24 \u2014 Session 8 (part 2): reliable mission programs \u2014 Checkpoint 2**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-09-24"
+  },
+  {
+   "title": "Rubrics/scoresheets/judging flowchart printed and handed to the team",
+   "body": "From **2026-09-24 \u2014 Session 8 (part 2): reliable mission programs \u2014 Checkpoint 2**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-09-24"
+  },
+  {
+   "title": "Packing layout for the 20-point inspection bonus",
+   "body": "From **2026-10-01 \u2014 Rules mastery + launch-routine and inspection drill (coach rules priority)**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-10-01"
+  },
+  {
+   "title": "EN p8 'Event Time' completed",
+   "body": "From **2026-10-13 \u2014 Session 11 (part 1): robot design explanation + Event Time milestone**.",
+   "labels": [
+    "gate"
+   ],
+   "due": "2026-10-13"
+  },
+  {
+   "title": "Scrimmage: Match format drilled: full 2.5-minute autonomous matches on a timer, run best-of",
+   "body": "Match format drilled: full 2.5-minute autonomous matches on a timer, run best-of-three style (only the best score counts; ties broken by 2nd then 3rd best) \u2014 team has run at least four rehearsal meetings of complete timed matches before Nov 8.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Equipment inspection ready: robot + ALL equipment fits within the two launch are",
+   "body": "Equipment inspection ready: robot + ALL equipment fits within the two launch areas under 12 in (305 mm); one-launch-area packing layout rehearsed for the 20-point inspection bonus; team can identify their self-built M13 keystone species model (bag 20 bricks, counts as equipment) to inspectors.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Pre-match setup window rehearsed to a couple of minutes: distribute loose missio",
+   "body": "Pre-match setup window rehearsed to a couple of minutes: distribute loose mission models and equipment between the two home areas, place robot in the chosen launch area, calibrate sensors on the mat, choose M13/M14/M15 dock placement (mine/city/farm), and ask the referee to check the field BEFORE the match.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Technician discipline fixed: two technicians per home area, left/right groups lo",
+   "body": "Technician discipline fixed: two technicians per home area, left/right groups locked with no side switching (same-side swaps only), everyone else standing back; handling of robot/equipment only when completely within your own home area.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Precision-token rules internalized: six tokens (50 pts) to start; one lost per i",
+   "body": "Precision-token rules internalized: six tokens (50 pts) to start; one lost per interruption outside home; end-of-match values 1=10/2=15/3=25/4=35/5=50/6=50; the free final stop-in-place exception; relaunch rules (partly outside = same home area, completely outside = either).",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: High-cost rules mastered via recurring quizzes: M04 katydid even partly outside ",
+   "body": "High-cost rules mastered via recurring quizzes: M04 katydid even partly outside the leaf habitat = zero for the mission; no separating Dual Lock or breaking mission models; robot/model combinations must free in one motion in perfect condition; objects obtained outside home after the last launch go to the referee; points scored by hand outside home don't count.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Variability-proofed programs: M13-15 mission programs work in all three dock ass",
+   "body": "Variability-proofed programs: M13-15 mission programs work in all three dock assignments; runs don't depend on M04 katydid/leaf placement (referee randomizes every match) or a fixed M02 tube orientation; robot launches from a consistent, noted position and the whole robot fits inside the launch area.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Mission strategy + contingency locked: program run order decided, mission owners",
+   "body": "Mission strategy + contingency locked: program run order decided, mission owners and robot operators assigned, attachments in labeled per-mission bags and easy to grab, alternate-mission contingency plan for mid-match failures rehearsed.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Scoring fluency: every practice match scored with the official scoresheet / Offi",
+   "body": "Scoring fluency: every practice match scored with the official scoresheet / Official Scoring Calculator so scrimmage scores are interpretable; team knows post-match review procedure (referee documents results WITH the team; agreement makes it official; head referee is final).",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Field ownership: team can reset the full field to wireframe-exact starting state",
+   "body": "Field ownership: team can reset the full field to wireframe-exact starting state quickly using the printed Field Setup Guide, and knows to check the tournament field and alert the referee to problems (including missing decorative elements) before each match.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Gracious Professionalism ready: team knows referees score GP at EVERY match (2/3",
+   "body": "Gracious Professionalism ready: team knows referees score GP at EVERY match (2/3/4, default 3, added to the Core Values score), including how to earn it even if the robot breaks; Coopetition behaviors prepared, including the cooperative M07/M05 cross-table bonus.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Judging session ready in case the scrimmage offers judging: 5-minute innovation ",
+   "body": "Judging session ready in case the scrimmage offers judging: 5-minute innovation project presentation and 5-minute robot design explanation (delivered without the field) rehearsed timed per the judging session flowchart, every member with a part and every member's contribution described, prototype/visuals/scripts packed, rubric criteria (including those feeding Core Values) reviewed.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  },
+  {
+   "title": "Scrimmage: Logistics packed: backed-up programs, charged/updated controller, spare batterie",
+   "body": "Logistics packed: backed-up programs, charged/updated controller, spare batteries or charged power pack, microSD, one sheet of program-notes paper per home area, scoresheets/calculator, printed Field Setup Guide, and the full packing checklist executed on Nov 5; latest Challenge Updates read and strategy re-verified against them.",
+   "labels": [
+    "scrimmage"
+   ],
+   "due": "2026-11-08"
+  }
+ ]
+}

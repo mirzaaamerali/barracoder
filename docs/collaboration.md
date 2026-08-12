@@ -1,3 +1,21 @@
+# How we keep track of things
+
+Two places, two jobs:
+
+| | Where | Who uses it |
+|---|---|---|
+| **Tasks** — things with a deadline and a state | [The board](https://github.com/users/mirzaaamerali/projects) — Backlog → In progress → Blocker → Done | Coach + anyone with a GitHub account. **Anyone can view it without one.** |
+| **Notes & ideas** — meeting write-ups, suggestions, questions | The **Journal** tab on the team site (a Google Form) | Everyone. No account, no login. |
+
+The Journal is the inbox; the board is the plan. If a note turns out to be a
+real task, it becomes a card on the board.
+
+Seeding the board is a one-time job — see [`scripts/seed-board.py`](../scripts/seed-board.py),
+which creates 40 issues from the season plan (every paperwork deadline, the hard
+gates, and the scrimmage-readiness checklist).
+
+---
+
 # Sharing notes and ideas — for teachers and volunteers
 
 You do **not** need a GitHub account, a login, or any app. There's a Journal tab
