@@ -560,6 +560,8 @@ const LIBGROUPS = [
     ['Paperwork checklist', 'https://github.com/mirzaaamerali/barracoder/blob/main/docs/DOCUMENTS.md', 'GitHub'],
     ['Scrimmage readiness', 'https://github.com/mirzaaamerali/barracoder/blob/main/docs/SCRIMMAGE.md', 'GitHub'],
     ['Shared notes & ideas', 'https://github.com/mirzaaamerali/barracoder/tree/main/notes', 'GitHub']]],
+  ['Supplementary lessons', [
+    ['Pybricks Mission Manual (Python coding for SPIKE Prime)', 'lessons/pybricks-mission-manual.html', 'HTML']]],
 ];
 function renderLib() {
   const grid = $('#libgrid'); grid.innerHTML = '';
@@ -575,7 +577,7 @@ function renderLib() {
       if (tag === 'PDF') a.onclick = e => { e.preventDefault(); openPdf(href, null, label); };
       li.appendChild(a);
       const s = document.createElement('span'); s.className = 'ft';
-      s.textContent = tag === 'PDF' ? 'PDF · opens in browser' : tag === 'PPTX' ? 'PPTX · downloads' : tag === 'DL' ? 'downloads · open in SPIKE app' : tag === 'YT' ? 'YouTube' : tag === 'MP4' ? 'MP4 · 1.4 GB download' : 'on GitHub';
+      s.textContent = tag === 'PDF' ? 'PDF · opens in browser' : tag === 'PPTX' ? 'PPTX · downloads' : tag === 'DL' ? 'downloads · open in SPIKE app' : tag === 'YT' ? 'YouTube' : tag === 'MP4' ? 'MP4 · 1.4 GB download' : tag === 'HTML' ? 'opens in browser' : 'on GitHub';
       li.appendChild(s);
       ul.appendChild(li);
     });

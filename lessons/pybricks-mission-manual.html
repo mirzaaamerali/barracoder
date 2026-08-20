@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pybricks Mission Manual — Barracoder</title>
+<meta name="description" content="A seven-mission playbook that teaches kids to build a LEGO SPIKE Prime robot and program it with real Pybricks Python commands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #eef3f1;
+    --paper-raise: #ffffff;
+    --grid-line: rgba(15, 36, 56, 0.08);
+    --ink: #0f2438;
+    --ink-soft: #3c5468;
+    --ink-faint: #7488a0;
+    --signal: #ff6a3d;
+    --signal-ink: #7a2c11;
+    --signal-soft: #ffe3d6;
+    --circuit: #0e9e8c;
+    --circuit-ink: #06403a;
+    --circuit-soft: #d9f2ee;
+    --code-bg: #0f2438;
+    --code-text: #d7e4e0;
+    --code-key: #ff9d78;
+    --code-str: #7fd9c9;
+    --code-com: #6f8ba3;
+    --border: rgba(15, 36, 56, 0.14);
+    --shadow: rgba(15, 36, 56, 0.12);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0b1622;
+      --paper-raise: #101f30;
+      --grid-line: rgba(231, 238, 240, 0.06);
+      --ink: #e7eef0;
+      --ink-soft: #a7bac6;
+      --ink-faint: #6f8598;
+      --signal: #ff8a5c;
+      --signal-ink: #ffd9c7;
+      --signal-soft: #3a2015;
+      --circuit: #35d1ba;
+      --circuit-ink: #c3f3ea;
+      --circuit-soft: #0f2e29;
+      --code-bg: #060d15;
+      --code-text: #cfe8e0;
+      --code-key: #ffab84;
+      --code-str: #7fd9c9;
+      --code-com: #5c7387;
+      --border: rgba(231, 238, 240, 0.14);
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0b1622;
+    --paper-raise: #101f30;
+    --grid-line: rgba(231, 238, 240, 0.06);
+    --ink: #e7eef0;
+    --ink-soft: #a7bac6;
+    --ink-faint: #6f8598;
+    --signal: #ff8a5c;
+    --signal-ink: #ffd9c7;
+    --signal-soft: #3a2015;
+    --circuit: #35d1ba;
+    --circuit-ink: #c3f3ea;
+    --circuit-soft: #0f2e29;
+    --code-bg: #060d15;
+    --code-text: #cfe8e0;
+    --code-key: #ffab84;
+    --code-str: #7fd9c9;
+    --code-com: #5c7387;
+    --border: rgba(231, 238, 240, 0.14);
+    --shadow: rgba(0, 0, 0, 0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color: var(--ink);
+    font-family: "Karla", "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--circuit); }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3 {
+    font-family: "Fredoka", "Segoe UI", sans-serif;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .backlink {
+    display: block;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 14px 24px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+  }
+  .backlink a { color: var(--ink-faint); text-decoration: none; }
+  .backlink a:hover { color: var(--circuit); }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  .eyebrow {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--circuit-ink);
+    background: var(--circuit-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 40px 0 40px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    border-bottom: 2px dashed var(--border);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+    line-height: 1.05;
+    margin: 14px 0 12px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--signal);
+  }
+
+  .hero p.lede {
+    color: var(--ink-soft);
+    font-size: 1.08rem;
+    max-width: 46ch;
+    margin: 0 0 20px;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 11px;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    color: var(--ink-soft);
+    background: var(--paper-raise);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .progress-card {
+    background: var(--paper-raise);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 6px 16px var(--shadow);
+    max-width: 380px;
+  }
+
+  .progress-ring {
+    flex: none;
+  }
+
+  .progress-track { fill: none; stroke: var(--grid-line); stroke-width: 6; }
+  .progress-fill {
+    fill: none;
+    stroke: var(--signal);
+    stroke-width: 6;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 27px 27px;
+    transition: stroke-dashoffset 0.4s ease;
+  }
+  .progress-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    fill: var(--ink);
+    font-weight: 700;
+  }
+
+  .progress-text strong { display: block; font-family: "Fredoka"; font-size: 1.02rem; }
+  .progress-text span { color: var(--ink-faint); font-size: 0.85rem; }
+  .reset-btn {
+    background: none;
+    border: none;
+    color: var(--ink-faint);
+    text-decoration: underline;
+    font-size: 0.78rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+  }
+
+  .hero-art { width: 100%; height: auto; }
+
+  /* ---------- TRACKER NAV ---------- */
+  .tracker {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    margin-bottom: 8px;
+  }
+  .tracker-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .tracker a {
+    flex: none;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.74rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 12px;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .tracker a[data-done="true"] {
+    border-color: var(--circuit);
+    color: var(--circuit-ink);
+    background: var(--circuit-soft);
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head {
+    margin: 56px 0 22px;
+    padding-top: 8px;
+  }
+  .section-head h2 {
+    font-size: 1.5rem;
+    margin: 6px 0 8px;
+  }
+  .section-head p {
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0;
+  }
+
+  /* ---------- MISSION CARD ---------- */
+  .mission {
+    background: var(--paper-raise);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 26px 28px 28px;
+    margin-bottom: 22px;
+    scroll-margin-top: 64px;
+    box-shadow: 0 4px 14px var(--shadow);
+  }
+  .mission-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .mission-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+  .mission h3 {
+    font-size: 1.28rem;
+    margin: 2px 0 6px;
+  }
+  .mission .meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 7px;
+  }
+
+  .check {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 11px;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .check input { accent-color: var(--signal); width: 15px; height: 15px; cursor: pointer; }
+  .check[data-done="true"] {
+    background: var(--circuit-soft);
+    border-color: var(--circuit);
+    color: var(--circuit-ink);
+  }
+
+  .mission p { margin: 0 0 14px; color: var(--ink-soft); }
+  .mission ul { margin: 0 0 14px; padding-left: 1.15em; color: var(--ink-soft); }
+  .mission li { margin-bottom: 5px; }
+
+  code.inline {
+    font-family: "JetBrains Mono", monospace;
+    background: var(--circuit-soft);
+    color: var(--circuit-ink);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  pre.code {
+    background: var(--code-bg);
+    color: var(--code-text);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    padding: 16px 18px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0 0 14px;
+  }
+  pre.code .k { color: var(--code-key); }
+  pre.code .s { color: var(--code-str); }
+  pre.code .c { color: var(--code-com); }
+
+  .try-it {
+    display: flex;
+    gap: 12px;
+    background: var(--signal-soft);
+    border: 1.5px dashed var(--signal);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 4px;
+  }
+  .try-it .icon { flex: none; color: var(--signal); margin-top: 2px; }
+  .try-it strong { color: var(--signal-ink); font-family: "Fredoka"; font-size: 0.92rem; }
+  .try-it p { margin: 2px 0 0; color: var(--signal-ink); font-size: 0.92rem; }
+
+  .coach {
+    display: flex;
+    gap: 12px;
+    border-top: 1px dashed var(--border);
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+  .coach .icon { flex: none; color: var(--ink-faint); margin-top: 3px; }
+  .coach strong { font-family: "Fredoka"; font-size: 0.86rem; color: var(--ink-soft); }
+  .coach p { margin: 2px 0 0; font-size: 0.86rem; color: var(--ink-faint); }
+
+  /* ---------- CHEAT SHEET ---------- */
+  .sheet-wrap { overflow-x: auto; border: 1.5px solid var(--border); border-radius: 10px; }
+  table.sheet {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+    background: var(--paper-raise);
+  }
+  table.sheet caption { display: none; }
+  table.sheet th {
+    text-align: left;
+    font-family: "Karla";
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    padding: 12px 16px;
+    border-bottom: 1.5px solid var(--border);
+  }
+  table.sheet td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+  table.sheet tr:last-child td { border-bottom: none; }
+  table.sheet td.cmd { font-family: "JetBrains Mono", monospace; color: var(--ink); font-size: 0.84rem; white-space: nowrap; }
+  table.sheet tr.group-row td {
+    background: var(--circuit-soft);
+    color: var(--circuit-ink);
+    font-family: "Fredoka";
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 2px dashed var(--border);
+    color: var(--ink-faint);
+    font-size: 0.84rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top: 20px; }
+    .hero-art { max-width: 220px; margin: 0 auto; }
+    .mission-head { flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .progress-fill { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="backlink"><a href="../index.html">&larr; Barracoder team site</a></div>
+
+<div class="tracker">
+  <div class="tracker-inner" id="trackerNav">
+    <a href="#m0" data-mission="m0">0 · Meet Your Robot</a>
+    <a href="#m1" data-mission="m1">1 · Build the Base</a>
+    <a href="#m2" data-mission="m2">2 · Say Hello</a>
+    <a href="#m3" data-mission="m3">3 · Get Moving</a>
+    <a href="#m4" data-mission="m4">4 · Sound &amp; Light</a>
+    <a href="#m5" data-mission="m5">5 · Wait &amp; Repeat</a>
+    <a href="#m6" data-mission="m6">6 · Sense the World</a>
+    <a href="#sheet">Cheat Sheet</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Pybricks &middot; LEGO&reg; SPIKE&reg; Prime</span>
+      <h1>Command your robot in <em>real Python</em>.</h1>
+      <p class="lede">A seven-mission playbook for young builders. Snap the robot together, write real code, and watch it drive, beep, light up, and sense the world &mdash; one small command at a time.</p>
+      <div class="badge-row">
+        <span class="badge">Ages 10+</span>
+        <span class="badge">No coding experience needed</span>
+        <span class="badge">Free at code.pybricks.com</span>
+      </div>
+      <div class="progress-card">
+        <svg class="progress-ring" width="54" height="54" viewBox="0 0 54 54" role="img" aria-label="Missions complete">
+          <circle class="progress-track" cx="27" cy="27" r="22"></circle>
+          <circle class="progress-fill" id="progressFill" cx="27" cy="27" r="22" stroke-dasharray="138.2" stroke-dashoffset="138.2"></circle>
+          <text class="progress-num" id="progressNum" x="27" y="31" text-anchor="middle">0/7</text>
+        </svg>
+        <div class="progress-text">
+          <strong id="progressLabel">0 of 7 missions complete</strong>
+          <span>Checkboxes save on this device</span>
+          <button class="reset-btn" id="resetBtn" type="button">Reset progress</button>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-art" viewBox="0 0 260 260" role="img" aria-label="Diagram of a small two-wheeled robot with a sensor eye">
+      <circle cx="130" cy="130" r="122" fill="none" stroke="var(--grid-line)" stroke-width="1.5" stroke-dasharray="3 6"></circle>
+      <rect x="70" y="86" width="120" height="88" rx="12" fill="none" stroke="var(--ink)" stroke-width="3"></rect>
+      <rect x="92" y="104" width="76" height="30" rx="4" fill="var(--circuit-soft)" stroke="var(--circuit)" stroke-width="2"></rect>
+      <circle cx="108" cy="119" r="6" fill="var(--circuit)"></circle>
+      <circle cx="130" cy="119" r="6" fill="var(--circuit)"></circle>
+      <circle cx="152" cy="119" r="6" fill="var(--circuit)"></circle>
+      <circle cx="130" cy="152" r="9" fill="var(--signal)"></circle>
+      <circle cx="52" cy="150" r="26" fill="none" stroke="var(--ink)" stroke-width="3"></circle>
+      <circle cx="52" cy="150" r="7" fill="var(--ink)"></circle>
+      <circle cx="208" cy="150" r="26" fill="none" stroke="var(--ink)" stroke-width="3"></circle>
+      <circle cx="208" cy="150" r="7" fill="var(--ink)"></circle>
+      <line x1="70" y1="150" x2="26" y2="150" stroke="var(--ink)" stroke-width="3"></line>
+      <line x1="190" y1="150" x2="234" y2="150" stroke="var(--ink)" stroke-width="3"></line>
+      <path d="M112 86 V64" stroke="var(--ink)" stroke-width="3"></path>
+      <circle cx="112" cy="56" r="9" fill="none" stroke="var(--signal)" stroke-width="3"></circle>
+      <path d="M148 86 V64" stroke="var(--ink)" stroke-width="3"></path>
+      <circle cx="148" cy="56" r="9" fill="none" stroke="var(--signal)" stroke-width="3"></circle>
+      <path d="M130 174 V196" stroke="var(--ink)" stroke-width="3"></path>
+      <circle cx="130" cy="204" r="10" fill="none" stroke="var(--ink)" stroke-width="3"></circle>
+    </svg>
+  </section>
+
+  <div class="section-head" id="m0">
+    <span class="eyebrow">Mission 0</span>
+    <h2>Meet your robot</h2>
+    <p>Before you build or code anything, get to know your two tools: the SPIKE Prime hub and the Pybricks language that controls it.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 00</div>
+        <h3>What is Pybricks?</h3>
+        <div class="meta"><span class="tag">Read</span><span class="tag">5 min</span></div>
+      </div>
+      <label class="check" data-check="m0">
+        <input type="checkbox" aria-label="Mark Mission 0 complete"> I did this!
+      </label>
+    </div>
+    <p><strong>Pybricks</strong> is a way to write real Python code that controls LEGO&reg; robots. Instead of snapping together colored code blocks, you'll type actual commands &mdash; the same kind professional programmers use.</p>
+    <p>Your robot's brain is the <strong>SPIKE&reg; Prime Hub</strong>: a small computer with buttons, a light-up grid, a speaker, and ports where motors and sensors plug in.</p>
+    <ul>
+      <li>Get a LEGO&reg; SPIKE&reg; Prime set (or SPIKE Essential, Technic, or MINDSTORMS &mdash; Pybricks works with several hubs).</li>
+      <li>Open <a href="https://code.pybricks.com" target="_blank" rel="noopener">code.pybricks.com</a> in a browser, or install the Pybricks app on a phone or tablet.</li>
+      <li>Connect the hub over USB cable or Bluetooth &mdash; a green light means you're linked up.</li>
+    </ul>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Turn on your hub by pressing the center button. Watch the light-up grid say hello &mdash; that grid is called the <em>Light Matrix</em>, and you'll control it yourself in Mission 4.</p></div>
+    </div>
+    <div class="coach">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      <div><strong>Coach tip</strong><p>Pair students up: one drives the mouse/keyboard, one reads instructions aloud. Swap roles every mission.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m1">
+    <span class="eyebrow">Mission 1</span>
+    <h2>Build the base</h2>
+    <p>Every mission below assumes the StarterBot: two motors, two wheels, a ball caster, plus a color sensor and an ultrasonic distance sensor.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 01</div>
+        <h3>Build the StarterBot</h3>
+        <div class="meta"><span class="tag">Build</span><span class="tag">30&ndash;45 min</span></div>
+      </div>
+      <label class="check" data-check="m1">
+        <input type="checkbox" aria-label="Mark Mission 1 complete"> I did this!
+      </label>
+    </div>
+    <p>Follow the official build instructions at <a href="https://pybricks.com/learn/building-a-robot/spike-prime/" target="_blank" rel="noopener">pybricks.com/learn/building-a-robot/spike-prime</a>. You're building in three stages:</p>
+    <ul>
+      <li><strong>Base:</strong> the hub sits on top, two motors drive the left and right wheels, and a ball caster at the back keeps it balanced.</li>
+      <li><strong>Eyes:</strong> an Ultrasonic Sensor bolts on the front &mdash; it "sees" distance, like a bat using echoes.</li>
+      <li><strong>Feelers:</strong> a Color Sensor for spotting lines on the floor, plus two bumpers that press the hub's left and right buttons when the robot bumps into something.</li>
+    </ul>
+    <p>Note which port each motor and sensor plugs into (A, B, C, D, E, or F) &mdash; you'll need those letters in Mission 2.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Spin each wheel by hand. If the hub is on, you should feel a tiny bit of resistance &mdash; that's the motor sensing the movement.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m2">
+    <span class="eyebrow">Mission 2</span>
+    <h2>Say hello</h2>
+    <p>Your first program doesn't need to move a single wheel. It just needs to prove the hub is listening to you.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 02</div>
+        <h3>Your first program</h3>
+        <div class="meta"><span class="tag">Code</span><span class="tag">10 min</span></div>
+      </div>
+      <label class="check" data-check="m2">
+        <input type="checkbox" aria-label="Mark Mission 2 complete"> I did this!
+      </label>
+    </div>
+    <p>Every Pybricks program starts by <code class="inline">import</code>ing the parts you need, then waking up the hub. Type this into a new project at code.pybricks.com:</p>
+    <pre class="code"><span class="k">from</span> pybricks.hubs <span class="k">import</span> PrimeHub
+<span class="k">from</span> pybricks.parameters <span class="k">import</span> Color
+
+hub = PrimeHub()
+hub.light.on(Color.GREEN)
+<span class="k">print</span>(<span class="s">"Hello, robot!"</span>)</pre>
+    <p>Press the green <strong>Play</strong> button. The hub's status light should turn green, and <code class="inline">"Hello, robot!"</code> will appear in the console at the bottom of the screen.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Change <code class="inline">Color.GREEN</code> to <code class="inline">Color.MAGENTA</code> and the message to your own name. Run it again.</p></div>
+    </div>
+    <div class="coach">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      <div><strong>Coach tip</strong><p>Point out capitalization and indentation now &mdash; Python cares about both, and it's easier to build the habit on a four-line program.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m3">
+    <span class="eyebrow">Mission 3</span>
+    <h2>Get moving</h2>
+    <p>Two motors become one steerable robot with a single command: <code class="inline">DriveBase</code>.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 03</div>
+        <h3>Drive straight and turn</h3>
+        <div class="meta"><span class="tag">Code</span><span class="tag">15 min</span></div>
+      </div>
+      <label class="check" data-check="m3">
+        <input type="checkbox" aria-label="Mark Mission 3 complete"> I did this!
+      </label>
+    </div>
+    <p>Tell Pybricks which ports your motors are plugged into, wrap them in a <code class="inline">DriveBase</code>, and give distances in millimeters and angles in degrees:</p>
+    <pre class="code"><span class="k">from</span> pybricks.pupdevices <span class="k">import</span> Motor
+<span class="k">from</span> pybricks.parameters <span class="k">import</span> Port
+<span class="k">from</span> pybricks.robotics <span class="k">import</span> DriveBase
+
+left_motor = Motor(Port.A)
+right_motor = Motor(Port.B)
+drive_base = DriveBase(left_motor, right_motor,
+                        wheel_diameter=<span class="s">56</span>, axle_track=<span class="s">114</span>)
+
+drive_base.straight(<span class="s">250</span>)   <span class="c"># drive forward 250 mm</span>
+drive_base.turn(<span class="s">90</span>)        <span class="c"># spin right 90 degrees</span>
+drive_base.straight(-<span class="s">250</span>)  <span class="c"># back up 250 mm</span></pre>
+    <p>If your robot drives backward when you say <code class="inline">straight()</code>, one motor is mirrored &mdash; fix it by wrapping that motor's port with <code class="inline">Direction.COUNTERCLOCKWISE</code>.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Chain four <code class="inline">straight(250)</code> and <code class="inline">turn(90)</code> pairs in a row. Does your robot end up back where it started &mdash; a perfect square?</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m4">
+    <span class="eyebrow">Mission 4</span>
+    <h2>Sound &amp; light</h2>
+    <p>Give your robot a voice and a face using the built-in speaker and the 5&times;5 Light Matrix.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 04</div>
+        <h3>Beep and glow</h3>
+        <div class="meta"><span class="tag">Code</span><span class="tag">10 min</span></div>
+      </div>
+      <label class="check" data-check="m4">
+        <input type="checkbox" aria-label="Mark Mission 4 complete"> I did this!
+      </label>
+    </div>
+    <pre class="code"><span class="k">from</span> pybricks.hubs <span class="k">import</span> PrimeHub
+<span class="k">from</span> pybricks.parameters <span class="k">import</span> Color
+
+hub = PrimeHub()
+
+hub.speaker.beep(<span class="s">500</span>, <span class="s">200</span>)   <span class="c"># 500 Hz tone for 200 ms</span>
+hub.light.on(Color.ORANGE)      <span class="c"># status light turns orange</span>
+hub.display.text(<span class="s">"HI"</span>)         <span class="c"># scroll "HI" across the matrix</span></pre>
+    <p>The first number in <code class="inline">beep()</code> is the pitch in Hertz &mdash; higher numbers sound higher. The second is how long the beep lasts, in milliseconds.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Write three beeps in a row, each a little higher-pitched than the last &mdash; a tiny rising alarm sound.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m5">
+    <span class="eyebrow">Mission 5</span>
+    <h2>Wait &amp; repeat</h2>
+    <p>Pausing and looping are how a handful of commands turn into a whole routine.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 05</div>
+        <h3>Patrol in a loop</h3>
+        <div class="meta"><span class="tag">Code</span><span class="tag">15 min</span></div>
+      </div>
+      <label class="check" data-check="m5">
+        <input type="checkbox" aria-label="Mark Mission 5 complete"> I did this!
+      </label>
+    </div>
+    <p><code class="inline">wait()</code> pauses for a number of milliseconds. A <code class="inline">while True:</code> loop repeats its indented block forever, until you stop the program:</p>
+    <pre class="code"><span class="k">from</span> pybricks.tools <span class="k">import</span> wait
+
+<span class="k">while</span> <span class="k">True</span>:
+    drive_base.straight(<span class="s">200</span>)
+    drive_base.turn(<span class="s">90</span>)
+    wait(<span class="s">300</span>)  <span class="c"># pause a third of a second between moves</span></pre>
+    <p>Want a fixed number of laps instead of forever? Swap the loop for <code class="inline">for lap in range(4):</code> so it counts to four and stops.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Replace <code class="inline">while True</code> with <code class="inline">for lap in range(4)</code> and drive a perfect square, then stop automatically.</p></div>
+    </div>
+    <div class="coach">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      <div><strong>Coach tip</strong><p>This is a good moment to talk about infinite loops on purpose vs. by accident &mdash; ask students to predict what happens if they forget the <code class="inline">wait()</code>.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="m6">
+    <span class="eyebrow">Mission 6</span>
+    <h2>Sense the world</h2>
+    <p>Sensors turn a robot that follows a script into one that reacts &mdash; the last skill before free-form building.</p>
+  </div>
+  <article class="mission">
+    <div class="mission-head">
+      <div>
+        <div class="mission-num">MISSION 06</div>
+        <h3>Stop before you crash</h3>
+        <div class="meta"><span class="tag">Code</span><span class="tag">20 min</span></div>
+      </div>
+      <label class="check" data-check="m6">
+        <input type="checkbox" aria-label="Mark Mission 6 complete"> I did this!
+      </label>
+    </div>
+    <p>Read the Ultrasonic Sensor's <code class="inline">distance()</code> in millimeters, and the Color Sensor's <code class="inline">color()</code> as a named color. Combine a sensor reading with an <code class="inline">if</code> statement to make a decision:</p>
+    <pre class="code"><span class="k">from</span> pybricks.pupdevices <span class="k">import</span> UltrasonicSensor
+<span class="k">from</span> pybricks.parameters <span class="k">import</span> Port
+
+eyes = UltrasonicSensor(Port.D)
+
+<span class="k">while</span> <span class="k">True</span>:
+    <span class="k">if</span> eyes.distance() &lt; <span class="s">100</span>:      <span class="c"># closer than 100 mm?</span>
+        drive_base.stop()
+        hub.speaker.beep(<span class="s">300</span>, <span class="s">300</span>)
+    <span class="k">else</span>:
+        drive_base.drive(<span class="s">150</span>, <span class="s">0</span>)   <span class="c"># cruise forward at 150 mm/s</span></pre>
+    <p>Same idea works for the Color Sensor &mdash; swap in <code class="inline">colors = ColorSensor(Port.C)</code> and check <code class="inline">if colors.color() == Color.RED:</code> to make your robot react to a colored card or a line on the floor.</p>
+    <div class="try-it">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9L21 12l-6.6 3.1L12 22l-2.4-6.9L3 12l6.6-3.1L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div><strong>Try it</strong><p>Hold your hand in front of the sensor and pull it away. Watch the robot start and stop &mdash; then try changing <code class="inline">100</code> to a bigger or smaller number.</p></div>
+    </div>
+  </article>
+
+  <div class="section-head" id="sheet">
+    <span class="eyebrow">Quick Reference</span>
+    <h2>Command cheat sheet</h2>
+    <p>Print this out, tape it next to the keyboard, and stop scrolling back through missions to find a command.</p>
+  </div>
+
+  <div class="sheet-wrap">
+    <table class="sheet">
+      <thead>
+        <tr><th>Command</th><th>What it does</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr class="group-row"><td colspan="3">Setup</td></tr>
+        <tr><td class="cmd">PrimeHub()</td><td>Wakes up the hub so you can control its light, speaker, and matrix.</td><td class="cmd">hub = PrimeHub()</td></tr>
+        <tr><td class="cmd">Motor(Port.X)</td><td>Connects to a motor plugged into port X.</td><td class="cmd">left = Motor(Port.A)</td></tr>
+        <tr><td class="cmd">DriveBase(l, r, &hellip;)</td><td>Combines two motors into one steerable robot.</td><td class="cmd">db = DriveBase(l, r, 56, 114)</td></tr>
+        <tr class="group-row"><td colspan="3">Movement</td></tr>
+        <tr><td class="cmd">.straight(mm)</td><td>Drives forward (or backward, with a negative number) that many millimeters.</td><td class="cmd">db.straight(250)</td></tr>
+        <tr><td class="cmd">.turn(deg)</td><td>Spins in place that many degrees. Negative turns left.</td><td class="cmd">db.turn(90)</td></tr>
+        <tr><td class="cmd">.drive(speed, turn_rate)</td><td>Drives continuously at a speed (mm/s) and turn rate, until told otherwise.</td><td class="cmd">db.drive(150, 0)</td></tr>
+        <tr><td class="cmd">.stop()</td><td>Stops the drive base immediately.</td><td class="cmd">db.stop()</td></tr>
+        <tr class="group-row"><td colspan="3">Sound &amp; light</td></tr>
+        <tr><td class="cmd">hub.speaker.beep(hz, ms)</td><td>Plays a tone at a pitch, for a duration.</td><td class="cmd">hub.speaker.beep(500, 200)</td></tr>
+        <tr><td class="cmd">hub.light.on(Color.X)</td><td>Sets the hub's status light to a color.</td><td class="cmd">hub.light.on(Color.GREEN)</td></tr>
+        <tr><td class="cmd">hub.display.text("&hellip;")</td><td>Scrolls letters or numbers across the 5&times;5 matrix.</td><td class="cmd">hub.display.text("HI")</td></tr>
+        <tr class="group-row"><td colspan="3">Timing &amp; loops</td></tr>
+        <tr><td class="cmd">wait(ms)</td><td>Pauses the program for a number of milliseconds.</td><td class="cmd">wait(1000)</td></tr>
+        <tr><td class="cmd">while True:</td><td>Repeats the indented block forever.</td><td class="cmd">while True: &hellip;</td></tr>
+        <tr><td class="cmd">for i in range(n):</td><td>Repeats the indented block exactly n times.</td><td class="cmd">for lap in range(4): &hellip;</td></tr>
+        <tr class="group-row"><td colspan="3">Sensors</td></tr>
+        <tr><td class="cmd">UltrasonicSensor(Port.X)</td><td>Connects to a distance sensor on port X.</td><td class="cmd">eyes = UltrasonicSensor(Port.D)</td></tr>
+        <tr><td class="cmd">.distance()</td><td>Returns distance to the nearest object, in millimeters.</td><td class="cmd">eyes.distance()</td></tr>
+        <tr><td class="cmd">ColorSensor(Port.X)</td><td>Connects to a color sensor on port X.</td><td class="cmd">eye = ColorSensor(Port.C)</td></tr>
+        <tr><td class="cmd">.color()</td><td>Returns the color it currently sees.</td><td class="cmd">eye.color() == Color.RED</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <span>Pybricks Mission Manual &middot; built for classroom and after-school robotics</span>
+    <span>Source guides: pybricks.com/learn &amp; docs.pybricks.com</span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var TOTAL = 7;
+  var KEY = "pybricksMissionManual.progress";
+  var checks = Array.prototype.slice.call(document.querySelectorAll(".check"));
+  var navLinks = {};
+  Array.prototype.slice.call(document.querySelectorAll(".tracker a[data-mission]")).forEach(function (a) {
+    navLinks[a.getAttribute("data-mission")] = a;
+  });
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  function render(state) {
+    var done = 0;
+    checks.forEach(function (label) {
+      var id = label.getAttribute("data-check");
+      var box = label.querySelector("input");
+      var isDone = !!state[id];
+      if (isDone) done++;
+      box.checked = isDone;
+      label.setAttribute("data-done", isDone ? "true" : "false");
+      if (navLinks[id]) navLinks[id].setAttribute("data-done", isDone ? "true" : "false");
+    });
+
+    var pct = done / TOTAL;
+    var circumference = 138.2;
+    var fill = document.getElementById("progressFill");
+    if (fill) fill.setAttribute("stroke-dashoffset", String(circumference * (1 - pct)));
+    var num = document.getElementById("progressNum");
+    if (num) num.textContent = done + "/" + TOTAL;
+    var label = document.getElementById("progressLabel");
+    if (label) label.textContent = done + " of " + TOTAL + " missions complete";
+  }
+
+  var state = load();
+  render(state);
+
+  checks.forEach(function (labelEl) {
+    var id = labelEl.getAttribute("data-check");
+    var box = labelEl.querySelector("input");
+    box.addEventListener("change", function () {
+      state[id] = box.checked;
+      save(state);
+      render(state);
+    });
+  });
+
+  var resetBtn = document.getElementById("resetBtn");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      state = {};
+      save(state);
+      render(state);
+    });
+  }
+})();
+</script>
+</body>
+</html>

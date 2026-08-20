@@ -61,6 +61,16 @@ the Nov 8 scrimmage and the December festival.
 > Note: `season/` previously held the FLL **Explore** packet (wrong division
 > for this team) — those files live on in git history before 2026-08-11.
 
+## Supplementary lessons
+
+Team-written material that goes beyond the official season kit — not part of
+the FIRST/LEGO curriculum, just extra practice.
+
+- [lessons/pybricks-mission-manual.html](lessons/pybricks-mission-manual.html)
+  — a seven-mission playbook that teaches real Python coding (Pybricks) on
+  the SPIKE Prime hub, for kids who want to go past the block-based SPIKE app.
+  Also linked from the team site's document library.
+
 ## Attribution
 
 Materials under `season/` are © FIRST and the LEGO Group — see
